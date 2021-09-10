@@ -1,0 +1,121 @@
+.lich-su {
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+    height:60vh;
+    transition-duration: 1s;
+    position: absolute;
+    background: #FFCC29;
+    height: calc(160vh);
+  }
+  
+  .lich-su img{
+    width:90%;
+    height: 55vh;
+    opacity:1;
+    position: relative;
+    border:2px solid green;
+    border-radius: 10px;
+    margin-top:60px;
+    margin-bottom:20px;
+  }
+  .col1:hover img, .col2:hover img{
+    top:-20px;
+    transition-duration: .5s;
+    opacity:1;
+  }
+
+
+  .card-button {
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 25px;
+    transition: background .5s;
+    background: #5CE3F2;
+    color: #3940BF;
+    background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
+    background-size: 200%;
+    position: absolute;
+    left: 43%;
+    margin-left: -43px;
+    bottom: 15%;
+    margin-bottom: -15px;
+    display: block;
+
+  
+  }
+  .card-button:hover{
+    background-position: left;
+    color:#0082c8;
+  }
+
+   
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h5 {
+  font-size: 7vh;
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    color: #fff6a9;
+  text-align: center;
+  animation: blink 12s infinite;
+    font-weight: bold;
+  -webkit-animation: blink 12s infinite;
+}
+
+
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #8C4545;
+  }
+}

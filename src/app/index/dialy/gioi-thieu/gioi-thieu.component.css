@@ -1,0 +1,120 @@
+.dia-ly {
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+    height: calc(100vh - 65px);
+    transition-duration: 1s;
+    position: absolute;
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: calc(100vh - 80px);
+
+}
+.carousel-inner{
+    margin: 5px auto;
+    width: calc(100% - 70px);
+    height: calc(100vh - 100px);
+    border: 5px solid orange;
+    border-radius: 10px;
+}
+
+.carousel-img, .carousel-content{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+    width: calc(100% - 75px);
+    height: calc(100vh - 100px);
+}
+
+.carousel-img img{
+    position: relative;
+    left: 0;  
+    width: 100%;
+    height: calc(100vh - 99px);
+}
+
+.carousel-content{
+   background-color: black;
+    color: white;
+}
+.title p{
+    margin-top:50px;
+    font-size:30px;
+    font-weight: bold;
+}
+.seperate{
+    margin: 20px auto 20px;
+    width: 200px;
+    height: 3px;
+    background-color: white;;
+}
+.carousel-content ul{
+    padding:0;
+    width: 90%;
+    margin: 0 auto;
+    list-style-type:none ;
+}
+.carousel-content ul li{
+    font-size: 18px;
+    padding: 5px;
+    line-height: 27px;
+    text-indent: 20px;
+}
+
+
+
+.carousel-control-prev{
+    width:44px;    
+    opacity:0;
+}
+.carousel-control-prev:hover{
+    opacity:1;
+}
+.carousel-control-next{
+    width:44px;
+    opacity:0;
+    
+}
+.carousel-control-next:hover{
+    opacity:1;
+}
+.carousel-indicators li{
+    height: 7px;  
+    width:30px
+}
+.back{
+    position: relative;
+    margin:0;
+    font-size: 40px;
+    top: 50px;
+    width: 100px;
+    margin-left: 40px;
+}
+.back a{
+    color:white;
+    text-decoration: none;
+    transition: .2s;
+}
+.back a i{
+    width:50px;
+} 
+.back a:hover{
+    border: 5px solid white;
+    border-radius: 20px;
+
+}
+
+
+  
+
+
+
+
+
+
+
+
+

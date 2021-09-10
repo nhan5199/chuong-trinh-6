@@ -1,0 +1,465 @@
+<div class="card" style="background-color: #03A66A;">
+    <div class="card-body">
+        <form [formGroup]="answerForm" style="margin:0 auto;width:60%">
+            <h1>Huyện Nhơn Trạch</h1>
+            <div class="form-group ">
+                <h2>Câu 1) Nêu vị trí địa lí của huyện Nhơn Trạch. </h2>
+                <div *ngIf="isSubmit  else answer1">
+                    <input type="radio" name="cau1" formControlName="cau1" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau1">
+                        Huyện Nhơn Trạch nằm ở phía tây nam tỉnh Đồng Nai.</label>
+
+                </div>
+                <ng-template #answer1>
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="A">
+                        <label for="cau1">
+                            Huyện Nhơn Trạch nằm ở phía tây nam tỉnh Đồng Nai.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau1 == 'B'; else condition1">
+                    <input type="radio" name="cau1" formControlName="cau1" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        Huyện Nhơn Trạch nằm ở phía tây bắc tỉnh Đồng Nai.</label>
+
+                </div>
+                <ng-template #condition1>
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="B">
+                        <label for="cau1">
+                            Huyện Nhơn Trạch nằm ở phía tây bắc tỉnh Đồng Nai.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit&& answerForm.value.cau1 == 'C'; else condition2">
+                    <input type="radio" name="cau1" formControlName="cau1" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        Huyện Nhơn Trạch nằm ở phía đông nam tỉnh Đồng Nai.
+                    </label>
+                </div>
+                <ng-template #condition2 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="C">
+                        <label for="cau1">
+                            Huyện Nhơn Trạch nằm ở phía đông nam tỉnh Đồng Nai.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group justify-content-center">
+                <h2>Câu 2) Phía tây và nam huyện Nhơn Trạch giáp với tỉnh nào?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau2 == 'A'; else condition4">
+                    <input type="radio" name="cau2" formControlName="cau2" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        Tỉnh Bình Dương.</label>
+
+                </div>
+                <ng-template #condition4>
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="A">
+                        <label for="cau1"> Tỉnh Bình Dương.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau2 == 'B'; else condition3">
+                    <input type="radio" name="cau2" formControlName="cau2" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau2">
+                        Tỉnh Bình Thuận.</label>
+
+                </div>
+                <ng-template #condition3>
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="B">
+                        <label for="cau1">Tỉnh Bình Thuận.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer2">
+                    <input type="radio" name="cau2" formControlName="cau2" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau2">
+                        Tỉnh Bà Rịa – Vũng Tàu.</label>
+                </div>
+                <ng-template #answer2 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="C">
+                        <label for="cau2">Tỉnh Bà Rịa – Vũng Tàu.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 3) Huyện Nhơn Trạch giáp với thành phố Hồ Chí Minh ở phía nào? </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau3 == 'A'; else condition5">
+                    <input type="radio" name="cau3" formControlName="cau3" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau3">Phía tây và đông.</label>
+
+                </div>
+                <ng-template #condition5>
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="A">
+                        <label for="cau3">Phía tây và đông.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau3 == 'B'; else condition6">
+                    <input type="radio" name="cau3" formControlName="cau3" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau3">Phía tây và bắc.</label>
+
+                </div>
+                <ng-template #condition6>
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="B">
+                        <label for="cau3">Phía tây và bắc.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer3">
+                    <input type="radio" name="cau3" formControlName="cau3" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau3">Phía tây và nam.</label>
+                </div>
+                <ng-template #answer3 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="C">
+                        <label for="cau3">Phía tây và nam.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 4) Nhơn Trạch có thế mạnh phát triển về những ngành nào?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau4 == 'A'; else condition7">
+                    <input type="radio" name="cau4" formControlName="cau4" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau4">Dịch vụ - nông nghiệp - đô thị cảng.</label>
+
+                </div>
+                <ng-template #condition7>
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="A">
+                        <label for="cau4">Dịch vụ - nông nghiệp - đô thị cảng.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit else answer4">
+                    <input type="radio" name="cau4" formControlName="cau4" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau4">Dịch vụ - công nghiệp - đô thị
+                        cảng.</label>
+
+                </div>
+                <ng-template #answer4>
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="B">
+                        <label for="cau4">Dịch vụ - công nghiệp - đô thị cảng.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau4 == 'C';  else condition8">
+                    <input type="radio" name="cau4" formControlName="cau4" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau4">Dịch vụ - nông nghiệp - công nghiệp.</label>
+                </div>
+                <ng-template #condition8 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="C">
+                        <label for="cau4">Dịch vụ - nông nghiệp - công nghiệp.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 5) Nhơn Trạch có thế mạnh phát triển về dịch vụ - công nghiệp -
+                    đô thị cảng nhờ những lợi thế nào?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau5 == 'A'; else condition9">
+                    <input type="radio" name="cau5" formControlName="cau5" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau5">
+                        Xây dựng hệ thống đường giao thông mới, các cụm cảng lớn và dịch vụ cảng phát triển.
+                    </label>
+
+                </div>
+                <ng-template #condition9>
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="A">
+                        <label for="cau5">
+                            Xây dựng hệ thống đường giao thông mới, các cụm cảng lớn và dịch vụ cảng phát triển.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau5 == 'B'; else condition10">
+                    <input type="radio" name="cau5" formControlName="cau5" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau5">
+                        Phát triển các khu công nghiệp gắn liền với hệ thống cảng; hoàn thiện mạng lưới chợ,
+                    </label>
+                    <label style="color:red;font-weight:bold  ">siêu thị, trung tâm thương mại.</label>
+
+                </div>
+                <ng-template #condition10>
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="B">
+                        <label for="cau5">
+                            Phát triển các khu công nghiệp gắn liền với hệ thống cảng; hoàn thiện mạng lưới chợ,
+                    </label>
+                    <label>siêu thị, trung tâm thương mại.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer5">
+                    <input type="radio" name="cau5" formControlName="cau5" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau5">
+                        Cả A và B đều đúng.</label>
+                </div>
+                <ng-template #answer5 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="C">
+                        <label for="cau5">Cả A và B đều đúng.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 6) Kể tên một số cảng lớn của huyện Nhơn Trạch.</h2>
+                <div *ngIf="isSubmit  else answer6">
+                    <input type="radio" name="cau6" formControlName="cau6" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau6">
+                        Cảng Thị Vải, Phước An, Phú Hữu 1, Phú Hữu 2,...
+                    </label>
+
+                </div>
+                <ng-template #answer6>
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="A">
+                        <label for="cau6">
+                            Cảng Thị Vải, Phước An, Phú Hữu 1, Phú Hữu 2,...
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau6 == 'B'; else condition11">
+                    <input type="radio" name="cau6" formControlName="cau6" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau6">
+                        Cảng Nhơn Trạch, Phước An, Phú Hữu 1, Phú Hữu 2,...</label>
+
+                </div>
+                <ng-template #condition11>
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="B">
+                        <label for="cau6">Cảng Nhơn Trạch, Phước An, Phú Hữu 1, Phú Hữu 2,...</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau6 == 'C';  else condition12">
+                    <input type="radio" name="cau6" formControlName="cau6" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau6">
+                        Cảng Thị Vải, Nhơn Trạch, Phú Hữu 1, Phú Hữu 2,...</label>
+                </div>
+                <ng-template #condition12 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="C">
+                        <label for="cau6"> Cảng Thị Vải, Nhơn Trạch, Phú Hữu 1, Phú Hữu 2,...</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 7) Loại hình du lịch chủ yếu ở huyện Nhơn Trạch là: </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau7 == 'A'; else condition13">
+                    <input type="radio" name="cau7" formControlName="cau7" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau7">
+                        Du lịch sinh thái, du lịch văn hóa, du lịch biển.</label>
+
+                </div>
+                <ng-template #condition13>
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="A">
+                        <label for="cau7"> Du lịch sinh thái, du lịch văn hóa, du lịch biển.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer7">
+                    <input type="radio" name="cau7" formControlName="cau7" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau7">
+                        Du lịch sinh thái và du lịch văn hóa, tín ngưỡng.</label>
+                </div>
+                <ng-template #answer7>
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="B">
+                        <label for="cau7">Du lịch sinh thái và du lịch văn hóa, tín ngưỡng.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau7 == 'C'; else condition14">
+                    <input type="radio" name="cau7" formControlName="cau7" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau7">
+                        Du lịch văn hóa, tín ngưỡng và du lịch biển.
+                    </label>
+                </div>
+                <ng-template #condition14 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="C">
+                        <label for="cau7">
+                            Du lịch văn hóa, tín ngưỡng và du lịch biển.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 8) Loại hình du lịch sinh thái ở huyện Nhơn Trạch gồm có: </h2>
+                <div *ngIf="isSubmit  else answer8">
+                    <input type="radio" name="cau8" formControlName="cau8" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau8">
+                        Du lịch sinh thái vườn, du lịch sinh thái sông nước, du lịch sinh thái rừng ngập mặn.
+                    </label>
+
+                </div>
+                <ng-template #answer8>
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="A">
+                        <label for="cau8">
+                            Du lịch sinh thái vườn, du lịch sinh thái sông nước, du lịch sinh thái rừng ngập mặn.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau8 == 'B'; else condition15">
+                    <input type="radio" name="cau8" formControlName="cau8" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau8">
+                        Du lịch sinh thái vườn, du lịch sinh thái sông nước, du lịch sinh thái rừng rậm nhiệt đới.
+                    </label>
+
+                </div>
+                <ng-template #condition15>
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="B">
+                        <label for="cau8">
+                            Du lịch sinh thái vườn, du lịch sinh thái sông nước, du lịch sinh thái rừng rậm nhiệt đới.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau8 == 'C';  else condition16">
+                    <input type="radio" name="cau8" formControlName="cau8" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau8">
+                        Du lịch sinh thái vườn, du lịch sinh thái sông nước, du lịch sinh thái biển.
+                    </label>
+                </div>
+                <ng-template #condition16 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="C">
+                        <label for="cau8">
+                            Du lịch sinh thái vườn, du lịch sinh thái sông nước, du lịch sinh thái biển.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 9) Một số địa điểm du lịch sinh thái nổi tiếng của huyện Nhơn Trạch là: </h2>
+                <div *ngIf="isSubmit  else answer9">
+                    <input type="radio" name="cau9" formControlName="cau9" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau9">
+                        Khu du lịch Ông Kèo, Bò Cạp Vàng, vườn (Long Tân, Phú Hội); rừng ngập mặn
+                    </label>
+                    <label style="color:#0000e6;font-weight:bold  ">(Phước An),...</label>
+
+                </div>
+                <ng-template #answer9>
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="A">
+                        <label for="cau9">
+                            Khu du lịch Ông Kèo, Bò Cạp Vàng, vườn (Long Tân, Phú Hội); rừng ngập mặn
+                        </label>
+                        <label >(Phước An),...</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau9 == 'B'; else condition18">
+                    <input type="radio" name="cau9" formControlName="cau9" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau9">
+                        Khu du lịch Ông Kèo, Bò Cạp Vàng, Suối Tiên, Đầm Sen, rừng ngập mặn Cần Giờ,...
+                    </label>
+
+                </div>
+                <ng-template #condition18>
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="B">
+                        <label for="cau9">
+                            Khu du lịch Ông Kèo, Bò Cạp Vàng, Suối Tiên, Đầm Sen, rừng ngập mặn Cần Giờ,...
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau9 == 'C'; else condition17">
+                    <input type="radio" name="cau9" formControlName="cau9" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Khu du lịch Ông Kèo, Bò Cạp Vàng, Đại Nam; rừng nguyên sinh Nam Cát Tiên, …
+                    </label>
+                </div>
+                <ng-template #condition17 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="C">
+                        <label for="cau9">
+                            Khu du lịch Ông Kèo, Bò Cạp Vàng, Đại Nam; rừng nguyên sinh Nam Cát Tiên, …
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group " style="padding:0 20px 20px 20px;">
+                <h2>Câu 10) Huyện Nhơn Trạch có diện tích là: </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau10 == 'A'; else condition20">
+                    <input type="radio" name="cau10" formControlName="cau10" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau10">
+                        4,1078 km <sup>2</sup>.</label>
+
+                </div>
+                <ng-template #condition20>
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="A">
+                        <label for="cau10">
+                            4,1078 km <sup>2</sup>.</label>                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau10 == 'B'; else condition19">
+                    <input type="radio" name="cau10" formControlName="cau10" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau10">
+                        41,078 km <sup>2</sup>.</label>
+                </div>
+                <ng-template #condition19>
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="B">
+                        <label for="cau10">41,078 km <sup>2</sup>.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit   else answer10">
+                    <input type="radio" name="cau10" formControlName="cau10" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau10">410,78 km <sup>2</sup>.</label>
+                </div>
+                <ng-template #answer10 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="C">
+                        <label for="cau10">410,78 km <sup>2</sup>.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group row ">
+                <div class="col-md-3 justify-content-left text-center" style="padding-left:0">
+
+                    <a style="color:white;text-decoration: none;cursor: pointer;" (click)="cancel()">
+                        <button type="submit" class="btn btn-primary"
+                            style="margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px">
+                            Trở về
+                        </button>
+                    </a>
+
+                </div>
+                <div class="col-md-6">
+                    <div *ngIf="!isSubmit else result" class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary"
+                            style="margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px"
+                            (click)="onSubmit()">Nộp bài </button>
+                    </div>
+                    <ng-template #result>
+                        <div class="form-group justify-content-center">
+                            <div class="col-md-12 text-center" style="padding:20px 0;">
+                                <h2>Số câu đúng là: &nbsp; <span style="color:#0000e6">{{point}}</span>/<span
+                                        style="color:red">10</span></h2>
+                                <h2>Số điểm của bạn là: &nbsp;<span style="color:#0000e6">{{point}}</span></h2>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a routerLink="/danhsachcauhoi"  class="btn btn-primary quest">Câu hỏi</a>
+                </div>
+            </div>
+
+
+        </form>
+
+
+    </div>
+</div>

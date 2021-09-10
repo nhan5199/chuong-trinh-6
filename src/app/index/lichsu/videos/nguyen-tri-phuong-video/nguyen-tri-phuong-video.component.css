@@ -1,0 +1,100 @@
+.contain{
+  width: 100%;
+  height: calc(120vh - 80px);
+ background: #056CF2;
+  transition: 1s;
+}
+
+.contain .video{
+  margin-top: 40px;
+}
+.contain .video iframe{
+  width: 60%;
+  height: 71vh;
+  border-radius: 10px;
+}
+
+.back{
+  position: relative;
+  margin:0;
+  font-size: 40px;
+  top: 10px;
+  width: 100px;
+  left: 80px;
+}
+.back a{
+  color:white;
+  text-decoration: none;
+  transition: .2s;
+}
+.back a i{
+  width:50px;
+}
+.back a:hover{
+  border: 5px solid white;
+  border-radius: 20px;
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h5 {
+  font-size: 7vh;
+  margin-bottom: 40px;
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    color: #fff6a9;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #F2EC94;
+  }
+}

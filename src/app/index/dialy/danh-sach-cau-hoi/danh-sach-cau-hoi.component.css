@@ -1,0 +1,139 @@
+.lich-su {
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    background-size: auto;
+    transition-duration: 1s;
+    background: #056CF2;
+    height: 195vh;
+  }
+
+  img{
+      width:90%;
+      height:45vh;
+      margin-bottom:70px;
+      border-radius: 10px;
+      border: 2px solid green;
+      cursor: pointer;
+      position: relative;
+  }
+  @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+  h5 {
+    font-size: 8vh;
+    padding:5% 0;
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+      color: #fff6a9;
+    text-align: center;
+    font-weight: bold;
+
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+
+
+
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      color: #fff6a9;
+    }
+  }
+
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      color: white;
+    }
+  }
+  .col2:hover .card-button{
+    display: block;
+  }
+  .col2:hover img{
+    margin-top:-20px;
+    filter: brightness(50%);
+  }
+  .card-button {
+    padding: 15px;
+    border-radius: 50px;
+    background: #1f75c4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background .5s;
+    background: linear-gradient(to left, #0082c8 50%, white 50%)right ;
+    background-size: 200%;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+    display: none;
+
+
+  }
+  .card-button:hover{
+    background-position: left;
+    color:#0082c8;
+  }
+
+  .back a{
+    color:white;
+    text-decoration: none;
+    transition: .2s;
+    margin-left:80px;
+}
+.back a i{
+    width:50px;
+}
+.back a:hover{
+    border: 5px solid white;
+    border-radius: 20px;
+
+}
+.back{
+  position: absolute;
+  margin:0;
+  font-size: 40px;
+  top: 100px;
+  width: 100px;
+  margin-left: 40px;
+}

@@ -1,0 +1,36 @@
+input{
+    width:17px;
+    height:17px
+}
+
+label{
+    font-size:20px;
+    margin-left: 10px
+}
+h1{
+    font-size: 50px;
+    font-family: Pacifico;
+    text-align: center;
+    margin: 25px 0;
+    padding:40px;
+}
+form{
+    background-color: white;
+    -webkit-box-shadow: 0 0 20px black;
+        box-shadow: 0 0 20px black;
+}
+
+form div{
+    padding-left:20px;
+    padding-right:20px
+}
+button, .quest{
+    margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px;
+    transition: background .5s;
+    background: linear-gradient(to left, #FA9905 50%, #03A66A 50%)right ;
+    background-size: 200%;
+}
+button:hover, .quest:hover{
+    background-position: left;
+  
+  }

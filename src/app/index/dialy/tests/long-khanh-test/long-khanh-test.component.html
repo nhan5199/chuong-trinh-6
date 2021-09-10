@@ -1,0 +1,545 @@
+<div class="card" style="background-color: #03A66A;">
+    <div class="card-body">
+        <form [formGroup]="answerForm" style="margin:0 auto;width:60%">
+            <h1>Thành phố Long Khánh</h1>
+            <div class="form-group ">
+                <h2>
+                    Câu 1) Thành phố Long Khánh có diện tích là:
+                </h2>
+                <div *ngIf="isSubmit else answer1">
+                    <input type="radio" name="cau1" formControlName="cau1" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau1">
+                        191,86 ki-lô-mét vuông.
+                    </label>
+
+                </div>
+                <ng-template #answer1>
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="A">
+                        <label for="cau1">
+                            191,86 ki-lô-mét vuông.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  && answerForm.value.cau1 == 'B'; else condition1">
+                    <input type="radio" name="cau1" formControlName="cau1" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        19,186 ki-lô-mét vuông.
+                    </label>
+
+                </div>
+                <ng-template #condition1>
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="B">
+                        <label for="cau1">
+                            19,186 ki-lô-mét vuông.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  && answerForm.value.cau1 == 'C'; else condition2">
+                    <input type="radio" name="cau1" formControlName="cau1" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        1,9186 ki-lô-mét vuông.
+                    </label>
+                </div>
+                <ng-template #condition2 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="C">
+                        <label for="cau1">
+                            1,9186 ki-lô-mét vuông.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group justify-content-center">
+                <h2>
+                    Câu 2) Từ thích hợp để điền vào chỗ chấm là: <br>
+                    Thành phố Long Khánh nằm ở khu vực ……………… tỉnh Đồng Nai.
+
+                </h2>
+                <div *ngIf="isSubmit  else answer2">
+                    <input type="radio" name="cau2" formControlName="cau2" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau1">
+                        trung tâm.
+                    </label>
+
+                </div>
+                <ng-template #answer2>
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="A">
+                        <label for="cau1">
+                            trung tâm.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau2 == 'B'; else condition3">
+                    <input type="radio" name="cau2" formControlName="cau2" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau2">
+                        ngoại ô.
+                    </label>
+
+                </div>
+                <ng-template #condition3>
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="B">
+                        <label for="cau1">
+                            ngoại ô.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau2 == 'C'; else condition4">
+                    <input type="radio" name="cau2" formControlName="cau2" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau2">
+                        phía đông nam.
+                    </label>
+                </div>
+                <ng-template #condition4 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="C">
+                        <label for="cau2">
+                            phía đông nam.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 3) Thị xã Long Khánh được công nhận là thành phố Long Khánh vào ngày, tháng, năm nào?
+                </h2>
+                <div *ngIf="isSubmit  && answerForm.value.cau3 == 'A'; else condition5">
+                    <input type="radio" name="cau3" formControlName="cau3" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau3">
+                        1/6/2018.
+                    </label>
+
+                </div>
+                <ng-template #condition5>
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="A">
+                        <label for="cau3">
+                            1/6/2018.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau3 == 'B'; else condition6">
+                    <input type="radio" name="cau3" formControlName="cau3" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau3">
+                        1/6/2019.
+                    </label>
+
+                </div>
+                <ng-template #condition6>
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="B">
+                        <label for="cau3">
+                            1/6/2019.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit else answer3">
+                    <input type="radio" name="cau3" formControlName="cau3" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau3">
+                        1/6/2020.
+                    </label>
+                </div>
+                <ng-template #answer3 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="C">
+                        <label for="cau3">
+                            1/6/2020.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 4) Giá trị thương mại – dịch vụ của thành phố Long Khánh đứng thứ mấy toàn tỉnh?
+
+                </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau4 == 'A'; else condition7">
+                    <input type="radio" name="cau4" formControlName="cau4" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Thứ nhất.
+                    </label>
+
+                </div>
+                <ng-template #condition7>
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="A">
+                        <label for="cau4">
+                            Thứ nhất.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer4">
+                    <input type="radio" name="cau4" formControlName="cau4" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau4">
+                        Thứ hai.
+                    </label>
+
+                </div>
+                <ng-template #answer4>
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="B">
+                        <label for="cau4">
+                            Thứ hai.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau4 == 'C'; else condition8">
+                    <input type="radio" name="cau4" formControlName="cau4" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Thứ ba.
+                    </label>
+                </div>
+                <ng-template #condition8 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="C">
+                        <label for="cau4">
+                            Thứ ba.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 5) Từ thích hợp để điền vào chỗ chấm là: <br>
+                    Thành phố Long Khánh được xem là trung tâm của ……………
+
+                </h2>
+                <div *ngIf="isSubmit else answer5">
+                    <input type="radio" name="cau5" formControlName="cau5" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau5">
+                        Cây ăn trái vùng nhiệt đới.
+                    </label>
+
+                </div>
+                <ng-template #answer5>
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="A">
+                        <label for="cau5">
+                            Cây ăn trái vùng nhiệt đới.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau5 == 'B';  else condition9">
+                    <input type="radio" name="cau5" formControlName="cau5" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau5">
+                        Cây công nghiệp lâu năm.
+                    </label>
+                </div>
+                <ng-template #condition9>
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="B">
+                        <label for="cau5">
+                            Cây công nghiệp lâu năm.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  && answerForm.value.cau5 == 'C'; else condition10">
+                    <input type="radio" name="cau5" formControlName="cau5" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau5">
+                        Các loại rau, đậu.
+                    </label>
+                </div>
+                <ng-template #condition10 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="C">
+                        <label for="cau5">
+                            Các loại rau, đậu.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 6) Nguyên nhân chính nào để các trung tâm buôn bán hiện đại có thể được
+                    hình thành ở thành phố Long Khánh?
+                </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau6 == 'A';   else condition12">
+                    <input type="radio" name="cau6" formControlName="cau6" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau6">
+                        Hàng hóa đa dạng, dân cư đông đúc.
+                    </label>
+
+                </div>
+                <ng-template #condition12>
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="A">
+                        <label for="cau6">
+                            Hàng hóa đa dạng, dân cư đông đúc.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer6">
+                    <input type="radio" name="cau6" formControlName="cau6" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau6">
+                        Giao thông thuận lợi, đời sống người dân ngày càng cao.
+                    </label>
+
+                </div>
+                <ng-template #answer6>
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="B">
+                        <label for="cau6">
+                            Giao thông thuận lợi, đời sống người dân ngày càng cao.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau6 == 'C';  else condition11">
+                    <input type="radio" name="cau6" formControlName="cau6" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau6">
+                        Tạo điều kiện việc làm cho người dân.
+                    </label>
+                </div>
+                <ng-template #condition11 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="C">
+                        <label for="cau6">
+                            Tạo điều kiện việc làm cho người dân.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 7) Thị trường tiêu thụ chủ yếu của các loại cây ăn trái của thành phố Long Khánh là:
+
+                </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau7 == 'A'; else condition14">
+                    <input type="radio" name="cau7" formControlName="cau7" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau7">
+                        Tiêu thụ tại chỗ và cung cấp cho khu vực lân cận, đặc biệt là thành phố Đà Lạt.
+                    </label>
+
+                </div>
+                <ng-template #condition14>
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="A">
+                        <label for="cau7">
+                            Tiêu thụ tại chỗ và cung cấp cho khu vực lân cận, đặc biệt là thành phố Đà Lạt.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau7 == 'B';  else condition13">
+                    <input type="radio" name="cau7" formControlName="cau7" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau7">
+                        Tiêu thụ tại chỗ và cung cấp cho khu vực lân cận, đặc biệt là thành phố Đà Lạt.
+                    </label>
+
+                </div>
+                <ng-template #condition13>
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="B">
+                        <label for="cau7">
+                            Tiêu thụ tại chỗ và cung cấp cho khu vực lân cận, đặc biệt là thành phố Đà Lạt.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer7">
+                    <input type="radio" name="cau7" formControlName="cau7" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau7">
+                        Tiêu thụ tại chỗ và cung cấp cho khu vực lân cận, đặc biệt là các thành phố lớn
+                    </label>
+                    <label style="color:#0000e6;font-weight:bold  ">phía bắc.</label>
+                </div>
+                <ng-template #answer7 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="C">
+                        <label for="cau7">
+                            Tiêu thụ tại chỗ và cung cấp cho khu vực lân cận, đặc biệt là các thành phố lớn
+                        </label>
+                        <label>phía bắc.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 8) Địa điểm du lịch nào dưới đây KHÔNG thuộc địa phận thành phố Long Khánh?
+                </h2>
+                <div *ngIf="isSubmit && answerForm.value.cau8 == 'A'; else condition15">
+                    <input type="radio" name="cau8" formControlName="cau8" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau8">
+                        Khu du lịch Suối Tre.
+                    </label>
+                </div>
+                <ng-template #condition15>
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="A">
+                        <label for="cau8">
+                            Khu du lịch Suối Tre.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  && answerForm.value.cau8 == 'B';  else condition16">
+                    <input type="radio" name="cau8" formControlName="cau8" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau8">
+                        Khu du lịch Suối Tre.
+                    </label>
+                </div>
+                <ng-template #condition16>
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="B">
+                        <label for="cau8">
+                            Khu du lịch Suối Tre.
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer8">
+                    <input type="radio" name="cau8" formControlName="cau8" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau8">
+                        Khu du lịch Bửu Long.
+
+                    </label>
+                </div>
+                <ng-template #answer8 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="C">
+                        <label for="cau8">
+                            Khu du lịch Bửu Long.
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>
+                    Câu 9) Các loại cây ăn trái tiêu biểu của thành phố Long Khánh là:
+                </h2>
+                <div *ngIf="isSubmit  && answerForm.value.cau9 == 'A'; else condition18">
+                    <input type="radio" name="cau9" formControlName="cau9" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau9">
+                        Táo, nhãn, vải, đào, hồng, cam, quýt,...
+                    </label>
+
+                </div>
+                <ng-template #condition18>
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="A">
+                        <label for="cau9">
+                            Táo, nhãn, vải, đào, hồng, cam, quýt,...
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit else answer9">
+                    <input type="radio" name="cau9" formControlName="cau9" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau9">
+                        Sầu riêng, chôm chôm, chuối, xoài, măng cụt,...
+                    </label>
+                </div>
+                <ng-template #answer9>
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="B">
+                        <label for="cau9">
+                            Sầu riêng, chôm chôm, chuối, xoài, măng cụt,...
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau9 == 'C'; else condition17">
+                    <input type="radio" name="cau9" formControlName="cau9" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Cam, bưởi, chanh, mãng cầu, dưa hấu, thanh long,
+                    </label>
+                </div>
+                <ng-template #condition17 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="C">
+                        <label for="cau9">
+                            Cam, bưởi, chanh, mãng cầu, dưa hấu, thanh long,
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group " style="padding:0 20px 20px 20px;">
+                <h2>
+                    Câu 10) Kể tên một số Khu công nghiệp thuộc thành phố Long Khánh.
+                </h2>
+                <div *ngIf="isSubmit  else answer10">
+                    <input type="radio" name="cau10" formControlName="cau10" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau10">
+                        KCN Long Khánh, cụm công nghiệp Suối Tre, Xuân Tân,...
+                    </label>
+                </div>
+                <ng-template #answer10>
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="A">
+                        <label for="cau10">
+                            KCN Long Khánh, cụm công nghiệp Suối Tre, Xuân Tân,...
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau10 == 'B'; else condition19">
+                    <input type="radio" name="cau10" formControlName="cau10" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau10">
+                        KCN Long Khánh, Sông Mây, Amata, Hố Nai,...
+                    </label>
+                </div>
+                <ng-template #condition19>
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="B">
+                        <label for="cau10">
+                            KCN Long Khánh, Sông Mây, Amata, Hố Nai,...
+                        </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau10 == 'C';  else condition20">
+                    <input type="radio" name="cau10" formControlName="cau10" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau10">
+                        Cụm công nghiệp Suối Tre, Amata, Phú Hữu, Phước An,...
+                    </label>
+                </div>
+                <ng-template #condition20 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="C">
+                        <label for="cau10">
+                            Cụm công nghiệp Suối Tre, Amata, Phú Hữu, Phước An,...
+                        </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group row ">
+                <div class="col-md-3 justify-content-left text-center" style="padding-left:0">
+
+                    <a style="color:white;text-decoration: none;cursor: pointer;" (click)="cancel()">
+                        <button type="submit" class="btn btn-primary"
+                            style="margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px">
+                            Trở về
+                        </button>
+                    </a>
+
+                </div>
+                <div class="col-md-6">
+                    <div *ngIf="!isSubmit else result" class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary"
+                            style="margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px"
+                            (click)="onSubmit()">Nộp bài </button>
+                    </div>
+                    <ng-template #result>
+                        <div class="form-group justify-content-center">
+                            <div class="col-md-12 text-center" style="padding:20px 0;">
+                                <h2>Số câu đúng là: &nbsp; <span style="color:#0000e6">{{point}}</span>/<span
+                                        style="color:red">10</span></h2>
+                                <h2>Số điểm của bạn là: &nbsp;<span style="color:#0000e6">{{point}}</span></h2>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a routerLink="/danhsachcauhoi"  class="btn btn-primary quest">Câu hỏi</a>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>

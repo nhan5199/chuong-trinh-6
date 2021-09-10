@@ -1,0 +1,447 @@
+<div class="card" style="background-color: #03A66A;">
+    <div class="card-body">
+        <form [formGroup]="answerForm" style="margin:0 auto;width:60%">
+            <h1>Huyện Định Quán</h1>
+            <div class="form-group ">
+                <h2>Câu 1) Nêu vị trí địa lí của huyện Định Quán.</h2>
+                <div *ngIf="isSubmit else answer1">
+                    <input type="radio" name="cau1" formControlName="cau1" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau1">
+                        Huyện Định Quán nằm ở phía bắc của tỉnh Đồng Nai.</label>
+                </div>
+                <ng-template #answer1>
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="A">
+                        <label for="cau1">
+                            Huyện Định Quán nằm ở phía bắc của tỉnh Đồng Nai.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau1 == 'B'; else condition1">
+                    <input type="radio" name="cau1" formControlName="cau1" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        Huyện Định Quán nằm ở phía nam của tỉnh Đồng Nai.</label>
+
+                </div>
+                <ng-template #condition1>
+                    <div>
+                        <input type="radio" name="cau1" formControlName="cau1" value="B">
+                        <label for="cau1">Huyện Định Quán nằm ở phía đông của tỉnh Đồng Nai.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau1 == 'C';  else condition2">
+                    <input type="radio" name="cau1" formControlName="cau1" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        Huyện Định Quán nằm ở phía đông của tỉnh Đồng Nai.</label>
+                </div>
+                <ng-template #condition2 [disabled]="true">
+                    <div style="padding-left:20px">
+                        <input type="radio" name="cau1" formControlName="cau1" value="C">
+                        <label for="cau1">Huyện Định Quán nằm ở phía đông của tỉnh Đồng Nai.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group justify-content-center">
+                <h2>Câu 2) Định Quán giáp với các huyện Xuân Lộc, Thống Nhất,
+                    Trảng Bom và TP. Long Khánh ở phía nào?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau2 == 'A'; else condition3">
+                    <input type="radio" name="cau2" formControlName="cau2" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau1">
+                        Phía đông.</label>
+
+                </div>
+                <ng-template #condition3>
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="A">
+                        <label for="cau1">Phía đông.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer2">
+                    <input type="radio" name="cau2" formControlName="cau2" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau2">
+                        Phía nam.</label>
+
+                </div>
+                <ng-template #answer2>
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="B">
+                        <label for="cau1">Phía nam.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau2 == 'C'; else condition4">
+                    <input type="radio" name="cau2" formControlName="cau2" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau2">
+                        Phía bắc.</label>
+                </div>
+                <ng-template #condition4 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau2" formControlName="cau2" value="C">
+                        <label for="cau2">Phía bắc.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 3) Phía đông của huyện Định Quán giáp với tỉnh nào? </h2>
+                <div *ngIf="isSubmit  else answer3">
+                    <input type="radio" name="cau3" formControlName="cau3" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau3">Tỉnh Bình Thuận.</label>
+
+                </div>
+                <ng-template #answer3>
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="A">
+                        <label for="cau3">Tỉnh Bình Thuận.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau3 == 'B'; else condition6">
+                    <input type="radio" name="cau3" formControlName="cau3" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau3">Tỉnh Bình Dương.</label>
+
+                </div>
+                <ng-template #condition6>
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="B">
+                        <label for="cau3">Tỉnh Bình Dương.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau3 == 'C';  else condition5">
+                    <input type="radio" name="cau3" formControlName="cau3" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau3">Tỉnh Bình Phước</label>
+                </div>
+                <ng-template #condition5 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau3" formControlName="cau3" value="C">
+                        <label for="cau3">Tỉnh Bình Phước.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 4) Huyện Định Quán có những lợi thế để phát triển ngành nghề nào?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau4 == 'A'; else condition7">
+                    <input type="radio" name="cau4" formControlName="cau4" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Nuôi trồng thủy sản, trồng cây lương thực và chăn nuôi gia súc.</label>
+
+                </div>
+                <ng-template #condition7>
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="A">
+                        <label for="cau4">Nuôi trồng thủy sản, trồng cây lương thực và chăn nuôi gia súc.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau4 == 'B'; else condition8">
+                    <input type="radio" name="cau4" formControlName="cau4" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Nuôi trồng thủy sản, trồng rừng và chăn nuôi gia cầm.</label>
+
+                </div>
+                <ng-template #condition8>
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="B">
+                        <label for="cau4">Nuôi trồng thủy sản, trồng rừng và chăn nuôi gia cầm.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer4">
+                    <input type="radio" name="cau4" formControlName="cau4" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau4">
+                        Nuôi trồng thủy sản, trồng cây ăn trái và cây công nghiệp lâu năm .</label>
+                </div>
+                <ng-template #answer4 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau4" formControlName="cau4" value="C">
+                        <label for="cau4"> Nuôi trồng thủy sản, trồng cây ăn trái và cây công nghiệp lâu năm .</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 5) Vào năm nào, huyện Định Quán có diện tích
+                    và sản lượng điều cao nhất tỉnh Đồng Nai?</h2>
+                <div *ngIf="isSubmit  else answer5">
+                    <input type="radio" name="cau5" formControlName="cau5" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau5">
+                        Năm 2014.</label>
+
+                </div>
+                <ng-template #answer5>
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="A">
+                        <label for="cau5">Năm 2014. </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau5 == 'B'; else condition10">
+                    <input type="radio" name="cau5" formControlName="cau5" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau5">
+                        Năm 2015. </label>
+
+                </div>
+                <ng-template #condition10>
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="B">
+                        <label for="cau5">Năm 2015. </label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau5 == 'C';  else condition9">
+                    <input type="radio" name="cau5" formControlName="cau5" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau5">
+                        Năm 2016.</label>
+                </div>
+                <ng-template #condition9 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau5" formControlName="cau5" value="C">
+                        <label for="cau5">Năm 2016.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 6) Vào năm 2014, huyện Định Quán có diện tích và
+                    sản lượng cà phê cao thứ mấy của tỉnh Đồng Nai?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau6 == 'A'; else condition11">
+                    <input type="radio" name="cau6" formControlName="cau6" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau6">Thứ nhất.</label>
+
+                </div>
+                <ng-template #condition11>
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="A">
+                        <label for="cau6">Thứ nhất.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer6">
+                    <input type="radio" name="cau6" formControlName="cau6" value="B">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau6">
+                        Thứ hai (sau huyện Cẩm Mỹ).</label>
+
+                </div>
+                <ng-template #answer6>
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="B">
+                        <label for="cau6">Thứ hai (sau huyện Cẩm Mỹ).</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau6 == 'C';  else condition12">
+                    <input type="radio" name="cau6" formControlName="cau6" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau6">
+                        Thứ ba (sau huyện Cẩm Mỹ, Trảng Bom).</label>
+                </div>
+                <ng-template #condition12 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau6" formControlName="cau6" value="C">
+                        <label for="cau6">Thứ ba (sau huyện Cẩm Mỹ, Trảng Bom).</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 7) Huyện Định Quán chú trọng phát triển mạnh các loại cây ăn trái nhờ vào lợi thế nào? </h2>
+                <div *ngIf="isSubmit  else answer7">
+                    <input type="radio" name="cau7" formControlName="cau7" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau7">
+                        Lợi thế về đất đai, khí hậu, kinh nghiệm của người dân.</label>
+
+                </div>
+                <ng-template #answer7>
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="A">
+                        <label for="cau7">Lợi thế về đất đai, khí hậu, kinh nghiệm của người dân.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau7 == 'B'; else condition14">
+                    <input type="radio" name="cau7" formControlName="cau7" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau7">
+                        Lợi thế về vị trí địa lí thuận lợi.</label>
+
+                </div>
+                <ng-template #condition14>
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="B">
+                        <label for="cau7">Lợi thế về vị trí địa lí thuận lợi.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau7 == 'C';  else condition13">
+                    <input type="radio" name="cau7" formControlName="cau7" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau7">
+                        Lợi thế về diện tích mặt nước lớn, nhiều sông suối, ao hồ.</label>
+                </div>
+                <ng-template #condition13 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau7" formControlName="cau7" value="C">
+                        <label for="cau7">Lợi thế về diện tích mặt nước lớn, nhiều sông suối, ao hồ.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 8) Từ thích hợp để điền vào chỗ chấm trong câu sau là: <br>
+                    “Huyện Định Quán là vùng …… quan trọng của tỉnh Đồng Nai.”
+                </h2>
+                <div *ngIf="isSubmit  else answer8">
+                    <input type="radio" name="cau8" formControlName="cau8" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau8">nuôi trồng thủy sản.</label>
+
+                </div>
+                <ng-template #answer8>
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="A">
+                        <label for="cau8">nuôi trồng thủy sản.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau8 == 'B'; else condition15">
+                    <input type="radio" name="cau8" formControlName="cau8" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau8">chăn nuôi gia cầm.</label>
+
+                </div>
+                <ng-template #condition15>
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="B">
+                        <label for="cau8">chăn nuôi gia cầm.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau8 == 'C';  else condition16">
+                    <input type="radio" name="cau8" formControlName="cau8" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau8">trồng cây công nghiệp.</label>
+                </div>
+                <ng-template #condition16 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau8" formControlName="cau8" value="C">
+                        <label for="cau8">trồng cây công nghiệp.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group ">
+                <h2>Câu 9) Nghề nuôi cá bè trên sông, trên hồ Trị An phát triển
+                    nhanh đã đem đến lợi ích gì cho người dân nơi đây?</h2>
+                <div *ngIf="isSubmit  else answer9">
+                    <input type="radio" name="cau9" formControlName="cau9" value="A">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau9">
+                        Góp phần tạo công ăn việc làm và tăng thu nhập cho người dân địa phương.</label>
+
+                </div>
+                <ng-template #answer9>
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="A">
+                        <label for="cau9">Góp phần tạo công ăn việc làm và
+                            tăng thu nhập cho người dân địa phương.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau9 == 'B'; else condition18">
+                    <input type="radio" name="cau9" formControlName="cau9" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau9">
+                        Góp phần tạo công ăn việc làm người dân địa phương.</label>
+
+                </div>
+                <ng-template #condition18>
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="B">
+                        <label for="cau9">Góp phần tạo công ăn việc làm người dân địa phương.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau9 == 'C'; else condition17">
+                    <input type="radio" name="cau9" formControlName="cau9" value="C">
+                    <label style="color:red;font-weight:bold  " for="cau4">
+                        Góp phần tạo tăng thu nhập cho người dân địa phương.</label>
+                </div>
+                <ng-template #condition17 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau9" formControlName="cau9" value="C">
+                        <label for="cau9">
+                            Góp phần tạo tăng thu nhập cho người dân địa phương.</label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group " style="padding:0 20px 20px 20px;">
+                <h2>Câu 10) Những lí do nào giúp huyện Định Quán trở thành
+                    vùng nuôi trồng thủy sản quan trọng của tỉnh Đồng Nai?</h2>
+                <div *ngIf="isSubmit && answerForm.value.cau10 == 'A';  else condition20">
+                    <input type="radio" name="cau10" formControlName="cau10" value="A">
+                    <label style="color:red;font-weight:bold  " for="cau10">
+                        Ứng dụng và cải tiến kĩ thuật nuôi trồng, sử dụng diện tích
+                        mặt nước hiệu quả, đầu</label>
+                    <label style="color:red;font-weight:bold  "> tư vốn lớn.</label>
+
+                </div>
+                <ng-template #condition20>
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="A">
+                        <label for="cau10">
+                            Ứng dụng và cải tiến kĩ thuật nuôi trồng, sử dụng diện tích
+                            mặt nước hiệu quả, đầu</label>
+                        <label> tư vốn lớn.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit && answerForm.value.cau10 == 'B'; else condition19">
+                    <input type="radio" name="cau10" formControlName="cau10" value="B">
+                    <label style="color:red;font-weight:bold  " for="cau10">
+                        Diện tích mặt nước lớn, nhiều sông suối, ao hồ, sử dụng diện tích mặt nước hiệu quả.</label>
+
+                </div>
+                <ng-template #condition19>
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="B">
+                        <label for="cau10">
+                            Diện tích mặt nước lớn, nhiều sông suối, ao hồ, sử dụng diện tích mặt nước hiệu quả.</label>
+                    </div>
+                </ng-template>
+                <div *ngIf="isSubmit  else answer10">
+                    <input type="radio" name="cau10" formControlName="cau10" value="C">
+                    <label style="color:#0000e6;font-weight:bold  " for="cau10">
+                        Diện tích mặt nước lớn, nhiều sông suối, ao hồ, sử dụng diện tích mặt
+                        nước hiệu quả,
+                    </label>
+                    <label style="color:#0000e6;font-weight:bold  ">
+                        ứng dụng và cải tiến kĩ thuật nuôi trồng, đầu tư vốn lớn. </label>
+                </div>
+                <ng-template #answer10 [disabled]="true">
+                    <div>
+                        <input type="radio" name="cau10" formControlName="cau10" value="C">
+                        <label for="cau10">
+                            Diện tích mặt nước lớn, nhiều sông suối, ao hồ, sử dụng diện tích mặt
+                            nước hiệu quả,
+                        </label>
+                        <label> ứng dụng và cải tiến kĩ thuật nuôi trồng, đầu tư vốn lớn. </label>
+                    </div>
+                </ng-template>
+            </div>
+
+            <div class="form-group row ">
+                <div class="col-md-3 justify-content-left text-center" style="padding-left:0">
+
+                    <a style="color:white;text-decoration: none;cursor: pointer;" (click)="cancel()">
+                        <button type="submit" class="btn btn-primary"
+                            style="margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px">
+                            Trở về
+                        </button>
+                    </a>
+
+                </div>
+                <div class="col-md-6">
+                    <div *ngIf="!isSubmit else result" class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary"
+                            style="margin: 20px 0;padding:10px 20px;font-size:20px;border-radius:10px"
+                            (click)="onSubmit()">Nộp bài </button>
+                    </div>
+                    <ng-template #result>
+                        <div class="form-group justify-content-center">
+                            <div class="col-md-12 text-center" style="padding:20px 0;">
+                                <h2>Số câu đúng là: &nbsp; <span style="color:#0000e6">{{point}}</span>/<span
+                                        style="color:red">10</span></h2>
+                                <h2>Số điểm của bạn là: &nbsp;<span style="color:#0000e6">{{point}}</span></h2>
+                            </div>
+                        </div>
+                    </ng-template>
+                </div>
+                <div class="col-md-3 text-center">
+                    <a routerLink="/danhsachcauhoi"  class="btn btn-primary quest">Câu hỏi</a>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>

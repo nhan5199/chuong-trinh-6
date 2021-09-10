@@ -1,0 +1,43 @@
+
+
+.contain{
+  transition: background 1s;
+    width: 100%;
+    padding-bottom: 50px;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contain .picture-content{
+    margin-top:30px;
+}
+
+.contain .picture-content img{
+    width: 65%;
+    border-radius: 20px;
+    margin: 2px 0
+}
+
+
+.back{
+    position: relative;
+    margin:0;
+    font-size: 40px;
+    top: 30px;
+    width: 100px;
+    left: 70px;
+  }
+  .back a{
+    color:white;
+    text-decoration: none;
+    transition: .2s;
+  }
+  .back a i{
+    width:50px;
+  }
+  .back a:hover{
+    border: 5px solid white;
+    border-radius: 20px;
+
+  }

@@ -1,0 +1,143 @@
+.con-nguoi {
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition-duration: 1s;
+    background: #FFCC29;
+  }
+
+  
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h5 {
+  font-size: 9vh;
+  margin-bottom: 70px;
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    color: #fff6a9;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #8C4545;
+  }
+}
+
+.image img{
+    width:80%;
+    height:57vh;
+    position:relative;
+    margin:20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 20px black;
+        box-shadow: 0 0 20px black;
+}
+.card-book:hover img{
+    filter: brightness(50%);
+}
+.card-book:hover .card-button{
+    display:block;
+    border:2px solid #0082c8;
+}
+
+.card-button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    background: #1f75c4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background .5s;
+     background: linear-gradient(to left, #0082c8 50%, white 50%)right ;
+      background-size: 200%;
+      position: absolute;
+      left: 47%;
+      margin-left: -47px;
+      top: 50%;
+      margin-top: -50px;
+      display: none;
+
+  
+  }
+  .card-button:hover{
+    background-position: left;
+    color:#0082c8;
+  }
+
+
+
+
+
+.back{
+    position: relative;
+    margin:0;
+    font-size: 40px;
+    top: 10px;
+    width: 100px;
+    left: 40px;
+  }
+  .back a{
+    color:white;
+    text-decoration: none;
+    transition: .2s;
+  }
+  .back a i{
+    width:50px;
+  } 
+  .back a:hover{
+    border: 5px solid white;
+    border-radius: 20px;
+  
+  }

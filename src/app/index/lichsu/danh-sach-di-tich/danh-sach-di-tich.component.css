@@ -1,0 +1,189 @@
+.di-tich {
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition-duration: 1s;
+    background: #056CF2;
+    height: calc(100vh - 83px);
+  }
+
+
+.card-book {
+    margin:0 auto;
+    width: 90%;
+    height: 40%;
+    
+}
+.card-book .image {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    border:5px solid white;  
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 20px black;
+        box-shadow: 0 0 20px black;
+}
+.card-book .image img {
+    width: 100%;
+    height:100%;
+    transition: .5s;
+    position: relative;
+}
+.card-book:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);
+ }
+.card-book .details {
+    border-radius: 10px;
+    position: absolute;
+    top: 8%;
+    left: 9%;
+    width: 70%;
+    height: 91%;
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.card-book:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card-book .details .center {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card-book .details .center{
+    width: 100%;
+    height: 60%;
+}
+.card-book .details .center h1{
+    font-family: Pacifico;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.card-book .details .center p{
+    margin-top:20px;
+    font-family: Lovers Quarrel;
+    font-size: 40px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+h5 {
+  font-size: 9vh;
+  margin: 40px;
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    color: #fff6a9;
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+/*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    color: white;
+  }
+}
+
+.card-button {
+    padding: 15px 20px;
+    border-radius: 50px;
+    background: #1f75c4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: background .5s;
+     background: linear-gradient(to left, #0082c8 50%, #ED213A 50%)right ;
+      background-size: 200%;
+    position:absolute;
+    bottom: 12%;
+    left:28%;
+  
+  }
+  .card-button:hover{
+    background-position: left;
+  }
+
+
+
+
+
+
+  .back{
+    position: relative;
+    margin:0;
+    font-size: 40px;
+    top: 10px;
+    width: 100px;
+    left: 40px;
+  }
+  .back a{
+    color:white;
+    text-decoration: none;
+    transition: .2s;
+  }
+  .back a i{
+    width:50px;
+  } 
+  .back a:hover{
+    border: 5px solid white;
+    border-radius: 20px;
+  
+  }
