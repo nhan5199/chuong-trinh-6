@@ -1,15 +1,12 @@
-@media(min-width:800px){
+@media(min-width:1100px){
   .first-image-content {
     position: relative;
     font-family: Arial;
     background: #11998e;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 41.4vw;
 
-  }
-  .first-image-content .img{
-    margin: 0 auto;
+
   }
   .first-image-content img{
       width: calc(100% - 70px);
@@ -17,6 +14,9 @@
       margin-left: 35px;
       border: 5px solid orange;
       border-radius: 15px;
+
+      margin:0.5vw;
+      margin-left:2vw;
   }
   .first-image-content h2{
       color: yellow;
@@ -40,45 +40,100 @@
   }
 }
 
-@media(max-width:800px){
-  .first-image-content {
-    position: relative;
-    font-family: Arial;
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 150vw;
 
+@media(max-width:1090px){
+  @media (orientation : portrait){
+    .first-image-content {
+      position: relative;
+      font-family: Arial;
+      background: #11998e;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      height: 150vw;
+
+    }
+    .first-image-content img{
+        width:85vw;
+        height: 70vw;
+        margin-top: 40vw;
+        margin-left:7vw;
+        border: 5px solid orange;
+        border-radius: 15px;
+
+    }
+    .first-image-content h2{
+        color: yellow;
+        top:60vw;
+        left:20vw;
+        position:absolute;
+        font-size: 6vw;
+    }
+    .text-block-first-image{
+      position: absolute;
+      top: 45vw;
+      right: 17vw;
+    }
+    .first-image-content .first-image-block-content {
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+      color: white;
+      text-align: center;
+    }
+    .first-image-block-content h3{
+      font-size: 1.8vw;
+      margin:0
+    }
+    .first-image-block-content h1{
+      font-size: 2.2vw;
+    }
   }
-  .first-image-content img{
-    margin-top: 40vw;
-  }
-  .first-image-content img{
-      width:85vw;
-      height: 70vw;
-      margin-left: 35px;
-      border: 5px solid orange;
-      border-radius: 15px;
-  }
-  .first-image-content h2{
-      color: yellow;
-      top:200px;
-      left:225px;
-      position:absolute;
-      font-size: 6em;
-  }
-  .text-block-first-image{
-    position: absolute;
-    top: 60px;
-    right: 60px;
-  }
-  .first-image-content .first-image-block-content {
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    margin: 10px 20px 60px 20px;
+
+  @media (orientation:landscape){
+    .first-image-content {
+      position: relative;
+      font-family: Arial;
+      background: #11998e;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      height:63vw;
+
+    }
+    .first-image-content img{
+      margin-top: 1.5vw;
+    }
+    .first-image-content img{
+        width:85vw;
+        height: 50vw;
+        margin-left: 7vw;
+        border: 5px solid orange;
+        border-radius: 15px;
+
+    }
+    .first-image-content h2{
+        color: yellow;
+        top:15vw;
+        left:15vw;
+        position:absolute;
+        font-size: 6vw;
+    }
+    .text-block-first-image{
+      position: absolute;
+      top: 6vw;
+      right: 17vw;
+    }
+    .first-image-content .first-image-block-content {
+      background-color: rgb(0, 0, 0); /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+      color: white;
+      text-align: center;
+    }
+    .first-image-block-content h3{
+      font-size: 1.8vw;
+      margin:0
+    }
+    .first-image-block-content h1{
+      font-size: 2.2vw;
+    }
   }
 
 }

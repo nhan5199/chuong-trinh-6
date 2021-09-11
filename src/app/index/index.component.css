@@ -1,11 +1,7 @@
 .menu{
     width: 100%;
-    height: calc(100vh - 80px);
 }
 .nav{
-    /* background: #11998e;
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
-    background: linear-gradient(to right, #38ef7d, #11998e);  */
 
     background-color: #ff8000;
     width: 100%;
@@ -23,19 +19,19 @@
 .value1, .value2, .value3, .value4, .value5{
     display:none;
     color: black;
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: bold;
     transition: background 1s;
 }
 .icon1, .icon2, .icon3, .icon4, .icon5{
     color: white;
-    font-size: 3vw;
+    font-size: 2vw;
     padding: 10px 0;
     opacity:1;
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 1100px) {
   .con1:hover .icon1, .active .icon1,.con2:hover .icon2, .active .icon2,.con3:hover .icon3, .active .icon3,.con4:hover .icon4, .active .icon4, .con5:hover .icon5, .active .icon5{
     opacity:0;
     display:none;
@@ -71,7 +67,7 @@
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 1090px) {
   .icon1, .icon2, .icon3, .icon4, .icon5{
     color: white;
     font-size: 5vw;

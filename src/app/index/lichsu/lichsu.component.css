@@ -1,100 +1,269 @@
-.lich-su {
-  width:100%;
-  margin:0 auto;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  transition-duration: 1s;
-  position: absolute;
-  background: #FFCC29;
-  height: calc(100vh - 80px);
-}
+@media (min-width :1100px) {
+  .lich-su {
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition-duration: 1s;
+    position: absolute;
+    background: #FFCC29;
+  }
+  .col-lg-11{
+    height:88vh;
+    margin:0 auto;
+    padding:0;
+  }
 
-.lich-su .col1, .col2{
-  margin-top:80px;
-  padding:0;
+  .col-lg-4{
+    padding:5px;
+    padding-top:2vw;
+    margin:0;
+  }
+  .lich-su img{
+    width:80%;
+    height: 60vh;
+    margin-top:5%;
+    opacity:1;
+    position: relative;
+    border:2px solid green;
+    border-radius: 10px;
 
-}
-.lich-su img{
-  width:80%;
-  height: 60vh;
-  margin-top:5%;
-  opacity:1;
-  position: relative;
-  border:2px solid green;
-  border-radius: 10px;
+  }
+  .col-lg-4:hover img{
+    top:-20px;
+    transition-duration: .5s;
+    opacity:1;
+  }
 
-}
-.col1:hover img, .col2:hover img{
-  top:-20px;
-  transition-duration: .5s;
-  opacity:1;
-}
-
-.go-corner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background: #FDC830;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-radius: 0 4px 0 32px;
-}
-
-.go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-  font-family: courier, sans;
-}
-
-.card1 {
-  left:12%;
-  display: block;
-  position: absolute;
-  width: 70%;
-  background-color: #f2f8f9;
-  border-radius: 4px;
-  padding: 15px 24px;
-  margin: 12px;
-  text-decoration: none;
-  z-index: 0;
-  overflow: hidden;
-  /* box-shadow: 5px 5px 5px 5px black; */
-  -webkit-box-shadow: 0 0 20px black;
-        box-shadow: 0 0 20px black;
-}
-.card1 p{
-  font-weight: bold;
-  font-size: 30px;
-  color:black;
-}
-.card1:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-   background: #FDC830;  /* fallback for old browsers */
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: #FDC830;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 50% 50%;
-  transition: transform 0.25s ease-out;
+    border-radius: 0 4px 0 32px;
+  }
+
+  .go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+  }
+
+  .card1 {
+    left:12%;
+    display: block;
+    position: absolute;
+    width: 70%;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 15px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    /* box-shadow: 5px 5px 5px 5px black; */
+    -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+  }
+  .card1 p{
+    font-weight: bold;
+    font-size: 2vw;
+    color:black;
+    line-height: 35px;
+  }
+  .card1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+     background: #FDC830;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+  .card1:hover:before {
+    transform: scale(21);
+  }
+  .card1:hover p {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+
 }
-.card1:hover:before {
-  transform: scale(21);
-}
-.card1:hover p {
-  transition: all 0.3s ease-out;
-  color: #ffffff;
+
+
+@media (max-width : 1090px){
+    @media (orientation : portrait){
+      .lich-su {
+        width:100%;
+        margin:0 auto;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        transition-duration: 1s;
+        position: absolute;
+        background: #FFCC29;
+        height:220vh;
+      }
+      .col-lg-11{
+        height:88vh;
+        margin:0 auto;
+        padding:0;
+      }
+
+      .col-lg-4{
+        padding:5px;
+        padding-top:2vw;
+        margin:60px 0;
+
+      }
+      .col1{
+        margin-top: 3vw;;
+      }
+
+      .lich-su img{
+        width:80%;
+        height: 45vh;
+        margin-top:5%;
+        opacity:1;
+        position: relative;
+        border: 4px solid yellow;
+        border-radius: 10px;
+        border-bottom:none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+      }
+      .go-arrow{
+        display: none;
+      }
+      .card1 {
+        display: block;
+        position: absolute;
+        width: 78%;
+        left:11%;
+        border: 4px solid yellow;
+        border-top:none;
+        background: #FDC830;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 4px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding: 15px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+      }
+      .card1 p{
+        font-weight: bold;
+        font-size: 8vw;
+        color:white;
+        line-height: 40px;
+      }
+      .card1:hover:before {
+        transform: scale(21);
+      }
+      .card1:hover p {
+        transition: all 0.3s ease-out;
+        color: #ffffff;
+      }
+    }
+
+    @media (orientation : landscape){
+      .lich-su {
+        width:100%;
+        margin:0 auto;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        transition-duration: 1s;
+        position: absolute;
+        background: #FFCC29;
+        height:300vh;
+      }
+      .col-lg-11{
+        height:88vh;
+        margin:0 auto;
+        padding:0;
+      }
+
+      .col-lg-4{
+        padding:5px;
+        padding-top:2vw;
+        margin:50px 0;
+
+      }
+      .col1{
+        margin-top: 3vw;;
+      }
+      .lich-su img{
+        width:60%;
+        height: 60vh;
+        margin-top:5%;
+        opacity:1;
+        position: relative;
+        border: 4px solid yellow;
+        border-radius: 10px;
+        border-bottom:none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+      }
+      .go-arrow{
+        display: none;
+      }
+      .card1 {
+        display: block;
+        position: absolute;
+        width: 59%;
+        left:20.5vw;
+        border: 4px solid yellow;
+        border-top:none;
+        background: #FDC830;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 4px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding: 15px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        /* box-shadow: 5px 5px 5px 5px black; */
+
+      }
+      .card1 p{
+        font-weight: bold;
+        font-size: 5vw;
+        color:white;
+        padding-top: 10px;
+      }
+      .card1:hover:before {
+        transform: scale(21);
+      }
+      .card1:hover p {
+        transition: all 0.3s ease-out;
+        color: #ffffff;
+      }
+      br{
+        display: none;
+      }
+    }
 }
