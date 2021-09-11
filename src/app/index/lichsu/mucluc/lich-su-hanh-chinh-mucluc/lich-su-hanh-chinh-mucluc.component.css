@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+@media(min-width:1100px){
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
 
 
 .lich-su {
@@ -67,9 +68,129 @@ img{
 }
 .back a i{
   width:50px;
-} 
+}
 .back a:hover{
   border: 5px solid white;
   border-radius: 20px;
 
+}
+}
+
+@media (max-width:1090px){
+  @media (orientation : portrait){
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+
+
+.lich-su {
+  position: absolute;
+  width: 100%;
+  background: #FFCC29;
+}
+.card-content{
+  margin-top:40px
+}
+.image{
+  padding-left:10%;
+}
+.card-content:hover img{
+  margin-top:-20px;
+}
+img{
+  width:80%;
+  height:45vh;
+  margin-left:3vw;
+  position:relative;
+  -webkit-box-shadow: 0 0 20px black;
+              box-shadow: 0 0 20px black;
+}
+.card-content a{
+  position:absolute;
+  left:30%;
+  bottom:10%;
+  z-index:999;
+}
+
+
+.card-button {
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #5CE3F2;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #3940BF;
+  font-size: 7vw;
+  transition: background .5s;
+   background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
+    background-size: 200%;
+
+}
+.card-button:hover{
+  background-position: left;
+
+}
+
+.back{
+  display:none;
+}
+  }
+
+  @media (orientation : landscape){
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+
+
+.lich-su {
+  position: absolute;
+  width: 100%;
+  background: #FFCC29;
+}
+.card-content{
+  margin-top:40px
+}
+.image{
+  padding-left:10%;
+}
+img{
+  width:40%;
+  height:60vh;
+  margin-left:23vw;
+  position:relative;
+  -webkit-box-shadow: 0 0 20px black;
+              box-shadow: 0 0 20px black;
+}
+.card-content a{
+  position:absolute;
+  left:44vw;
+  bottom:2vw;
+  z-index:999;
+}
+
+
+.card-button {
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #5CE3F2;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #3940BF;
+  font-size: 3vw;
+  transition: background .5s;
+   background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
+    background-size: 200%;
+
+}
+.card-button:hover{
+  background-position: left;
+
+}
+
+.back{
+  display:none;
+}
+}
 }

@@ -151,7 +151,7 @@
         margin-bottom: 50vw;
       }
       .col4 a{
-        bottom:14vw;
+        bottom:20vw;
       }
       .go-arrow{
         display: none;
@@ -176,7 +176,7 @@
       }
       .card1 p{
         font-weight: bold;
-        font-size: 8vw;
+        font-size: 6vw;
         color:white;
         line-height: 40px;
       }
