@@ -133,6 +133,10 @@ ul{
   padding:0;
 
 }
+.col-lg-12{
+  margin-top: 20vw;
+    margin-bottom: 45vw;
+}
 .sub-menu .title{
   border: 3px solid black;
   border-top:none;
@@ -158,6 +162,26 @@ a{
   text-decoration: none;
   color:black;
 }
+.lichsu{
+  display: none;
+}
+.lich-su-list:hover .lichsu{
+  display:block;
+}
+
+.dialy{
+  display: none;
+}
+.dia-ly-list:hover .dialy{
+  display:block;
+}
+
+.tainguyen{
+  display: none;
+}
+.tai-nguyen-list:hover .tainguyen{
+  display:block;
+}
   }
 
   @media (min-width:400px) and (max-width:500px){
@@ -167,7 +191,8 @@ a{
   background: #03A66A;
 }
 .col-lg-12{
-  padding:0;
+    margin-top: 30vw;
+    margin-bottom: 72vw;
 }
 ul{
   padding-left: 0;
@@ -220,6 +245,32 @@ ul{
 a{
   text-decoration: none;
   color:black;
+}
+.lichsu{
+  display: none;
+}
+.lich-su-list:hover .lichsu{
+  display:block;
+}
+
+.dialy{
+  display: none;
+}
+.dia-ly-list:hover .dialy{
+  display:block;
+}
+
+.tainguyen{
+  display: none;
+}
+.tai-nguyen-list:hover .tainguyen{
+  display:block;
+}
+.lich-su-list{
+  padding-top:5vw;
+}
+.tai-nguyen-list{
+  margin-bottom:5vw;
 }
   }
 
