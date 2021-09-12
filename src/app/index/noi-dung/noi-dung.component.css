@@ -96,98 +96,262 @@ a{
 
 }
 
-@media (max-width : 1090px){
+@media (orientation : portrait){
+  @media (max-width : 390px){
 
-  @media (orientation : portrait){
-    .table{
-      width:100%;
-      background: #03A66A;
-    }
-    .col-lg-12{
-      padding:0;
-    }
-    ul{
-      padding-left: 0;
-      list-style-type: none;
-    }
-    .title{
-      background: #FFCC29;
+.table{
+  width:100%;
+  background: #03A66A;
+}
+.col-lg-12{
+  padding:0;
+}
+ul{
+  padding-left: 0;
+  list-style-type: none;
+}
+.title{
+  background: #FFCC29;
 
-    }
-    .menu{
-      width:100%;
-      margin-top: 10vw ;
-      padding:0;
-      border: 3px solid black;
-      border-radius: 10px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-    .menu .title{
-      border-top-right-radius: 8px;
-      border-top-left-radius: 8px;
-    }
-    .sub-menu{
-      width:100%;
-      margin:0;
-      padding:0;
+}
+.menu{
+  width:100%;
+  margin-top: 10vw ;
+  padding:0;
+  border: 3px solid black;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.menu .title{
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.sub-menu{
+  width:100%;
+  margin:0;
+  padding:0;
 
-    }
-    .sub-menu .title{
-      border: 3px solid black;
-      border-top:none;
-      background-color: white;
-    }
-    .sub-menu .title p{
-      font-size: 7.7vw;
-      line-height: 40px;
-    }
+}
+.sub-menu .title{
+  border: 3px solid black;
+  border-top:none;
+  background-color: white;
+}
+.sub-menu .title p{
+  font-size: 7.7vw;
+  line-height: 40px;
+}
 
-    .number{
-      display:none;
-    }
-    .title p{
-      font-size: 3em;
-      padding: 30px;
-      margin:0;
-      font-weight: bold;
-      text-align: center;
-    }
+.number{
+  display:none;
+}
+.title p{
+  font-size: 3em;
+  padding: 30px;
+  margin:0;
+  font-weight: bold;
+  text-align: center;
+}
 
-    a{
-      text-decoration: none;
-      color:black;
-    }
+a{
+  text-decoration: none;
+  color:black;
+}
   }
 
-  @media (orientation : landscape){
+  @media (min-width:400px) and (max-width:500px){
+
+.table{
+  width:100%;
+  background: #03A66A;
+}
+.col-lg-12{
+  padding:0;
+}
+ul{
+  padding-left: 0;
+  list-style-type: none;
+}
+.title{
+  background: #FFCC29;
+
+}
+.menu{
+  width:100%;
+  margin-top: 10vw ;
+  padding:0;
+  border: 3px solid black;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.menu .title{
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.sub-menu{
+  width:100%;
+  margin:0;
+  padding:0;
+
+}
+.sub-menu .title{
+  border: 3px solid black;
+  border-top:none;
+  background-color: white;
+}
+.sub-menu .title p{
+  font-size: 7.7vw;
+  line-height: 40px;
+}
+
+.number{
+  display:none;
+}
+.title p{
+  font-size: 3em;
+  padding: 30px;
+  margin:0;
+  font-weight: bold;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+  }
+
+  @media only screen
+ and (min-width: 900px)
+ and (max-width: 1050px) {
+  .table{
+    width:100%;
+    background: #03A66A;
+  }
+  ul{
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .col-lg-6{
+    padding-top:40px;padding-bottom:90px
+  }
+  .title{
+    background: white;
+  }
+  .menu{
+    width:100%;
+    margin-top: 80px ;
+    padding:0;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+  .menu .title{
+    border-top-right-radius: 8px;
+  }
+  .sub-menu{
+    width:100%;
+    margin:0;
+    padding:0;
+
+  }
+  .sub-menu .title{
+    border: 3px solid black;
+    border-top:none;
+  }
+  .sub-menu .title p{
+    font-size: 2.5vw;
+    text-align: center;
+  }
+
+  .number{
+    background: #FFCC29;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .number p{
+    font-size: 3em;
+    padding: 30px 0;
+    font-weight: bold;
+    margin:0;
+  }
+  .title p{
+    font-size: 3em;
+    padding: 30px;
+    margin:0;
+    font-weight: bold;
+    text-align: center;;
+
+  }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+
+  .lichsu{
+    display: none;
+  }
+  .lich-su-list:hover .lichsu{
+    display:block;
+  }
+
+  .dialy{
+    display: none;
+  }
+  .dia-ly-list:hover .dialy{
+    display:block;
+  }
+
+  .tainguyen{
+    display: none;
+  }
+  .tai-nguyen-list:hover .tainguyen{
+    display:block;
+  }
+
+  .title{
+    transition: background 0.7s;
+     background: linear-gradient(to right, white 50%, #FFCC29 50%) left;
+      background-size: 200%;
+
+  }
+  .title:hover {
+    background-position: right;
+  }
+ }
+ @media only screen
+ and (min-device-width : 768px)
+ and (max-device-width : 850px){
     .table{
       width:100%;
       background: #03A66A;
-    }
-    .col-lg-12{
-      padding:0;
     }
     ul{
       padding-left: 0;
       list-style-type: none;
     }
+    .col-lg-6{
+      padding-top:40px;padding-bottom:90px
+    }
     .title{
-      background: #FFCC29;
-
+      background: white;
+    }
+    .number{
+      display:none;
     }
     .menu{
       width:100%;
-      margin-top: 10vw ;
+      margin-top: 80px ;
       padding:0;
       border: 3px solid black;
       border-radius: 10px;
       border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
     }
     .menu .title{
       border-top-right-radius: 8px;
-      border-top-left-radius: 8px;
     }
     .sub-menu{
       width:100%;
@@ -198,28 +362,310 @@ a{
     .sub-menu .title{
       border: 3px solid black;
       border-top:none;
-      background-color: white;
     }
     .sub-menu .title p{
-      font-size: 7.7vw;
-      line-height: 60px;
+      font-size: 4vw;
+      text-align: center;
     }
 
     .number{
-      display:none;
+      background: #FFCC29;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    .number p{
+      font-size: 3em;
+      padding: 30px 0;
+      font-weight: bold;
+      margin:0;
     }
     .title p{
       font-size: 3em;
       padding: 30px;
       margin:0;
       font-weight: bold;
-      text-align: center;
+      text-align: center;;
+
     }
 
     a{
       text-decoration: none;
       color:black;
+    }
+
+    .lichsu{
+      display: none;
+    }
+    .lich-su-list:hover .lichsu{
+      display:block;
+    }
+
+    .dialy{
+      display: none;
+    }
+    .dia-ly-list:hover .dialy{
+      display:block;
+    }
+
+    .tainguyen{
+      display: none;
+    }
+    .tai-nguyen-list:hover .tainguyen{
+      display:block;
+    }
+
+    .title{
+      transition: background 0.7s;
+       background: linear-gradient(to right, white 50%, #FFCC29 50%) left;
+        background-size: 200%;
+
+    }
+    .title:hover {
+      background-position: right;
     }
   }
 
 }
+
+@media (orientation : landscape){
+
+ @media only screen
+ and (min-width: 1024px)
+ and (max-height: 1366px)
+ and (-webkit-min-device-pixel-ratio: 1.5) {
+
+ }
+ @media only screen
+ and (min-device-width : 768px)
+ and (max-device-width : 1024px) {
+  .table{
+    width:100%;
+    background: #03A66A;
+  }
+  ul{
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .col-lg-6{
+    padding-top:40px;padding-bottom:90px
+  }
+  .title{
+    background: white;
+  }
+  .menu{
+    width:100%;
+    margin-top: 80px ;
+    padding:0;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+  .menu .title{
+    border-top-right-radius: 8px;
+  }
+  .sub-menu{
+    width:100%;
+    margin:0;
+    padding:0;
+
+  }
+  .sub-menu .title{
+    border: 3px solid black;
+    border-top:none;
+  }
+  .sub-menu .title p{
+    font-size: 2vw;
+
+  }
+
+  .number{
+    background: #FFCC29;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .number p{
+    font-size: 3em;
+    padding: 30px 0;
+    font-weight: bold;
+    margin:0;
+  }
+  .title p{
+    font-size: 3em;
+    padding: 30px;
+    margin:0;
+    font-weight: bold;
+  }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+
+  .lichsu{
+    display: none;
+  }
+  .lich-su-list:hover .lichsu{
+    display:block;
+  }
+
+  .dialy{
+    display: none;
+  }
+  .dia-ly-list:hover .dialy{
+    display:block;
+  }
+
+  .tainguyen{
+    display: none;
+  }
+  .tai-nguyen-list:hover .tainguyen{
+    display:block;
+  }
+
+  .title{
+    transition: background 0.7s;
+     background: linear-gradient(to right, white 50%, #FFCC29 50%) left;
+      background-size: 200%;
+
+  }
+  .title:hover {
+    background-position: right;
+  }
+ }
+
+ @media only screen
+ and (min-width : 374px)
+ and (max-width : 813px){
+  .table{
+    width:100%;
+    background: #03A66A;
+  }
+  .col-lg-12{
+    padding:0;
+  }
+  ul{
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .title{
+    background: #FFCC29;
+
+  }
+  .menu{
+    width:100%;
+    margin-top: 10vw ;
+    padding:0;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .menu .title{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .sub-menu{
+    width:100%;
+    margin:0;
+    padding:0;
+
+  }
+  .sub-menu .title{
+    border: 3px solid black;
+    border-top:none;
+    background-color: white;
+  }
+  .sub-menu .title p{
+    font-size: 7.7vw;
+    line-height: 40px;
+  }
+
+  .number{
+    display:none;
+  }
+  .title p{
+    font-size: 3em;
+    padding: 30px;
+    margin:0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+ }
+
+ @media only screen
+ and (min-width:375px)
+ and (max-width : 750px){
+  .table{
+    width:100%;
+    background: #03A66A;
+  }
+  .col-lg-12{
+    padding:0;
+  }
+  ul{
+    padding-left: 0;
+    list-style-type: none;
+  }
+  .title{
+    background: #FFCC29;
+
+  }
+  .menu{
+    width:100%;
+    margin-top: 10vw ;
+    padding:0;
+    border: 3px solid black;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .menu .title{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .sub-menu{
+    width:100%;
+    margin:0;
+    padding:0;
+
+  }
+  .sub-menu .title{
+    border: 3px solid black;
+    border-top:none;
+    background-color: white;
+  }
+  .sub-menu .title p{
+    font-size: 7.7vw;
+    line-height: 40px;
+  }
+
+  .number{
+    display:none;
+  }
+  .title p{
+    font-size: 3em;
+    padding: 30px;
+    margin:0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  a{
+    text-decoration: none;
+    color:black;
+  }
+ }
+}
+
+
+
+
+
+
+
+
