@@ -1,43 +1,145 @@
 
 
 .contain{
-    transition: background 1s;
-      width: 100%;
-      padding-bottom: 50px;
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  transition: background 1s;
+    width: 100%;
+    padding-bottom: 50px;
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@media(min-width:1100px){
+.contain .picture-content{
+    margin-top:30px;
+}
+}
+
+.contain .picture-content img{
+    width: 65%;
+    border-radius: 20px;
+    margin: 2px 0
+}
+
+
+.back{
+    position: relative;
+    margin:0;
+    font-size: 40px;
+    top: 30px;
+    width: 100px;
+    left: 70px;
   }
-  
-  .contain .picture-content{
-      margin-top:30px;
+  .back a{
+    color:white;
+    text-decoration: none;
+    transition: .2s;
   }
-  
-  .contain .picture-content img{
-      width: 65%;
+  .back a i{
+    width:50px;
+  }
+  .back a:hover{
+    border: 5px solid white;
+    border-radius: 20px;
+
+  }
+
+
+  @media (orientation : portrait){
+
+    @media (max-width:500px){
+      .picture-content{
+        padding-top:7vw;
+      }
+      .back{
+        display:none;
+      }
+      .contain .picture-content img{
+        width: 85vw;
+        border-radius: 20px;
+        margin: 2px 0
+    }
+    }
+
+    @media (min-width: 700px) and (max-width: 1090px){
+      .back{
+        position: relative;
+        margin:0;
+        font-size: 40px;
+        top: 30px;
+        width: 100px;
+        left: 3vw;
+      }
+      .picture-content{
+        padding-top:7vw;
+      }
+      .back a{
+        color:white;
+        text-decoration: none;
+        transition: .2s;
+      }
+      .back a i{
+        width:50px;
+      }
+      .back a:hover{
+        border: 5px solid white;
+        border-radius: 20px;
+
+      }
+      .contain .picture-content img{
+        width: 85vw;
+        border-radius: 20px;
+        margin: 2px 0
+    }
+    }
+  }
+
+  @media (orientation : landscape){
+
+   @media only screen
+   and (min-width: 1024px)
+   and (max-height: 1366px)
+   and (-webkit-min-device-pixel-ratio: 1.5) {
+    .contain .picture-content img{
+      width: 70vw;
       border-radius: 20px;
       margin: 2px 0
   }
-  
-  
-  .back{
-      position: relative;
-      margin:0;
-      font-size: 40px;
-      top: 30px;
-      width: 100px;
-      left: 70px;
-    }
-    .back a{
-      color:white;
-      text-decoration: none;
-      transition: .2s;
-    }
-    .back a i{
-      width:50px;
-    } 
-    .back a:hover{
-      border: 5px solid white;
+   }
+   @media only screen
+   and (min-device-width : 768px)
+   and (max-device-width : 1024px)
+   and (orientation : landscape) {
+    .contain .picture-content img{
+      width: 70vw;
       border-radius: 20px;
-    
+      margin: 2px 0
     }
+    .picture-content{
+      padding-top:7vw;
+    }
+   }
+
+   @media only screen
+   and (min-width : 374px)
+   and (max-width : 813px){
+    .back{
+      display:none;
+    }
+   }
+
+   @media only screen
+   and (min-width:375px)
+   and (max-width : 750px){
+    .back{
+      display:none;
+    }
+    .picture-content{
+      padding-top:7vw;
+    }
+    .contain .picture-content img{
+      width: 70vw;
+      border-radius: 20px;
+      margin: 2px 0
+  }
+   }
+  }
