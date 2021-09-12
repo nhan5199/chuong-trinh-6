@@ -7,10 +7,10 @@
     background-size: auto;
     transition-duration: 1s;
     position: absolute;
-    background: #FFCC29;
+    background: #FFCC29;height:calc(100vh - 83px);
   }
   .col-lg-11{
-    height:88vh;
+    height:85vh;
     margin:0 auto;
     padding:0;
   }
@@ -22,7 +22,7 @@
   }
   .lich-su img{
     width:80%;
-    height: 60vh;
+    height: 55vh;
     margin-top:5%;
     opacity:1;
     position: relative;

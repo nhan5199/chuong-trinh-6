@@ -10,7 +10,7 @@
     transition-duration: 1s;
     position: absolute;
     background: #FFCC29;
-    height: calc(100vh - 86px);
+    height: calc(100vh - 83px);
   }
 
   .lich-su .col2{
