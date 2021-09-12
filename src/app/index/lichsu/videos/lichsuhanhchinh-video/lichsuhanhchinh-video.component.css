@@ -1,6 +1,6 @@
-.contain{
+
+  .contain{
     width: 100%;
-    height: calc(220vh - 80px);
    background: #056CF2;
     transition: 1s;
 }
@@ -54,7 +54,11 @@
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
   }
-
+  @media (max-width:1100px){
+    .title2{
+      margin-top:20px;
+    }
+  }
 
 
   @-webkit-keyframes blink {
@@ -102,3 +106,165 @@
       color: #F2EC94;
     }
   }
+@media (orientation : portrait){
+
+  @media (max-width:500px){
+    .back{
+      display: none;
+    }
+
+    h5 {
+      font-size: 5vw;
+      margin-bottom: 5vw;
+      padding-top:8vw;
+    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+      color: #fccaff; */
+        color: #fff6a9;
+      font-family: "Pacifico", cursive;
+      text-align: center;
+      animation: blink 12s infinite;
+      -webkit-animation: blink 12s infinite;
+    }
+    .contain .video iframe{
+      width: 80vw;
+      height: 31vh;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: 700px) and (max-width: 1090px){
+    h5 {
+      font-size: 8vw;
+      line-height:9vw;
+      margin-bottom: 5vw;
+      padding-top:8vw;
+    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+      color: #fccaff; */
+        color: #fff6a9;
+      font-family: "Pacifico", cursive;
+      text-align: center;
+      animation: blink 12s infinite;
+      -webkit-animation: blink 12s infinite;
+    }
+    .contain .video iframe{
+      width: 80vw;
+      height: 40vh;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (orientation : landscape){
+
+ @media only screen
+ and (min-width: 1024px)
+ and (max-height: 1366px)
+ and (-webkit-min-device-pixel-ratio: 1.5) {
+  h5 {
+    font-size: 5vw;
+    line-height:9vw;
+    margin-bottom: 3vw;
+    padding-top:2vw;
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+      color: #fff6a9;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  .contain .video iframe{
+    width: 80vw;
+    height: 62vh;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+ }
+ @media only screen
+ and (min-device-width : 768px)
+ and (max-device-width : 1024px)
+ and (orientation : landscape) {
+  h5 {
+    font-size: 5vw;
+    line-height:9vw;
+    margin-bottom: 3vw;
+    padding-top:2vw;
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+      color: #fff6a9;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  .contain .video iframe{
+    width: 80vw;
+    height: 60vh;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+ }
+
+ @media only screen
+ and (min-width : 374px)
+ and (max-width : 813px){
+  .back{
+    display:none;
+  }
+  h5 {
+    font-size: 4vw;
+    line-height:9vw;
+    margin-bottom: 2vw;
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+      color: #fff6a9;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  .contain .video iframe{
+    width: 70vw;
+    height: 80vh;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+ }
+
+ @media only screen
+ and (min-width:375px)
+ and (max-width : 750px){
+  .back{
+    display:none;
+  }
+  h5 {
+    font-size: 4vw;
+    line-height:9vw;
+    margin-bottom: 2vw;
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+    color: #fccaff; */
+      color: #fff6a9;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    animation: blink 12s infinite;
+    -webkit-animation: blink 12s infinite;
+  }
+  .contain .video iframe{
+    width: 70vw;
+    height: 70vh;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+ }
+}
+
+
+
