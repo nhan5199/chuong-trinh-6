@@ -101,6 +101,7 @@ a{
 
 .table{
   width:100%;
+  height:163vw;
   background: #03A66A;
 }
 .col-lg-12{
@@ -134,8 +135,7 @@ ul{
 
 }
 .col-lg-12{
-  margin-top: 20vw;
-    margin-bottom: 45vw;
+  margin-top: 10vw;
 }
 .sub-menu .title{
   border: 3px solid black;
@@ -189,10 +189,10 @@ a{
 .table{
   width:100%;
   background: #03A66A;
+  height:163vw;
 }
 .col-lg-12{
-    margin-top: 30vw;
-    margin-bottom: 72vw;
+    margin-top: 15vw;
 }
 ul{
   padding-left: 0;
