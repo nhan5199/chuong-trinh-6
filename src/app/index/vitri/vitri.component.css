@@ -89,38 +89,8 @@
 
 
   @media (orientation : portrait){
-    @media (max-width : 390px){
-      .first-image-content {
 
-        height:162vw;
-
-      }
-      .first-image-content img{
-          width:85vw;
-          height: 65vw;
-          margin-top: 30vw;
-          margin-left: 7vw;
-
-      }
-      .first-image-content h2{
-          top:45vw;
-          left:15vw;
-          font-size: 6vw;
-      }
-      .text-block-first-image{
-        top: 35vw;
-        right: 17vw;
-      }
-      .first-image-block-content h3{
-        font-size: 1.8vw;
-        margin:0
-      }
-      .first-image-block-content h1{
-        font-size: 2.2vw;
-      }
-    }
-
-    @media (min-width:400px) and (max-width:500px){
+    @media (max-width:500px){
       .first-image-content {
 
         height:162vw;
