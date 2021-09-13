@@ -115,6 +115,27 @@ a{
   font-size: 3em;
   text-align: center;
   }
+  .lichsu{
+    display: none;
+  }
+  .lich-su-list:hover .lichsu{
+    display:block;
+  }
+
+  .dialy{
+    display: none;
+  }
+  .dia-ly-list:hover .dialy{
+    display:block;
+  }
+
+  .tainguyen{
+    display: none;
+  }
+  .tai-nguyen-list:hover .tainguyen{
+    display:block;
+  }
+
   @media (max-width:500px){
     .table{
       height:200vw;
@@ -191,18 +212,23 @@ a{
 .table{
   height:68vw;
 }
+
  }
  @media only screen
  and (min-device-width : 768px)
  and (max-device-width : 1024px) {
-
 
  }
 
  @media only screen
  and (min-width : 374px)
  and (max-width : 813px){
-
+  p{
+    text-align: center;
+  }
+  .sub-menu .title p{
+    font-size: 3.5vw;;
+  }
  }
 }
 

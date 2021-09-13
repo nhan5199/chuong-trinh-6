@@ -93,9 +93,9 @@ img{
     padding-left:10%;
   }
   img{
-    width:80%;
-    margin-left:4vw;
-    height:35vh;
+    width:70%;
+    margin-left:9vw;
+    height:40vh;
     position:relative;
     -webkit-box-shadow: 0 0 20px black;
                 box-shadow: 0 0 20px black;
@@ -103,7 +103,7 @@ img{
   }
   .card-content a{
     position:absolute;
-    left:35vw;
+    left:40vw;
     bottom:24vw;
     z-index:999;
   }
@@ -117,7 +117,7 @@ img{
     margin: 0 auto;
     text-decoration: none;
     color: #3940BF;
-    font-size: 6vw;
+    font-size: 4vw;
     transition: background .5s;
      background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
       background-size: 200%;
