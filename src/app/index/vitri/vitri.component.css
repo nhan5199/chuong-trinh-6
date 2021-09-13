@@ -80,10 +80,12 @@
 
     .first-image-block-content h3{
       font-size: 1.8vw;
+      line-height: 15px;
       margin:0
     }
     .first-image-block-content h1{
       font-size: 2.2vw;
+      line-height: 25px;
     }
   }
 
