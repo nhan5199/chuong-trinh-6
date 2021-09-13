@@ -1,40 +1,53 @@
-@media(min-width:1100px){
-  .first-image-content {
-    position: relative;
-    font-family: Arial;
-    background: #11998e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height:41vw;
+.first-image-content {
+  position: relative;
+  font-family: Arial;
+  background: #11998e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+.first-image-content img{
+    border: 5px solid orange;
+    border-radius: 15px;
+
+}
+.first-image-content h2{
+    color: yellow;
+    position:absolute;
+
+}
+.text-block-first-image{
+  position: absolute;
+}
+.first-image-content .first-image-block-content {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+  color: white;
+  text-align: center;
+
+}
+@media(min-width:1100px){
+  .first-image-content{
+    height:41vw;
   }
   .first-image-content img{
-      width: calc(100% - 70px);
-      height: calc(100vh - 100px);
-      margin-left: 35px;
-      border: 5px solid orange;
-      border-radius: 15px;
-      margin:0;
-      margin-top:0.5vw;
-      margin-left:2vw;
+    width: calc(100% - 70px);
+    height: calc(100vh - 100px);
+    margin-left: 35px;
+    margin:0;
+    margin-top:0.5vw;
+    margin-left:2vw;
   }
   .first-image-content h2{
-      color: yellow;
-      top:200px;
-      left:225px;
-      position:absolute;
-      font-size: 6em;
+    top:200px;
+    left:225px;
+    font-size: 6em;
   }
   .text-block-first-image{
-    position: absolute;
     top: 50px;
     right: 60px;
   }
-  .first-image-content .first-image-block-content {
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-    color: white;
-    text-align: center;
+  .first-image-content .first-image-block-content{
     padding: 10px 20px;
     margin: 10px 20px 60px 20px;
   }
@@ -42,11 +55,7 @@
 
   @media (orientation : portrait){
     .first-image-content {
-      position: relative;
-      font-family: Arial;
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       height: 150vw;
 
     }
@@ -55,28 +64,20 @@
         height: 70vw;
         margin-top: 40vw;
         margin-left:7vw;
-        border: 5px solid orange;
-        border-radius: 15px;
+
 
     }
     .first-image-content h2{
-        color: yellow;
+
         top:60vw;
         left:20vw;
-        position:absolute;
         font-size: 6vw;
     }
     .text-block-first-image{
-      position: absolute;
       top: 45vw;
       right: 17vw;
     }
-    .first-image-content .first-image-block-content {
-      background-color: rgb(0, 0, 0); /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-      color: white;
-      text-align: center;
-    }
+
     .first-image-block-content h3{
       font-size: 1.8vw;
       margin:0
@@ -90,11 +91,7 @@
   @media (orientation : portrait){
     @media (max-width : 390px){
       .first-image-content {
-        position: relative;
-        font-family: Arial;
-        background: #11998e;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         height:162vw;
 
       }
@@ -103,27 +100,16 @@
           height: 65vw;
           margin-top: 30vw;
           margin-left: 7vw;
-          border: 5px solid orange;
-          border-radius: 15px;
 
       }
       .first-image-content h2{
-          color: yellow;
           top:45vw;
           left:15vw;
-          position:absolute;
           font-size: 6vw;
       }
       .text-block-first-image{
-        position: absolute;
         top: 35vw;
         right: 17vw;
-      }
-      .first-image-content .first-image-block-content {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-        color: white;
-        text-align: center;
       }
       .first-image-block-content h3{
         font-size: 1.8vw;
@@ -136,11 +122,7 @@
 
     @media (min-width:400px) and (max-width:500px){
       .first-image-content {
-        position: relative;
-        font-family: Arial;
-        background: #11998e;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         height:162vw;
 
       }
@@ -149,27 +131,16 @@
           height: 60vw;
           margin-top: 30vw;
           margin-left: 7vw;
-          border: 5px solid orange;
-          border-radius: 15px;
 
       }
       .first-image-content h2{
-          color: yellow;
           top:45vw;
           left:15vw;
-          position:absolute;
           font-size: 6vw;
       }
       .text-block-first-image{
-        position: absolute;
         top: 35vw;
         right: 17vw;
-      }
-      .first-image-content .first-image-block-content {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-        color: white;
-        text-align: center;
       }
       .first-image-block-content h3{
         font-size: 1.8vw;
@@ -182,12 +153,8 @@
 
     @media (min-width: 700px) and (max-width: 1090px){
       .first-image-content {
-        position: relative;
-        font-family: Arial;
-        background: #11998e;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        height:63vw;
+
+        height:125vw;
 
       }
       .first-image-content img{
@@ -197,34 +164,25 @@
           width:85vw;
           height: 50vw;
           margin-left: 7vw;
-          border: 5px solid orange;
-          border-radius: 15px;
-
+          margin-top:30vw;
       }
       .first-image-content h2{
-          color: yellow;
-          top:15vw;
+          top:45vw;
           left:15vw;
-          position:absolute;
           font-size: 6vw;
       }
       .text-block-first-image{
-        position: absolute;
-        top: 6vw;
+        top: 38vw;
         right: 17vw;
-      }
-      .first-image-content .first-image-block-content {
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-        color: white;
-        text-align: center;
       }
       .first-image-block-content h3{
         font-size: 1.8vw;
-        margin:0
+        margin:0;
+        padding:10px 20px;
       }
       .first-image-block-content h1{
         font-size: 2.2vw;
+        padding:10px 20px;
       }
     }
   }
@@ -236,11 +194,7 @@
   and (max-height: 1366px)
   and (-webkit-min-device-pixel-ratio: 1.5) {
     .first-image-content {
-      position: relative;
-      font-family: Arial;
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       height:70vw;
 
     }
@@ -252,28 +206,19 @@
         height: 50vw;
         margin-left: 7vw;
         margin-top:8vw;
-        border: 5px solid orange;
-        border-radius: 15px;
+
 
     }
     .first-image-content h2{
-        color: yellow;
         top:15vw;
         left:15vw;
-        position:absolute;
         font-size: 6vw;
     }
     .text-block-first-image{
-      position: absolute;
       top: 10vw;
       right: 13vw;
     }
-    .first-image-content .first-image-block-content {
-      background-color: rgb(0, 0, 0); /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-      color: white;
-      text-align: center;
-    }
+
     .first-image-block-content h3{
       font-size: 1.8vw;
       margin:0;
@@ -286,14 +231,9 @@
   }
   @media only screen
   and (min-device-width : 768px)
-  and (max-device-width : 1024px)
-  and (orientation : landscape) {
+  and (max-device-width : 1024px) {
     .first-image-content {
-      position: relative;
-      font-family: Arial;
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       height:63vw;
 
     }
@@ -305,28 +245,19 @@
         height: 50vw;
         margin-top:4vw;
         margin-left: 7vw;
-        border: 5px solid orange;
-        border-radius: 15px;
+
 
     }
     .first-image-content h2{
-        color: yellow;
         top:15vw;
         left:15vw;
-        position:absolute;
         font-size: 6vw;
     }
     .text-block-first-image{
-      position: absolute;
       top: 10vw;
       right: 15vw;
     }
-    .first-image-content .first-image-block-content {
-      background-color: rgb(0, 0, 0); /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-      color: white;
-      text-align: center;
-    }
+
     .first-image-block-content h3{
       font-size: 1.8vw;
       margin:0
@@ -341,11 +272,7 @@
   and (min-width : 374px)
    and (max-width : 813px){
     .first-image-content {
-      position: relative;
-      font-family: Arial;
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       height:63vw;
 
     }
@@ -356,28 +283,19 @@
         width:85vw;
         height: 50vw;
         margin-left: 7vw;
-        border: 5px solid orange;
-        border-radius: 15px;
+
 
     }
     .first-image-content h2{
-        color: yellow;
         top:15vw;
         left:15vw;
-        position:absolute;
         font-size: 6vw;
     }
     .text-block-first-image{
-      position: absolute;
       top: 6vw;
       right: 17vw;
     }
-    .first-image-content .first-image-block-content {
-      background-color: rgb(0, 0, 0); /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-      color: white;
-      text-align: center;
-    }
+
     .first-image-block-content h3{
       font-size: 1.8vw;
       margin:0
@@ -391,11 +309,7 @@
   and (min-width:375px)
   and (max-width : 750px){
     .first-image-content {
-      position: relative;
-      font-family: Arial;
-      background: #11998e;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
       height:63vw;
 
     }
@@ -406,28 +320,19 @@
         width:85vw;
         height: 50vw;
         margin-left: 7vw;
-        border: 5px solid orange;
-        border-radius: 15px;
+
 
     }
     .first-image-content h2{
-        color: yellow;
         top:15vw;
         left:15vw;
-        position:absolute;
         font-size: 6vw;
     }
     .text-block-first-image{
-      position: absolute;
       top: 6vw;
       right: 17vw;
     }
-    .first-image-content .first-image-block-content {
-      background-color: rgb(0, 0, 0); /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
-      color: white;
-      text-align: center;
-    }
+
     .first-image-block-content h3{
       font-size: 1.8vw;
       margin:0
