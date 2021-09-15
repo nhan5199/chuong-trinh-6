@@ -3,13 +3,16 @@
   width:100%;
   background: #03A66A;
 }
+
+
+
 ul{
   padding: 0;
   list-style-type: none;
 }
 .col-lg-6{
   padding-top:40px;
-  padding-bottom:90px
+  padding-bottom:115px
 }
 .title{
   background: white;
