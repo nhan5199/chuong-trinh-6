@@ -1,22 +1,20 @@
 
-@media(min-width:1100px){
+
+
   .contain{
     width: 100%;
-    height: calc(120vh - 80px);
    background: #056CF2;
     transition: 1s;
-  }
+    height: calc(100vh - 87px);
+}
 
-  .contain .video{
-    margin-top: 40px;
-  }x
-  .contain .video iframe{
-    width: 60%;
-    height: 71vh;
-    border-radius: 10px;
-  }
+.contain .video iframe{
+  width: 60%;
+  height: 71vh;
+  border-radius: 10px;
+}
 
-  .back{
+.back{
     position: relative;
     margin:0;
     font-size: 40px;
@@ -52,7 +50,11 @@
     animation: blink 12s infinite;
     -webkit-animation: blink 12s infinite;
   }
-
+  @media (max-width:1100px){
+    .title2{
+      margin-top:20px;
+    }
+  }
 
 
   @-webkit-keyframes blink {
@@ -100,8 +102,6 @@
       color: #F2EC94;
     }
   }
-
-}
 
 @media (orientation : portrait){
   @media (max-width : 390px){
@@ -383,6 +383,20 @@
 }
 
 @media (orientation : landscape){
+  @media only screen
+and (min-width: 1024px)
+and (max-height: 1366px)
+and (-webkit-min-device-pixel-ratio: 1.5) {
+ h5{
+   margin-bottom:5vw;
+   padding-top:6vw;
+ }
+ .contain .video iframe{
+  width: 75%;
+  height: 60vh;
+  border-radius: 10px;
+}
+}
   @media (min-width:500px) and (max-width : 780px){
     .contain{
       width: 100%;
@@ -487,215 +501,116 @@
     }
 
   }
-  @media (min-width:790px) and (max-width : 950px){
-    .contain{
-      width: 100%;
-      height: calc(120vh - 80px);
-     background: #056CF2;
-      transition: 1s;
-    }
-
-    .contain .video{
-      margin-top: 40px;
-    }
-    .contain .video iframe{
-      width: 53vw;
-      height: 60vh;
-      border-radius: 10px;
-    }
-
-    .back{
-      display:none;
-    }
-    /* .back{
-      position: relative;
-      margin:0;
-      font-size: 40px;
-      top: 10px;
-      width: 100px;
-      left: 80px;
-    }
-    .back a{
-      color:white;
-      text-decoration: none;
-      transition: .2s;
-    }
-    .back a i{
-      width:50px;
-    }
-    .back a:hover{
-      border: 5px solid white;
-      border-radius: 20px;
-
-    } */
-
-    @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
-
-    h5 {
-      font-size: 7vh;
-      margin-bottom: 3vw;
-      padding-top:2vw;
-    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
-      color: #fccaff; */
-        color: #fff6a9;
-      font-family: "Pacifico", cursive;
-      text-align: center;
-      animation: blink 12s infinite;
-      -webkit-animation: blink 12s infinite;
-    }
 
 
-
-    @-webkit-keyframes blink {
-      20%,
-      24%,
-      55% {
-        color: #111;
-        text-shadow: none;
+    @media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px){
+      .contain{
+        width: 100%;
+        height: calc(120vh - 80px);
+       background: #056CF2;
+        transition: 1s;
       }
 
-      0%,
-      19%,
-      21%,
-      23%,
-      25%,
-      54%,
-      56%,
-      100% {
-    /*     color: #fccaff;
-        text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-          0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-        color: #fff6a9;
+      .contain .video{
+        margin-top: 40px;
       }
-    }
-
-    @keyframes blink {
-      20%,
-      24%,
-      55% {
-        color: #111;
-        text-shadow: none;
+      .contain .video iframe{
+        width: 80vw;
+        height: 60vh;
+        border-radius: 10px;
       }
 
-      0%,
-      19%,
-      21%,
-      23%,
-      25%,
-      54%,
-      56%,
-      100% {
-    /*     color: #fccaff;
-        text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-          0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-        color: #F2EC94;
+      .back{
+        display:none;
       }
-    }
+      /* .back{
+        position: relative;
+        margin:0;
+        font-size: 40px;
+        top: 10px;
+        width: 100px;
+        left: 80px;
+      }
+      .back a{
+        color:white;
+        text-decoration: none;
+        transition: .2s;
+      }
+      .back a i{
+        width:50px;
+      }
+      .back a:hover{
+        border: 5px solid white;
+        border-radius: 20px;
 
-  }
-  @media (min-width: 950px) and (max-width: 1400px){
-    .contain{
-      width: 100%;
-      height: calc(120vh - 80px);
-     background: #056CF2;
-      transition: 1s;
-    }
+      } */
 
-    .contain .video{
-      margin-top: 40px;
-    }
-    .contain .video iframe{
-      width: 80vw;
-      height: 60vh;
-      border-radius: 10px;
-    }
+      @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
-    .back{
-      position: relative;
-      margin:0;
-      font-size: 40px;
-      top: 4vw;
-      width: 100px;
-      left: 8vw;
-    }
-    .back a{
-      color:white;
-      text-decoration: none;
-      transition: .2s;
-    }
-    .back a i{
-      width:50px;
-    }
-    .back a:hover{
-      border: 5px solid white;
-      border-radius: 20px;
-
-    }
-
-    @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
-
-    h5 {
-      font-size: 6vh;
-      margin-bottom: 8vw;
-      padding-top:3vw;
-    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
-      color: #fccaff; */
-        color: #fff6a9;
-      font-family: "Pacifico", cursive;
-      text-align: center;
-      animation: blink 12s infinite;
-      -webkit-animation: blink 12s infinite;
-    }
-
-
-
-    @-webkit-keyframes blink {
-      20%,
-      24%,
-      55% {
-        color: #111;
-        text-shadow: none;
+      h5 {
+        font-size: 7vh;
+        margin-bottom: 5vw;
+        padding-top:4vw;
+      /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+          0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+        color: #fccaff; */
+          color: #fff6a9;
+        font-family: "Pacifico", cursive;
+        text-align: center;
+        animation: blink 12s infinite;
+        -webkit-animation: blink 12s infinite;
       }
 
-      0%,
-      19%,
-      21%,
-      23%,
-      25%,
-      54%,
-      56%,
-      100% {
-    /*     color: #fccaff;
-        text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-          0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-        color: #fff6a9;
-      }
-    }
 
-    @keyframes blink {
-      20%,
-      24%,
-      55% {
-        color: #111;
-        text-shadow: none;
+
+      @-webkit-keyframes blink {
+        20%,
+        24%,
+        55% {
+          color: #111;
+          text-shadow: none;
+        }
+
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+      /*     color: #fccaff;
+          text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+            0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+          color: #fff6a9;
+        }
       }
 
-      0%,
-      19%,
-      21%,
-      23%,
-      25%,
-      54%,
-      56%,
-      100% {
-    /*     color: #fccaff;
-        text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-          0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-        color: #F2EC94;
+      @keyframes blink {
+        20%,
+        24%,
+        55% {
+          color: #111;
+          text-shadow: none;
+        }
+
+        0%,
+        19%,
+        21%,
+        23%,
+        25%,
+        54%,
+        56%,
+        100% {
+      /*     color: #fccaff;
+          text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+            0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+          color: #F2EC94;
+        }
       }
-    }
+
 
   }
 }
