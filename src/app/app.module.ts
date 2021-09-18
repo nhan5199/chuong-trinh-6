@@ -76,6 +76,7 @@ import { LeHoiComponent } from './index/tainguyen/le-hoi/le-hoi.component';
 import { TroChoiComponent } from './index/tainguyen/tro-choi/tro-choi.component';
 import { LangNgheComponent } from './index/tainguyen/lang-nghe/lang-nghe.component';
 import { SachDienTuComponent } from './index/tainguyen/sach-dien-tu/sach-dien-tu.component';
+import { SachLichSuComponent } from './index/tainguyen/sach-lich-su/sach-lich-su.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -143,7 +144,8 @@ import { SachDienTuComponent } from './index/tainguyen/sach-dien-tu/sach-dien-tu
     LeHoiComponent,
     TroChoiComponent,
     LangNgheComponent,
-    SachDienTuComponent
+    SachDienTuComponent,
+    SachLichSuComponent
   ],
   imports: [
     BrowserModule,
