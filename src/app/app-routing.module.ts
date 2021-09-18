@@ -64,6 +64,7 @@ import { HoatHinhComponent } from './index/tainguyen/hoat-hinh/hoat-hinh.compone
 import { LangNgheComponent } from './index/tainguyen/lang-nghe/lang-nghe.component';
 import { LeHoiComponent } from './index/tainguyen/le-hoi/le-hoi.component';
 import { SachBanDoComponent } from './index/tainguyen/sach-ban-do/sach-ban-do.component';
+import { SachDienTuComponent } from './index/tainguyen/sach-dien-tu/sach-dien-tu.component';
 import { TainguyenComponent } from './index/tainguyen/tainguyen.component';
 import { TroChoiComponent } from './index/tainguyen/tro-choi/tro-choi.component';
 import { VanHoaComponent } from './index/tainguyen/van-hoa/van-hoa.component';
@@ -101,6 +102,9 @@ const routes: Routes = [
       },
       {
         path: 'bando', component: BanDoComponent
+      },
+      {
+        path: 'sachdiali', component: SachDienTuComponent
       },
       {
         path: 'danhsachtruyentranh', component: DanhSachTruyenTranhComponent
