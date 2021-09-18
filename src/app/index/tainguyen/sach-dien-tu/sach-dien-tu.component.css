@@ -103,38 +103,83 @@ p{
 	opacity: 1;
 } */
 #p1{
-	z-index: 3;
+	z-index: 26;
 }
 #p2{
-	z-index: 2;
+	z-index: 25;
 }
 #p3{
-	z-index: 1;
+	z-index: 24;
 }
-/*#p4{
-	z-index: 8;
+#p4{
+	z-index: 23;
 }
 #p5{
-	z-index: 7;
+	z-index: 22;
 }
 #p6{
-	z-index: 6;
+	z-index: 21;
 }
 #p7{
-	z-index: 5;
+	z-index: 20;
 }
 #p8{
-	z-index: 4;
+	z-index: 19;
 }
 #p9{
-	z-index: 3;
+	z-index: 18;
 }
 #p10{
-	z-index: 2;
+	z-index: 17;
 }
 #p11{
+	z-index: 16;
+}
+#p12{
+	z-index: 15;
+}
+#p13{
+	z-index: 14;
+}
+#p14{
+	z-index: 13;
+}
+#p15{
+	z-index: 12;
+}
+#p16{
+	z-index: 11;
+}
+#p17{
+	z-index: 10;
+}
+#p18{
+	z-index: 9;
+}
+#p19{
+	z-index: 8;
+}
+#p20{
+	z-index: 7;
+}
+#p21{
+	z-index: 6;
+}
+#p22{
+	z-index: 5;
+}
+#p23{
+	z-index: 4;
+}
+#p24{
+	z-index: 3;
+}
+#p25{
+	z-index: 2;
+}
+#p26{
 	z-index: 1;
-} */
+}
 #c1:checked ~ .flip-book #p1{
 	transform: rotateY(-180deg);
 	z-index: 1;
@@ -147,7 +192,7 @@ p{
 	transform: rotateY(-180deg);
 	z-index: 3;
 }
-/*#c4:checked ~ .flip-book #p4{
+#c4:checked ~ .flip-book #p4{
 	transform: rotateY(-180deg);
 	z-index: 4;
 }
@@ -178,7 +223,67 @@ p{
 #c11:checked ~ .flip-book #p11{
 	transform: rotateY(-180deg);
 	z-index: 11;
-} */
+}
+#c12:checked ~ .flip-book #p12{
+	transform: rotateY(-180deg);
+	z-index: 12;
+}
+#c13:checked ~ .flip-book #p13{
+	transform: rotateY(-180deg);
+	z-index: 13;
+}
+#c14:checked ~ .flip-book #p14{
+	transform: rotateY(-180deg);
+	z-index: 14;
+}
+#c15:checked ~ .flip-book #p15{
+	transform: rotateY(-180deg);
+	z-index: 15;
+}
+#c16:checked ~ .flip-book #p16{
+	transform: rotateY(-180deg);
+	z-index: 16;
+}
+#c17:checked ~ .flip-book #p17{
+	transform: rotateY(-180deg);
+	z-index: 17;
+}
+#c18:checked ~ .flip-book #p18{
+	transform: rotateY(-180deg);
+	z-index: 18;
+}
+#c19:checked ~ .flip-book #p19{
+	transform: rotateY(-180deg);
+	z-index: 19;
+}
+#c20:checked ~ .flip-book #p20{
+	transform: rotateY(-180deg);
+	z-index: 20;
+}
+#c21:checked ~ .flip-book #p21{
+	transform: rotateY(-180deg);
+	z-index: 21;
+}
+#c22:checked ~ .flip-book #p22{
+	transform: rotateY(-180deg);
+	z-index: 22;
+}
+#c23:checked ~ .flip-book #p23{
+	transform: rotateY(-180deg);
+	z-index: 23;
+}
+#c24:checked ~ .flip-book #p24{
+	transform: rotateY(-180deg);
+	z-index: 24;
+}
+#c25:checked ~ .flip-book #p25{
+	transform: rotateY(-180deg);
+	z-index: 25;
+}
+#c26:checked ~ .flip-book #p26{
+	transform: rotateY(-180deg);
+	z-index: 26;
+}
 .return{
 	position: relative;
 	margin:0;
