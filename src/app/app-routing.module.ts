@@ -66,6 +66,7 @@ import { LeHoiComponent } from './index/tainguyen/le-hoi/le-hoi.component';
 import { SachBanDoComponent } from './index/tainguyen/sach-ban-do/sach-ban-do.component';
 import { SachDienTuComponent } from './index/tainguyen/sach-dien-tu/sach-dien-tu.component';
 import { SachLichSuComponent } from './index/tainguyen/sach-lich-su/sach-lich-su.component';
+import { SachComponent } from './index/tainguyen/sach/sach.component';
 import { TainguyenComponent } from './index/tainguyen/tainguyen.component';
 import { TroChoiComponent } from './index/tainguyen/tro-choi/tro-choi.component';
 import { VanHoaComponent } from './index/tainguyen/van-hoa/van-hoa.component';
@@ -121,6 +122,9 @@ const routes: Routes = [
       },
       {
         path: 'nguyentriphuong_mucluc', component: NguyenTriPhuongMuclucComponent
+      },
+      {
+        path: 'sachdientu', component: SachComponent
       },
       {
         path: 'sachlichsu', component: SachLichSuComponent
