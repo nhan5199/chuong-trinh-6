@@ -78,6 +78,9 @@ import { LangNgheComponent } from './index/tainguyen/lang-nghe/lang-nghe.compone
 import { SachDienTuComponent } from './index/tainguyen/sach-dien-tu/sach-dien-tu.component';
 import { SachLichSuComponent } from './index/tainguyen/sach-lich-su/sach-lich-su.component';
 import { SachComponent } from './index/tainguyen/sach/sach.component';
+import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.component';
+import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
+import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -147,7 +150,10 @@ import { SachComponent } from './index/tainguyen/sach/sach.component';
     LangNgheComponent,
     SachDienTuComponent,
     SachLichSuComponent,
-    SachComponent
+    SachComponent,
+    DienBienComponent,
+    DuongTruongSonComponent,
+    NguyenTatThanhComponent
   ],
   imports: [
     BrowserModule,

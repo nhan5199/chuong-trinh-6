@@ -1,3 +1,4 @@
+import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BanDoComponent } from './index/dialy/ban-do/ban-do.component';
@@ -71,6 +72,8 @@ import { TainguyenComponent } from './index/tainguyen/tainguyen.component';
 import { TroChoiComponent } from './index/tainguyen/tro-choi/tro-choi.component';
 import { VanHoaComponent } from './index/tainguyen/van-hoa/van-hoa.component';
 import { VitriComponent } from './index/vitri/vitri.component';
+import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
+import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
 
 const routes: Routes = [
 
@@ -218,6 +221,15 @@ const routes: Routes = [
       },
       {
         path: 'doanvancu_comic', component: DoanVanCUComponent
+      },
+      {
+        path: 'dienbien_comic', component: DienBienComponent
+      },
+      {
+        path: 'nguyentatthanh_comic', component: NguyenTatThanhComponent
+      },
+      {
+        path: 'duongtruongson_comic', component: DuongTruongSonComponent
       },
       {
         path: 'trinhhoaiduc_mucluc', component: TrinhHoaiDucMuclucComponent
