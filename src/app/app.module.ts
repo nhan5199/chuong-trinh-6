@@ -81,6 +81,7 @@ import { SachComponent } from './index/tainguyen/sach/sach.component';
 import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.component';
 import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
 import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
+import { RollDiceComponent } from './index/roll-dice/roll-dice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -153,7 +154,8 @@ import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/
     SachComponent,
     DienBienComponent,
     DuongTruongSonComponent,
-    NguyenTatThanhComponent
+    NguyenTatThanhComponent,
+    RollDiceComponent
   ],
   imports: [
     BrowserModule,

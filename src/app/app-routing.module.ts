@@ -1,3 +1,4 @@
+import { RollDiceComponent } from './index/roll-dice/roll-dice.component';
 import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -287,11 +288,10 @@ const routes: Routes = [
       },
       {
         path: 'sachbando', component: SachBanDoComponent
+      },
+      {
+        path: 'quay-xuc-xac', component: RollDiceComponent
       }
-
-
-
-
 
 ];
 
