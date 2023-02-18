@@ -72,7 +72,7 @@ cursor: pointer;
 .side-6 .dot-6 { top: 50%; left: 75%; }
 
 #dice .side-1 {
-transform: translateZ(45px);
+transform: translateZ(51px);
 }
 #dice .side-2 {
   transform: rotateX(-180deg) translateZ(249px);
