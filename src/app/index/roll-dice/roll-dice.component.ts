@@ -21,11 +21,12 @@ export class RollDiceComponent implements OnInit {
 
 
     let dice : any = document.getElementById('dice');
-    // let outputDiv : any = document.getElementById('diceResult');
+    let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    dice.dataset.side = result;
     dice.classList.toggle("reRoll");
 
     setTimeout(() => {
      audio.pause()
-    }, 2000);
+    }, 4500);
   }
 }
