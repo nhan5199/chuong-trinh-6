@@ -103,7 +103,7 @@
 
 @media (min-width:1100px){
   .dia-ly{
-    height: calc(100vh - 87px);
+    height: 100%;
 
   }
 }

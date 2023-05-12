@@ -8,9 +8,9 @@
     transition-duration: 1s;
     position: absolute;
     background: #FFCC29;
+    height: calc(100svh - 76px);
   }
   .col-lg-11{
-    height:85vh;
     margin:0 auto;
     padding:0;
   }
@@ -114,7 +114,7 @@
       transition-duration: 1s;
       position: absolute;
       background: #FFCC29;
-      height: calc(100vh - 87px);
+      height: calc(100svh - 76px);
     }
   }
   @media (orientation : portrait){

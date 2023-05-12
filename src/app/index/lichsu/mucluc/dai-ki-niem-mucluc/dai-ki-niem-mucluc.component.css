@@ -6,7 +6,7 @@
 .lich-su {
   position: absolute;
   width: 100%;
-  height: calc(100vh - 87px);
+  height: 100%;
   background: #FFCC29;
 }
 .card-content{

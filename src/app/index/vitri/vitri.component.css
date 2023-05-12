@@ -1,6 +1,7 @@
 .first-image-content {
   position: relative;
   font-family: Arial;
+  height: 100%;
   background: #11998e;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -27,9 +28,6 @@
 
 }
 @media(min-width:1100px){
-  .first-image-content{
-    height:43.5vw;
-  }
   .first-image-content img{
     width: calc(100% - 70px);
     height: calc(100vh - 100px);

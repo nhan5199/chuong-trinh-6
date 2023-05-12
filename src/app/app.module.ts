@@ -82,6 +82,19 @@ import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.com
 import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
 import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
 import { RollDiceComponent } from './index/roll-dice/roll-dice.component';
+import { BruneiComponent } from './index/tainguyen/em-yeu-dia-li/brunei/brunei.component';
+import { EmYeuDiaLiComponent } from './index/tainguyen/em-yeu-dia-li/em-yeu-dia-li.component';
+import { EmYeuLichSuComponent } from './index/tainguyen/em-yeu-lich-su/em-yeu-lich-su.component';
+import { VietNamComponent } from './index/tainguyen/em-yeu-dia-li/viet-nam/viet-nam.component';
+import { LaoComponent } from './index/tainguyen/em-yeu-dia-li/lao/lao.component';
+import { CampuchiaComponent } from './index/tainguyen/em-yeu-dia-li/campuchia/campuchia.component';
+import { ThaiLanComponent } from './index/tainguyen/em-yeu-dia-li/thai-lan/thai-lan.component';
+import { IndonesiaComponent } from './index/tainguyen/em-yeu-dia-li/indonesia/indonesia.component';
+import { PhilippinesComponent } from './index/tainguyen/em-yeu-dia-li/philippines/philippines.component';
+import { MalaysiaComponent } from './index/tainguyen/em-yeu-dia-li/malaysia/malaysia.component';
+import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
+import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
+import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -155,7 +168,20 @@ import { RollDiceComponent } from './index/roll-dice/roll-dice.component';
     DienBienComponent,
     DuongTruongSonComponent,
     NguyenTatThanhComponent,
-    RollDiceComponent
+    RollDiceComponent,
+    VietNamComponent,
+    LaoComponent,
+    CampuchiaComponent,
+    ThaiLanComponent,
+    IndonesiaComponent,
+    PhilippinesComponent,
+    MalaysiaComponent,
+    SingaporeComponent,
+    MyanmarComponent,
+    EastLesteComponent,
+    BruneiComponent,
+    EmYeuDiaLiComponent,
+    EmYeuLichSuComponent
   ],
   imports: [
     BrowserModule,

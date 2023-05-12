@@ -75,6 +75,18 @@ import { VanHoaComponent } from './index/tainguyen/van-hoa/van-hoa.component';
 import { VitriComponent } from './index/vitri/vitri.component';
 import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
 import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
+import { BruneiComponent } from './index/tainguyen/em-yeu-dia-li/brunei/brunei.component';
+import { EmYeuDiaLiComponent } from './index/tainguyen/em-yeu-dia-li/em-yeu-dia-li.component';
+import { VietNamComponent } from './index/tainguyen/em-yeu-dia-li/viet-nam/viet-nam.component';
+import { LaoComponent } from './index/tainguyen/em-yeu-dia-li/lao/lao.component';
+import { CampuchiaComponent } from './index/tainguyen/em-yeu-dia-li/campuchia/campuchia.component';
+import { ThaiLanComponent } from './index/tainguyen/em-yeu-dia-li/thai-lan/thai-lan.component';
+import { IndonesiaComponent } from './index/tainguyen/em-yeu-dia-li/indonesia/indonesia.component';
+import { PhilippinesComponent } from './index/tainguyen/em-yeu-dia-li/philippines/philippines.component';
+import { MalaysiaComponent } from './index/tainguyen/em-yeu-dia-li/malaysia/malaysia.component';
+import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
+import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
+import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
 
 const routes: Routes = [
 
@@ -291,8 +303,82 @@ const routes: Routes = [
       },
       {
         path: 'quay-xuc-xac', component: RollDiceComponent
-      }
+      },
 
+      {
+        path: 'em-yeu-dia-li', component: EmYeuDiaLiComponent,
+        children: [
+          // {
+          //   path: 'vietnam', component: VietNamComponent
+          // },
+          // {
+          //   path: 'lao', component: LaoComponent
+          // },
+          // {
+          //   path: 'campuchia', component: CampuchiaComponent
+          // },
+          // {
+          //   path: 'thailan', component: ThaiLanComponent
+          // },
+          // {
+          //   path: 'indonesia', component: IndonesiaComponent
+          // },
+          // {
+          //   path: 'philippines', component: PhilippinesComponent
+          // },
+          // {
+          //   path: 'malaysia', component: MalaysiaComponent
+          // },
+          // {
+          //   path: 'myanmar', component: MyanmarComponent
+          // },
+          // {
+          //   path: 'singapore', component: SingaporeComponent
+          // },
+          // {
+          //   path: 'eastleste', component: EastLesteComponent
+          // },
+          // {
+          //   path: 'brunei', component: BruneiComponent
+          // },
+        ]
+      },
+      {
+        path: 'em-yeu-dia-li/vietnam', component: VietNamComponent
+      },
+      {
+        path: 'em-yeu-dia-li/lao', component: LaoComponent
+      },
+      {
+        path: 'em-yeu-dia-li/campuchia', component: CampuchiaComponent
+      },
+      {
+        path: 'em-yeu-dia-li/thailan', component: ThaiLanComponent
+      },
+      {
+        path: 'em-yeu-dia-li/indonesia', component: IndonesiaComponent
+      },
+      {
+        path: 'em-yeu-dia-li/philippines', component: PhilippinesComponent
+      },
+      {
+        path: 'em-yeu-dia-li/malaysia', component: MalaysiaComponent
+      },
+      {
+        path: 'em-yeu-dia-li/myanmar', component: MyanmarComponent
+      },
+      {
+        path: 'em-yeu-dia-li/singapore', component: SingaporeComponent
+      },
+      {
+        path: 'em-yeu-dia-li/eastleste', component: EastLesteComponent
+      },
+      {
+        path: 'em-yeu-dia-li/brunei', component: BruneiComponent
+      },
+      {
+        path: '**', component: VitriComponent
+      }
 ];
 
 @NgModule({

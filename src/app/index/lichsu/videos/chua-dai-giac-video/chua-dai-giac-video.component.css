@@ -5,7 +5,7 @@
     width: 100%;
    background: #056CF2;
     transition: 1s;
-    height: calc(100vh - 87px);
+    height: 100%;
 }
 
 .contain .video iframe{
