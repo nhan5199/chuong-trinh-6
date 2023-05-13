@@ -102,15 +102,18 @@ p{
 	opacity: 1;
 } */
 #p1{
-	z-index: 4;
+	z-index: 5;
 }
 #p2{
-	z-index: 3;
+	z-index: 4;
 }
 #p3{
-	z-index: 2;
+	z-index: 3;
 }
 #p4{
+	z-index: 2;
+}
+#p5{
 	z-index: 1;
 }
 #c1:checked ~ .flip-book #p1{
@@ -128,6 +131,10 @@ p{
 #c4:checked ~ .flip-book #p4{
 	transform: rotateY(-180deg);
 	z-index: 4;
+}
+#c5:checked ~ .flip-book #p5{
+	transform: rotateY(-180deg);
+	z-index: 5;
 }
 
 

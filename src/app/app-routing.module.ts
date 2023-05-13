@@ -87,6 +87,7 @@ import { MalaysiaComponent } from './index/tainguyen/em-yeu-dia-li/malaysia/mala
 import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
 import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
 import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
+import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.component';
 
 const routes: Routes = [
 
@@ -342,6 +343,9 @@ const routes: Routes = [
           //   path: 'brunei', component: BruneiComponent
           // },
         ]
+      },
+      {
+        path: 'em-yeu-dia-li/asean', component: AseanComponent
       },
       {
         path: 'em-yeu-dia-li/vietnam', component: VietNamComponent

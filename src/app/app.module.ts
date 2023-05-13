@@ -95,6 +95,7 @@ import { MalaysiaComponent } from './index/tainguyen/em-yeu-dia-li/malaysia/mala
 import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
 import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
 import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
+import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -181,7 +182,8 @@ import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/e
     EastLesteComponent,
     BruneiComponent,
     EmYeuDiaLiComponent,
-    EmYeuLichSuComponent
+    EmYeuLichSuComponent,
+    AseanComponent
   ],
   imports: [
     BrowserModule,
