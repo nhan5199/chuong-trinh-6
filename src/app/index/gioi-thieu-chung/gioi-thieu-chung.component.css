@@ -7,7 +7,7 @@
   transition-duration: 1s;
   position: absolute;
   background: #ffcc29;
-  height: calc(100svh - 76px);
+  background-size: cover;
 }
 .col-lg-11 {
   margin: 0 auto;

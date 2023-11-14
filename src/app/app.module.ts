@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,15 +28,16 @@ import { DanhSachTruyenTranhComponent } from './index/lichsu/danh-sach-truyen-tr
 import { GioiThieuComponent } from './index/dialy/gioi-thieu/gioi-thieu.component';
 import { BanDoComponent } from './index/dialy/ban-do/ban-do.component';
 
-
 import { LaNgaMuclucComponent } from './index/lichsu/mucluc/la-nga-mucluc/la-nga-mucluc.component';
 import { LaNgaCanvaComponent } from './index/lichsu/canvas/la-nga-canva/la-nga-canva.component';
 import { LaNgaVideoComponent } from './index/lichsu/videos/la-nga-video/la-nga-video.component';
 import { CamMyTestComponent } from './index/dialy/tests/cam-my-test/cam-my-test.component';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {DialogModule} from 'primeng/dialog';
-import {RadioButtonModule} from 'primeng/radiobutton';
-import {ButtonModule} from 'primeng/button';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { DinhQuanTestComponent } from './index/dialy/tests/dinh-quan-test/dinh-quan-test.component';
 import { LongThanhTestComponent } from './index/dialy/tests/long-thanh-test/long-thanh-test.component';
 import { NhonTrachTestComponent } from './index/dialy/tests/nhon-trach-test/nhon-trach-test.component';
@@ -99,6 +99,7 @@ import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.comp
 import { GioiThieuChungComponent } from './index/gioi-thieu-chung/gioi-thieu-chung.component';
 import { GioiThieuChungVideoComponent } from './index/gioi-thieu-chung/gioi-thieu-chung-video/gioi-thieu-chung-video.component';
 import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-dung/huong-dan-su-dung.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -189,7 +190,7 @@ import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-d
     AseanComponent,
     GioiThieuChungComponent,
     GioiThieuChungVideoComponent,
-    HuongDanSuDungComponent
+    HuongDanSuDungComponent,
   ],
   imports: [
     BrowserModule,
@@ -197,12 +198,9 @@ import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-d
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    RadioButtonModule,
-    ButtonModule,
-    DialogModule
-
+    NgbModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

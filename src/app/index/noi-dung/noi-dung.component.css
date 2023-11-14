@@ -1,242 +1,220 @@
-
-.table{
-  background: #03A66A;
+.table {
+  background: #03a66a;
   margin: 0 !important;
 }
 
-ul{
+ul {
   padding: 0;
   list-style-type: none;
+  background-color: #03a66a;
 }
-.col-lg-6{
-  padding-top:40px;
-  padding-bottom:115px
+
+ul li {
+  background-color: #03a66a;
 }
-.title{
+.col-lg-6 {
+  padding-top: 40px;
+  padding-bottom: 115px;
+}
+.title {
   background: white;
 }
-.menu{
-  width:100%;
-  margin-top: 80px ;
-  padding:0;
+.menu {
+  width: 100%;
+  margin-top: 80px;
+  padding: 0;
   border: 3px solid black;
   border-radius: 10px;
   border-bottom-right-radius: 0;
 }
-.menu .title{
+.menu .title {
   border-top-right-radius: 8px;
 }
-.sub-menu{
-  width:100%;
-  margin:0;
-  padding:0;
-
+.sub-menu {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-.sub-menu .title{
+.sub-menu .title {
   border: 3px solid black;
-  border-top:none;
+  border-top: none;
 }
-.sub-menu .title p{
-  font-size: 2vw;
-
+.sub-menu .title p {
+  font-size: 30px;
 }
 
-.number{
-  background: #FFCC29;
+.number {
+  background: #ffcc29;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-.number p{
-  font-size: 3em;
+.number p {
+  font-size: 20px;
   padding: 30px 0;
   font-weight: bold;
-  margin:0;
+  margin: 0;
 }
-.title p{
-  font-size: 3em;
+.title p {
+  font-size: 20px;
   padding: 30px;
-  margin:0;
+  margin: 0;
   font-weight: bold;
 }
 
-a{
+a {
   text-decoration: none;
-  color:black;
+  color: black;
 }
-.title{
-  z-index:999;
+.title {
+  z-index: 999;
 }
-.lichsu{
+.lichsu {
   display: none;
 }
-.lich-su-list:hover .lichsu{
-  display:block;
+.lich-su-list:hover .lichsu {
+  display: block;
 }
 
-.dialy{
+.dialy {
   display: none;
 }
-.dia-ly-list:hover .dialy{
-  display:block;
+.dia-ly-list:hover .dialy {
+  display: block;
 }
 
-.tainguyen{
+.tainguyen {
   display: none;
 }
-.tai-nguyen-list:hover .tainguyen{
-  display:block;
+.tai-nguyen-list:hover .tainguyen {
+  display: block;
 }
 
-.title{
+.title {
   transition: background 0.7s;
-   background: linear-gradient(to right, white 50%, #FFCC29 50%) left;
-    background-size: 200%;
-
+  background: linear-gradient(to right, white 50%, #ffcc29 50%) left;
+  background-size: 200%;
 }
 .title:hover {
   background-position: right;
 }
 
-@media (orientation : portrait){
-  .table{
-    height:200vw;
+@media (orientation: portrait) {
+  .table {
+    height: 200vw;
   }
-  .menu{
-  margin-top: 10vw ;
-  border-bottom-left-radius: 0;
+  .menu {
+    margin-top: 10vw;
+    border-bottom-left-radius: 0;
   }
-  .menu .title{
-  border-top-left-radius: 8px;
+  .menu .title {
+    border-top-left-radius: 8px;
   }
-  .sub-menu .title p{
-  font-size: 7vw;
-  line-height: 40px;
+  .sub-menu .title p {
+    font-size: 30px;
+    line-height: 40px;
   }
-  .title p{
-  font-size: 3em;
-  text-align: center;
+  .title p {
+    font-size: 30px;
+    text-align: center;
   }
-  .lichsu{
+  .lichsu {
     display: none;
   }
-  .lich-su-list:hover .lichsu{
-    display:block;
+  .lich-su-list:hover .lichsu {
+    display: block;
   }
 
-  .dialy{
+  .dialy {
     display: none;
   }
-  .dia-ly-list:hover .dialy{
-    display:block;
+  .dia-ly-list:hover .dialy {
+    display: block;
   }
 
-  .tainguyen{
+  .tainguyen {
     display: none;
   }
-  .tai-nguyen-list:hover .tainguyen{
-    display:block;
+  .tai-nguyen-list:hover .tainguyen {
+    display: block;
   }
 
-  @media (max-width:500px){
-    .table{
-      height:200vw;
+  @media (max-width: 500px) {
+    .table {
+      height: 200vw;
     }
-    .sub-menu .title p{
+    .sub-menu .title p {
       font-size: 7vw;
       line-height: 40px;
     }
 
-    .number{
-      display:none;
+    .number {
+      display: none;
     }
   }
 
-  @media only screen
- and (min-width: 900px)
- and (max-width: 1050px) {
-    .table{
-      height:120vw;
+  @media only screen and (min-width: 900px) and (max-width: 1050px) {
+    .table {
+      height: 120vw;
     }
-    .sub-menu .title p{
-    font-size: 3vw;
-    line-height: 40px;
+    .sub-menu .title p {
+      font-size: 3vw;
+      line-height: 40px;
     }
- }
-
- @media only screen
- and (min-device-width : 768px)
- and (max-device-width : 850px){
-  .table{
-    height:200vw;
-  }
-  .sub-menu .title p{
-    font-size: 4vw;
-    line-height: 40px;
   }
 
-  .number{
-    display:none;
-  }
-  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
+    .table {
+      height: 200vw;
+    }
+    .sub-menu .title p {
+      font-size: 4vw;
+      line-height: 40px;
+    }
 
+    .number {
+      display: none;
+    }
+  }
 }
 
-@media (orientation : landscape){
-  .menu{
-    width:100%;
-    margin-top: 80px ;
+@media (orientation: landscape) {
+  .menu {
+    width: 100%;
+    margin-top: 80px;
     border-bottom-right-radius: 0;
   }
-  .menu .title{
+  .menu .title {
     border-top-right-radius: 8px;
   }
-  .sub-menu .title p{
+  .sub-menu .title p {
     font-size: 2vw;
-
   }
 
-  .number{
-    background: #FFCC29;
+  .number {
+    background: #ffcc29;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
   }
-  .number p{
-    font-size: 3em;
+  .number p {
+    font-size: 30px;
   }
-  .title p{
-    font-size: 3em;
+  .title p {
+    font-size: 30px;
   }
- @media only screen
- and (min-width: 1024px)
- and (max-height: 1366px)
- and (-webkit-min-device-pixel-ratio: 1.5) {
-.table{
-  height:68vw;
+  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .table {
+      height: 68vw;
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  }
+
+  @media only screen and (min-width: 374px) and (max-width: 813px) {
+    p {
+      text-align: center;
+    }
+    .sub-menu .title p {
+      font-size: 3.5vw;
+    }
+  }
 }
-
- }
- @media only screen
- and (min-device-width : 768px)
- and (max-device-width : 1024px) {
-
- }
-
- @media only screen
- and (min-width : 374px)
- and (max-width : 813px){
-  p{
-    text-align: center;
-  }
-  .sub-menu .title p{
-    font-size: 3.5vw;;
-  }
- }
-}
-
-
-
-
-
-
-
-

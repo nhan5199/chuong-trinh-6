@@ -1,85 +1,78 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-trang-bom-test',
   templateUrl: './trang-bom-test.component.html',
-  styleUrls: ['./trang-bom-test.component.css']
+  styleUrls: ['./trang-bom-test.component.css'],
 })
 export class TrangBomTestComponent implements OnInit {
-  answerForm !: FormGroup;
-  constructor(
-    private _formBuilder : FormBuilder
-    ,private modalService : NgbModal
-    ,private location : Location
-  ) { }
+  answerForm!: FormGroup;
+  constructor(private _formBuilder: FormBuilder, private location: Location) {}
 
-  point : number = 0;
+  point: number = 0;
   string = 'n3ifb3iu4v3';
   ngOnInit(): void {
     this.answerForm = this._formBuilder.group({
-      cau1:['',[Validators.required]],
-      cau2:['',[Validators.required]],
-      cau3:['',[Validators.required]],
-      cau4:['',[Validators.required]],
-      cau5:['',[Validators.required]],
-      cau6:['',[Validators.required]],
-      cau7:['',[Validators.required]],
-      cau8:['',[Validators.required]],
-      cau9:['',[Validators.required]],
-      cau10:['',[Validators.required]],
-
-    })
+      cau1: ['', [Validators.required]],
+      cau2: ['', [Validators.required]],
+      cau3: ['', [Validators.required]],
+      cau4: ['', [Validators.required]],
+      cau5: ['', [Validators.required]],
+      cau6: ['', [Validators.required]],
+      cau7: ['', [Validators.required]],
+      cau8: ['', [Validators.required]],
+      cau9: ['', [Validators.required]],
+      cau10: ['', [Validators.required]],
+    });
   }
 
-  cancel(){
+  cancel() {
     this.location.back();
   }
   // open(content : any, point : number) {
   //   this.modalService.open(content,{ centered: true });
   // }
-  get answerFormValue(){
+  get answerFormValue() {
     return this.answerForm.value;
   }
   isSubmit = false;
-  onSubmit(){
+  onSubmit() {
     this.point = 0;
     console.log(this.answerForm.value);
-    if (this.answerForm.value.cau1 == 'C'){
-      this.point = this.point + 1;  
+    if (this.answerForm.value.cau1 == 'C') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau2 == 'A'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau2 == 'A') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau3 == 'C'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau3 == 'C') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau4 == 'C'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau4 == 'C') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau5 == 'B'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau5 == 'B') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau6 == 'C'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau6 == 'C') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau7 == 'A'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau7 == 'A') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau8 == 'B'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau8 == 'B') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau9 == 'A'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau9 == 'A') {
+      this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau10 == 'A'){
-      this.point =this.point + 1;
+    if (this.answerForm.value.cau10 == 'A') {
+      this.point = this.point + 1;
     }
     console.log('diem', this.point);
     this.isSubmit = true;
     console.log('diem', this.isSubmit);
     // this.open(content, this.point);
   }
-
 }
