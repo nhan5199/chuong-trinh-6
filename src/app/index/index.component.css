@@ -1,92 +1,132 @@
-.menu{
-    width: 100%;
+.menu {
+  width: 100%;
 }
-.nav{
-
-    background-color: #ff8000;
-    width: 100%;
-    margin:0;
+.nav {
+  background-color: #ff8000;
+  width: 100%;
+  margin: 0;
 }
-.col{
-    margin:7px;
-    padding:5px 10px 0 10px;
-}
-
-.col a{
-    text-decoration: none;
+.col {
+  margin: 7px;
+  padding: 5px 10px 0 10px;
 }
 
-.value1, .value2, .value3, .value4, .value5{
-    display:none;
-    color: black;
-    font-size: 2vw;
-    font-weight: bold;
-    transition: background 1s;
-}
-.icon1, .icon2, .icon3, .icon4, .icon5{
-    color: white;
-    font-size: 2vw;
-    padding: 10px 0;
-    opacity:1;
+.col a {
+  text-decoration: none;
 }
 
-.main-content{
+.value1,
+.value2,
+.value3,
+.value4,
+.value5,
+.value6 {
+  display: none;
+  color: black;
+  font-size: 2vw;
+  font-weight: bold;
+  transition: background 1s;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6 {
+  color: white;
+  font-size: 2vw;
+  padding: 10px 0;
+  opacity: 1;
+}
+
+.main-content {
   height: calc(100svh - 76px);
 }
 
-
 @media (min-width: 1100px) {
-  .con1:hover .icon1, .active .icon1,.con2:hover .icon2, .active .icon2,.con3:hover .icon3, .active .icon3,.con4:hover .icon4, .active .icon4, .con5:hover .icon5, .active .icon5{
-    opacity:0;
-    display:none;
- }
- .icon1, .icon2, .icon3, .icon4, .icon5{
-  color: white;
-  font-size: 3vw;
-  padding: 10px 0;
-  opacity:1;
-}
-  .con1:hover .value1, .active .value1,.con2:hover .value2, .active .value2, .con3:hover .value3, .active .value3, .con5:hover .value5, .active .value5{
-      display: block;
-      padding: 13px 0 13px 0;
-      color: #ff8000;
-      background:white;
-      border-radius: 20px;
-      margin:0;
+  .con1:hover .icon1,
+  .active .icon1,
+  .con2:hover .icon2,
+  .active .icon2,
+  .con3:hover .icon3,
+  .active .icon3,
+  .con4:hover .icon4,
+  .active .icon4,
+  .con5:hover .icon5,
+  .active .icon5,
+  .con6:hover .icon6,
+  .active .icon6 {
+    opacity: 0;
+    display: none;
   }
-
-  .con4:hover .value4, .active .value4{
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4,
+  .icon5,
+  .icon6 {
+    color: white;
+    font-size: 2.5vw;
+    padding: 3px;
+    opacity: 1;
+  }
+  .con1:hover .value1,
+  .active .value1,
+  .con2:hover .value2,
+  .active .value2,
+  .con3:hover .value3,
+  .active .value3,
+  .con5:hover .value5,
+  .active .value5,
+  .con6:hover .value6,
+  .active .value6 {
     display: block;
     padding: 13px 0 13px 0;
     color: #ff8000;
-    background:white;
+    background: white;
     border-radius: 20px;
-    margin:0;
+    margin: 0;
   }
-  .active .value1,.active .value2, .active .value3, .active .value4, .active .value5{
+
+  .con4:hover .value4,
+  .active .value4 {
+    display: block;
+    padding: 13px 0 13px 0;
     color: #ff8000;
-    background:white;
+    background: white;
     border-radius: 20px;
-    margin:0;
+    margin: 0;
+  }
+  .active .value1,
+  .active .value2,
+  .active .value3,
+  .active .value4,
+  .active .value5,
+  .active .value6 {
+    color: #ff8000;
+    background: white;
+    border-radius: 20px;
+    margin: 0;
   }
 }
 
 @media (max-width: 1090px) {
-  .icon1, .icon2, .icon3, .icon4, .icon5{
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4,
+  .icon5,
+  .icon6 {
     color: white;
     font-size: 5vw;
-}
-  .active .content i{
-    padding:  3vw;
-    color: #ff8000;
-    margin:0;
   }
-  .active .content{
+  .active .content i {
+    padding: 3vw;
+    color: #ff8000;
+    margin: 0;
+  }
+  .active .content {
     background-color: white;
     border-radius: 0.5vw;
   }
 }
-
-
-
-

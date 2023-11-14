@@ -88,305 +88,403 @@ import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanma
 import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
 import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
 import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.component';
+import { GioiThieuChungComponent } from './index/gioi-thieu-chung/gioi-thieu-chung.component';
+import { GioiThieuChungVideoComponent } from './index/gioi-thieu-chung/gioi-thieu-chung-video/gioi-thieu-chung-video.component';
+import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-dung/huong-dan-su-dung.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: VitriComponent,
+  },
+  {
+    path: 'vitri',
+    component: VitriComponent,
+  },
+  {
+    path: 'gioithieuchung',
+    component: GioiThieuChungComponent,
+  },
+  {
+    path: 'gioithieuchung/gioithieu',
+    component: GioiThieuChungVideoComponent,
+  },
+  {
+    path: 'gioithieuchung/huongdan',
+    component: HuongDanSuDungComponent,
+  },
+  {
+    path: 'noidung',
+    component: NoiDungComponent,
+  },
+  {
+    path: 'lichsu',
+    component: LichsuComponent,
+  },
+  {
+    path: 'dialy',
+    component: DialyComponent,
+  },
+  {
+    path: 'tainguyen',
+    component: TainguyenComponent,
+  },
+  {
+    path: 'gioithieu',
+    component: GioiThieuComponent,
+  },
+  {
+    path: 'dialyhanhchinh',
+    component: DiaLyHanhChinhComponent,
+  },
+  {
+    path: 'dialykinhte',
+    component: DiaLyKinhTeComponent,
+  },
+  {
+    path: 'bando',
+    component: BanDoComponent,
+  },
+  {
+    path: 'sachdiali',
+    component: SachDienTuComponent,
+  },
+  {
+    path: 'danhsachtruyentranh',
+    component: DanhSachTruyenTranhComponent,
+  },
+  {
+    path: 'danhsachditich',
+    component: DanhSachDiTichComponent,
+  },
+  {
+    path: 'danhsachcauhoi',
+    component: DanhSachCauHoiComponent,
+  },
+  {
+    path: 'nguyenhuucanh_mucluc',
+    component: NguyenHuuCanhMuclucComponent,
+  },
+  {
+    path: 'nguyentriphuong_mucluc',
+    component: NguyenTriPhuongMuclucComponent,
+  },
+  {
+    path: 'sachdientu',
+    component: SachComponent,
+  },
+  {
+    path: 'sachlichsu',
+    component: SachLichSuComponent,
+  },
+  {
+    path: 'dabachong_mucluc',
+    component: DaBaChongMuclucComponent,
+  },
+  {
+    path: 'langa_mucluc',
+    component: LaNgaMuclucComponent,
+  },
+  {
+    path: 'daikiniem_mucluc',
+    component: DaiKiNiemMuclucComponent,
+  },
+  {
+    path: 'dabachong_canva',
+    component: DaBaChongCanvaComponent,
+  },
+  {
+    path: 'chuadaigiac_canva',
+    component: ChuaDaiGiacCanvaComponent,
+  },
+  {
+    path: 'daikiniem_canva',
+    component: DaiKiNiemCanvaComponent,
+  },
+  {
+    path: 'langa_canva',
+    component: LaNgaCanvaComponent,
+  },
+  {
+    path: 'dinhtanlan_canva',
+    component: DinhTanLanCanvaComponent,
+  },
+  {
+    path: 'trinhhoaiduc_canva',
+    component: TrinhHoaiDucCanvaComponent,
+  },
+  {
+    path: 'nguyentriphuong_canva',
+    component: NguyenTriPhuongCanvaComponent,
+  },
+  {
+    path: 'nguyenhuucanh_canva',
+    component: NguyenHuuCanhCanvaComponent,
+  },
+  {
+    path: 'vanhoa',
+    component: VanHoaComponent,
+  },
+  {
+    path: 'dulich',
+    component: DuLichComponent,
+  },
+  {
+    path: 'amthuc',
+    component: AmThucComponent,
+  },
+  {
+    path: 'hoathinh',
+    component: HoatHinhComponent,
+  },
+  {
+    path: 'langnghe',
+    component: LangNgheComponent,
+  },
+  {
+    path: 'lehoi',
+    component: LeHoiComponent,
+  },
+  {
+    path: 'trochoi',
+    component: TroChoiComponent,
+  },
+  {
+    path: 'dabachong_video',
+    component: DaBaChongVideoComponent,
+  },
+  {
+    path: 'langa_video',
+    component: LaNgaVideoComponent,
+  },
+  {
+    path: 'dinhtanlan_video',
+    component: DinhTanLanVideoComponent,
+  },
+  {
+    path: 'nguyenhuucanh_video',
+    component: NguyenHuuCanhVideoComponent,
+  },
+  {
+    path: 'trinhhoaiduc_video',
+    component: TrinhHoaiDucVideoComponent,
+  },
+  {
+    path: 'nguyentriphuong_video',
+    component: NguyenTriPhuongVideoComponent,
+  },
+  {
+    path: 'daikiniem_video',
+    component: DaiKiNiemVideoComponent,
+  },
+  {
+    path: 'nguyenhuucanh_comic',
+    component: NguyenHuuCanhComicComponent,
+  },
+  {
+    path: 'nguyenthiton_comic',
+    component: NguyenThiTonComicComponent,
+  },
+  {
+    path: 'tranthuongxuyen_comic',
+    component: TranThuongXuyenComponent,
+  },
+  {
+    path: 'trinhhoaiduc_comic',
+    component: TrinhHoaiDucComicComponent,
+  },
+  {
+    path: 'doanvancu_comic',
+    component: DoanVanCUComponent,
+  },
+  {
+    path: 'dienbien_comic',
+    component: DienBienComponent,
+  },
+  {
+    path: 'nguyentatthanh_comic',
+    component: NguyenTatThanhComponent,
+  },
+  {
+    path: 'duongtruongson_comic',
+    component: DuongTruongSonComponent,
+  },
+  {
+    path: 'trinhhoaiduc_mucluc',
+    component: TrinhHoaiDucMuclucComponent,
+  },
+  {
+    path: 'chuadaigiac_video',
+    component: ChuaDaiGiacVideoComponent,
+  },
+  {
+    path: 'chuadaigiac_mucluc',
+    component: ChuaDaiGiacMuclucComponent,
+  },
+  {
+    path: 'dinhtanlan_mucluc',
+    component: DinhTanLanMuclucComponent,
+  },
+  {
+    path: 'lichsuhanhchinh_mucluc',
+    component: LichSuHanhChinhMuclucComponent,
+  },
+  {
+    path: 'lichsuhanhchinh_video',
+    component: LichsuhanhchinhVideoComponent,
+  },
+  {
+    path: 'lichsuhanhchinh_canva',
+    component: LichSuHanhChinhCanvaComponent,
+  },
+  {
+    path: 'cammy_test',
+    component: CamMyTestComponent,
+  },
+  {
+    path: 'dinhquan_test',
+    component: DinhQuanTestComponent,
+  },
+  {
+    path: 'longthanh_test',
+    component: LongThanhTestComponent,
+  },
+  {
+    path: 'nhontrach_test',
+    component: NhonTrachTestComponent,
+  },
+  {
+    path: 'tanphu_test',
+    component: TanPhuTestComponent,
+  },
+  {
+    path: 'thongnhat_test',
+    component: ThongNhatTestComponent,
+  },
+  {
+    path: 'trangbom_test',
+    component: TrangBomTestComponent,
+  },
+  {
+    path: 'vinhcuu_test',
+    component: VinhCuuTestComponent,
+  },
+  {
+    path: 'xuanloc_test',
+    component: XuanLocTestComponent,
+  },
+  {
+    path: 'bienhoa_test',
+    component: BienHoaTestComponent,
+  },
+  {
+    path: 'longkhanh_test',
+    component: LongKhanhTestComponent,
+  },
+  {
+    path: 'sachbando',
+    component: SachBanDoComponent,
+  },
+  {
+    path: 'quay-xuc-xac',
+    component: RollDiceComponent,
+  },
 
-
-      {
-        path: '', component: VitriComponent
-      },
-      {
-        path: 'vitri', component: VitriComponent
-      },
-      {
-        path: 'noidung', component: NoiDungComponent
-      },
-      {
-        path: 'lichsu', component: LichsuComponent
-      },
-      {
-        path: 'dialy', component: DialyComponent
-      },
-      {
-        path: 'tainguyen', component: TainguyenComponent
-      },
-      {
-        path: 'gioithieu', component: GioiThieuComponent
-      },
-      {
-        path: 'dialyhanhchinh', component: DiaLyHanhChinhComponent
-      },
-      {
-        path: 'dialykinhte', component: DiaLyKinhTeComponent
-      },
-      {
-        path: 'bando', component: BanDoComponent
-      },
-      {
-        path: 'sachdiali', component: SachDienTuComponent
-      },
-      {
-        path: 'danhsachtruyentranh', component: DanhSachTruyenTranhComponent
-      },
-      {
-        path: 'danhsachditich', component: DanhSachDiTichComponent
-      },
-      {
-        path: 'danhsachcauhoi', component: DanhSachCauHoiComponent
-      },
-      {
-        path: 'nguyenhuucanh_mucluc', component: NguyenHuuCanhMuclucComponent
-      },
-      {
-        path: 'nguyentriphuong_mucluc', component: NguyenTriPhuongMuclucComponent
-      },
-      {
-        path: 'sachdientu', component: SachComponent
-      },
-      {
-        path: 'sachlichsu', component: SachLichSuComponent
-      },
-      {
-        path: 'dabachong_mucluc', component: DaBaChongMuclucComponent
-      },
-      {
-        path: 'langa_mucluc', component: LaNgaMuclucComponent
-      },
-      {
-        path: 'daikiniem_mucluc', component: DaiKiNiemMuclucComponent
-      },
-      {
-        path: 'dabachong_canva', component: DaBaChongCanvaComponent
-      },
-      {
-        path: 'chuadaigiac_canva', component: ChuaDaiGiacCanvaComponent
-      },
-      {
-        path: 'daikiniem_canva', component: DaiKiNiemCanvaComponent
-      },
-      {
-        path: 'langa_canva', component: LaNgaCanvaComponent
-      },
-      {
-        path: 'dinhtanlan_canva', component: DinhTanLanCanvaComponent
-      },
-      {
-        path: 'trinhhoaiduc_canva', component: TrinhHoaiDucCanvaComponent
-      },
-      {
-        path: 'nguyentriphuong_canva', component: NguyenTriPhuongCanvaComponent
-      },
-      {
-        path: 'nguyenhuucanh_canva', component: NguyenHuuCanhCanvaComponent
-      },
-      {
-        path: 'vanhoa', component: VanHoaComponent
-      },
-      {
-        path: 'dulich', component: DuLichComponent
-      },
-      {
-        path: 'amthuc', component: AmThucComponent
-      },
-      {
-        path: 'hoathinh', component: HoatHinhComponent
-      },
-      {
-        path: 'langnghe', component: LangNgheComponent
-      },
-      {
-        path: 'lehoi', component: LeHoiComponent
-      },
-      {
-        path: 'trochoi', component: TroChoiComponent
-      },
-      {
-        path: 'dabachong_video', component: DaBaChongVideoComponent
-      },
-      {
-        path: 'langa_video', component: LaNgaVideoComponent
-      },
-      {
-        path: 'dinhtanlan_video', component: DinhTanLanVideoComponent
-      },
-      {
-        path: 'nguyenhuucanh_video', component: NguyenHuuCanhVideoComponent
-      },
-      {
-        path: 'trinhhoaiduc_video', component: TrinhHoaiDucVideoComponent
-      },
-      {
-        path: 'nguyentriphuong_video', component: NguyenTriPhuongVideoComponent
-      },
-      {
-        path: 'daikiniem_video', component: DaiKiNiemVideoComponent
-      },
-      {
-        path: 'nguyenhuucanh_comic', component: NguyenHuuCanhComicComponent
-      },
-      {
-        path: 'nguyenthiton_comic', component: NguyenThiTonComicComponent
-      },
-      {
-        path: 'tranthuongxuyen_comic', component: TranThuongXuyenComponent
-      },
-      {
-        path: 'trinhhoaiduc_comic', component: TrinhHoaiDucComicComponent
-      },
-      {
-        path: 'doanvancu_comic', component: DoanVanCUComponent
-      },
-      {
-        path: 'dienbien_comic', component: DienBienComponent
-      },
-      {
-        path: 'nguyentatthanh_comic', component: NguyenTatThanhComponent
-      },
-      {
-        path: 'duongtruongson_comic', component: DuongTruongSonComponent
-      },
-      {
-        path: 'trinhhoaiduc_mucluc', component: TrinhHoaiDucMuclucComponent
-      },
-      {
-        path: 'chuadaigiac_video', component: ChuaDaiGiacVideoComponent
-      },
-      {
-        path: 'chuadaigiac_mucluc', component: ChuaDaiGiacMuclucComponent
-      },
-      {
-        path: 'dinhtanlan_mucluc', component: DinhTanLanMuclucComponent
-      },
-      {
-        path: 'lichsuhanhchinh_mucluc', component: LichSuHanhChinhMuclucComponent
-      },
-      {
-        path: 'lichsuhanhchinh_video', component: LichsuhanhchinhVideoComponent
-      },
-      {
-        path: 'lichsuhanhchinh_canva', component: LichSuHanhChinhCanvaComponent
-      },
-      {
-        path: 'cammy_test', component: CamMyTestComponent
-      },
-      {
-        path: 'dinhquan_test', component: DinhQuanTestComponent
-      },
-      {
-        path: 'longthanh_test', component: LongThanhTestComponent
-      },
-      {
-        path: 'nhontrach_test', component: NhonTrachTestComponent
-      },
-      {
-        path: 'tanphu_test', component: TanPhuTestComponent
-      },
-      {
-        path: 'thongnhat_test', component: ThongNhatTestComponent
-      },
-      {
-        path: 'trangbom_test', component: TrangBomTestComponent
-      },
-      {
-        path: 'vinhcuu_test', component: VinhCuuTestComponent
-      },
-      {
-        path: 'xuanloc_test', component: XuanLocTestComponent
-      },
-      {
-        path: 'bienhoa_test', component: BienHoaTestComponent
-      },
-      {
-        path: 'longkhanh_test', component: LongKhanhTestComponent
-      },
-      {
-        path: 'sachbando', component: SachBanDoComponent
-      },
-      {
-        path: 'quay-xuc-xac', component: RollDiceComponent
-      },
-
-      {
-        path: 'em-yeu-dia-li', component: EmYeuDiaLiComponent,
-        children: [
-          // {
-          //   path: 'vietnam', component: VietNamComponent
-          // },
-          // {
-          //   path: 'lao', component: LaoComponent
-          // },
-          // {
-          //   path: 'campuchia', component: CampuchiaComponent
-          // },
-          // {
-          //   path: 'thailan', component: ThaiLanComponent
-          // },
-          // {
-          //   path: 'indonesia', component: IndonesiaComponent
-          // },
-          // {
-          //   path: 'philippines', component: PhilippinesComponent
-          // },
-          // {
-          //   path: 'malaysia', component: MalaysiaComponent
-          // },
-          // {
-          //   path: 'myanmar', component: MyanmarComponent
-          // },
-          // {
-          //   path: 'singapore', component: SingaporeComponent
-          // },
-          // {
-          //   path: 'eastleste', component: EastLesteComponent
-          // },
-          // {
-          //   path: 'brunei', component: BruneiComponent
-          // },
-        ]
-      },
-      {
-        path: 'em-yeu-dia-li/asean', component: AseanComponent
-      },
-      {
-        path: 'em-yeu-dia-li/vietnam', component: VietNamComponent
-      },
-      {
-        path: 'em-yeu-dia-li/lao', component: LaoComponent
-      },
-      {
-        path: 'em-yeu-dia-li/campuchia', component: CampuchiaComponent
-      },
-      {
-        path: 'em-yeu-dia-li/thailan', component: ThaiLanComponent
-      },
-      {
-        path: 'em-yeu-dia-li/indonesia', component: IndonesiaComponent
-      },
-      {
-        path: 'em-yeu-dia-li/philippines', component: PhilippinesComponent
-      },
-      {
-        path: 'em-yeu-dia-li/malaysia', component: MalaysiaComponent
-      },
-      {
-        path: 'em-yeu-dia-li/myanmar', component: MyanmarComponent
-      },
-      {
-        path: 'em-yeu-dia-li/singapore', component: SingaporeComponent
-      },
-      {
-        path: 'em-yeu-dia-li/eastleste', component: EastLesteComponent
-      },
-      {
-        path: 'em-yeu-dia-li/brunei', component: BruneiComponent
-      },
-      {
-        path: '**', component: VitriComponent
-      }
+  {
+    path: 'em-yeu-dia-li',
+    component: EmYeuDiaLiComponent,
+    children: [
+      // {
+      //   path: 'vietnam', component: VietNamComponent
+      // },
+      // {
+      //   path: 'lao', component: LaoComponent
+      // },
+      // {
+      //   path: 'campuchia', component: CampuchiaComponent
+      // },
+      // {
+      //   path: 'thailan', component: ThaiLanComponent
+      // },
+      // {
+      //   path: 'indonesia', component: IndonesiaComponent
+      // },
+      // {
+      //   path: 'philippines', component: PhilippinesComponent
+      // },
+      // {
+      //   path: 'malaysia', component: MalaysiaComponent
+      // },
+      // {
+      //   path: 'myanmar', component: MyanmarComponent
+      // },
+      // {
+      //   path: 'singapore', component: SingaporeComponent
+      // },
+      // {
+      //   path: 'eastleste', component: EastLesteComponent
+      // },
+      // {
+      //   path: 'brunei', component: BruneiComponent
+      // },
+    ],
+  },
+  {
+    path: 'em-yeu-dia-li/asean',
+    component: AseanComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/vietnam',
+    component: VietNamComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/lao',
+    component: LaoComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/campuchia',
+    component: CampuchiaComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/thailan',
+    component: ThaiLanComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/indonesia',
+    component: IndonesiaComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/philippines',
+    component: PhilippinesComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/malaysia',
+    component: MalaysiaComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/myanmar',
+    component: MyanmarComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/singapore',
+    component: SingaporeComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/eastleste',
+    component: EastLesteComponent,
+  },
+  {
+    path: 'em-yeu-dia-li/brunei',
+    component: BruneiComponent,
+  },
+  {
+    path: '**',
+    component: VitriComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -96,6 +96,9 @@ import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/si
 import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
 import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
 import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.component';
+import { GioiThieuChungComponent } from './index/gioi-thieu-chung/gioi-thieu-chung.component';
+import { GioiThieuChungVideoComponent } from './index/gioi-thieu-chung/gioi-thieu-chung-video/gioi-thieu-chung-video.component';
+import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-dung/huong-dan-su-dung.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -183,7 +186,10 @@ import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.comp
     BruneiComponent,
     EmYeuDiaLiComponent,
     EmYeuLichSuComponent,
-    AseanComponent
+    AseanComponent,
+    GioiThieuChungComponent,
+    GioiThieuChungVideoComponent,
+    HuongDanSuDungComponent
   ],
   imports: [
     BrowserModule,
