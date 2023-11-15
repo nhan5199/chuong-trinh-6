@@ -1,5 +1,8 @@
 .menu {
   width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .nav {
   background-color: #ff8000;

@@ -335,123 +335,45 @@ p {
   color: white;
   /* opacity:0; */
 }
-@media (min-width: 1100px) {
-  .contain {
-    height: calc(110vh - 80px);
-  }
-}
-@media (orientation: portrait) {
-  @media (max-width: 500px) {
-    .return {
-      display: none;
-    }
-    .book {
-      padding-right: 0;
-    }
-    .contain {
-      height: 190vw;
-    }
-    .flip-book {
-      height: 60vw;
-      margin-top: 30vw;
-      margin-bottom: 50vw;
-      width: 90%;
-      margin-right: 5.5vw;
-    }
-    .next-btn {
-      font-size: 5vw;
-      right: -10vw;
-      padding: 55% 15%;
-    }
-    .back-btn {
-      font-size: 5vw;
-      left: -10vw;
-      padding: 55% 15%;
-    }
+
+@media screen and (max-width: 950px) {
+  .flip-book {
+    width: 60%;
+    height: 70svh;
   }
 
-  @media (min-width: 700px) and (max-width: 1090px) {
-    .flip-book {
-      height: 55vw;
-      width: 90%;
-      margin-top: 20vw;
-      margin-bottom: 40vw;
-      margin-right: 6vw;
-    }
-    .next-btn {
-      right: -12vw;
-      padding: 60% 20%;
-    }
-    .back-btn {
-      left: -12vw;
-      padding: 60% 20%;
-    }
+  .return {
+    font-size: 20px;
+    width: 40px;
+  }
+
+  .return a:hover {
+    border: 2px solid white;
+    border-radius: 10px;
   }
 }
 
-@media (orientation: landscape) {
-  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    .flip-book {
-      height: 55vw;
-      width: 90%;
-      margin-top: 5vw;
-      margin-bottom: 40vw;
-      margin-right: 6vw;
-    }
-    .book {
-      height: 73vw;
-    }
-    .next-btn {
-      right: -12vw;
-      padding: 60% 20%;
-    }
-    .back-btn {
-      left: -12vw;
-      padding: 60% 20%;
-    }
+@media screen and (max-width: 950px) {
+  .flip-book {
+    width: 55%;
+    height: 60svh;
   }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    .flip-book {
-      height: 55vw;
-      width: 90%;
-      margin-top: 2vw;
-      margin-bottom: 40vw;
-      margin-right: 6vw;
-    }
-    .book {
-      height: 70vw;
-    }
-    .next-btn {
-      right: -12vw;
-      padding: 60% 20%;
-    }
-    .back-btn {
-      left: -12vw;
-      padding: 60% 20%;
-    }
-    .return {
-      top: 13px;
-    }
+}
+
+@media screen and (max-width: 450px) {
+  .flip-book {
+    margin-top: 15%;
+    width: 90%;
+    height: 45svh;
   }
 
-  @media only screen and (min-width: 374px) and (max-width: 813px) {
-    .return {
-      display: none;
-    }
-    .flip-book {
-      width: 90%;
-      margin-right: 6vw;
-    }
-    .next-btn {
-      right: -11vw;
-      padding: 48% 20%;
-    }
-    .back-btn {
-      left: -11vw;
-      padding: 48% 20%;
-    }
+  .next-btn {
+    padding: 80% 10%;
+    right: -40px;
   }
 
-  @media only screen and (min-width: 375px) and (max-width: 750px) {
+  .back-btn {
+    padding: 80% 10%;
+    left: -40px;
   }
 }

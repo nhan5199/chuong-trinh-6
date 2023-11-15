@@ -1,7 +1,7 @@
 .first-image-content {
   position: relative;
   font-family: Arial;
-  height: calc(100svh - 76px);
+  min-height: 100svh;
   background: #11998e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,

@@ -1,41 +1,33 @@
-<div class="lich-su row w3-animate-opacity">
-  <div class="col-lg-11 row">
-    <div class="col-lg-4 col1">
-      <a routerLink="/gioithieuchung/gioithieu">
-        <img src="assets/images/introduce.png" alt="" />
-        <a class="card1" routerLink="/gioithieuchung/gioithieu">
-          <p>Giới thiệu</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </a>
-      </a>
+<div class="introduce w3-animate-opacity">
+  <div class="container">
+    <div class="item">
+      <img
+        src="assets/images/introduce.png"
+        alt=""
+        (click)="onClickNavigate('/gioithieuchung/gioithieu')"
+      />
+      <button (click)="onClickNavigate('/gioithieuchung/gioithieu')">
+        Giới thiệu
+      </button>
     </div>
     <!-- 134 -->
-    <div class="col-lg-4">
-      <a routerLink="/gioithieuchung/huongdan">
-        <img src="assets/images/direction.png" alt="" />
-        <a class="card1" routerLink="/gioithieuchung/huongdan">
-          <p>
-            Hướng dẫn<br />
-            sử dụng website
-          </p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </a>
-      </a>
+    <div class="item">
+      <img
+        src="assets/images/direction.png"
+        alt=""
+        (click)="onClickNavigate('/gioithieuchung/huongdan')"
+      />
+      <button (click)="onClickNavigate('/gioithieuchung/huongdan')">
+        Hướng dẫn sử dụng
+      </button>
     </div>
-    <div class="col-lg-4 col2" style="height: 80vh">
-      <a routerLink="/gioithieuchung/game">
-        <img src="assets/images/question.png" alt="" />
-        <a class="card1" routerLink="/gioithieuchung/game">
-          <p>Game</p>
-          <div class="go-corner">
-            <div class="go-arrow">→</div>
-          </div>
-        </a>
-      </a>
+    <div class="item">
+      <img
+        src="assets/images/question.png"
+        alt=""
+        (click)="onClickNavigate('/gioithieuchung/game')"
+      />
+      <button (click)="onClickNavigate('/gioithieuchung/game')">Game</button>
     </div>
   </div>
 </div>
