@@ -1,5 +1,3 @@
-import { RollDiceComponent } from './index/roll-dice/roll-dice.component';
-import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BanDoComponent } from './index/dialy/ban-do/ban-do.component';
@@ -19,7 +17,6 @@ import { ThongNhatTestComponent } from './index/dialy/tests/thong-nhat-test/thon
 import { TrangBomTestComponent } from './index/dialy/tests/trang-bom-test/trang-bom-test.component';
 import { VinhCuuTestComponent } from './index/dialy/tests/vinh-cuu-test/vinh-cuu-test.component';
 import { XuanLocTestComponent } from './index/dialy/tests/xuan-loc-test/xuan-loc-test.component';
-import { IndexComponent } from './index/index.component';
 import { ChuaDaiGiacCanvaComponent } from './index/lichsu/canvas/chua-dai-giac-canva/chua-dai-giac-canva.component';
 import { DaBaChongCanvaComponent } from './index/lichsu/canvas/da-ba-chong-canva/da-ba-chong-canva.component';
 import { DaiKiNiemCanvaComponent } from './index/lichsu/canvas/dai-ki-niem-canva/dai-ki-niem-canva.component';
@@ -29,8 +26,10 @@ import { LichSuHanhChinhCanvaComponent } from './index/lichsu/canvas/lich-su-han
 import { NguyenHuuCanhCanvaComponent } from './index/lichsu/canvas/nguyen-huu-canh-canva/nguyen-huu-canh-canva.component';
 import { NguyenTriPhuongCanvaComponent } from './index/lichsu/canvas/nguyen-tri-phuong-canva/nguyen-tri-phuong-canva.component';
 import { TrinhHoaiDucCanvaComponent } from './index/lichsu/canvas/trinh-hoai-duc-canva/trinh-hoai-duc-canva.component';
+import { DienBienComponent } from './index/lichsu/comics/dien-bien/dien-bien.component';
 import { DoanVanCUComponent } from './index/lichsu/comics/doan-van-cu/doan-van-cu.component';
 import { NguyenHuuCanhComicComponent } from './index/lichsu/comics/nguyen-huu-canh-comic/nguyen-huu-canh-comic.component';
+import { RollDiceComponent } from './index/roll-dice/roll-dice.component';
 
 import { NguyenThiTonComicComponent } from './index/lichsu/comics/nguyen-thi-ton-comic/nguyen-thi-ton-comic.component';
 
@@ -52,6 +51,11 @@ import { TrinhHoaiDucMuclucComponent } from './index/lichsu/mucluc/trinh-hoai-du
 import { ChuaDaiGiacVideoComponent } from './index/lichsu/videos/chua-dai-giac-video/chua-dai-giac-video.component';
 import { DaBaChongVideoComponent } from './index/lichsu/videos/da-ba-chong-video/da-ba-chong-video.component';
 
+import { GioiThieuChungVideoComponent } from './index/gioi-thieu-chung/gioi-thieu-chung-video/gioi-thieu-chung-video.component';
+import { GioiThieuChungComponent } from './index/gioi-thieu-chung/gioi-thieu-chung.component';
+import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-dung/huong-dan-su-dung.component';
+import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
+import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
 import { DaiKiNiemVideoComponent } from './index/lichsu/videos/dai-ki-niem-video/dai-ki-niem-video.component';
 import { DinhTanLanVideoComponent } from './index/lichsu/videos/dinh-tan-lan-video/dinh-tan-lan-video.component';
 import { LaNgaVideoComponent } from './index/lichsu/videos/la-nga-video/la-nga-video.component';
@@ -62,6 +66,19 @@ import { TrinhHoaiDucVideoComponent } from './index/lichsu/videos/trinh-hoai-duc
 import { NoiDungComponent } from './index/noi-dung/noi-dung.component';
 import { AmThucComponent } from './index/tainguyen/am-thuc/am-thuc.component';
 import { DuLichComponent } from './index/tainguyen/du-lich/du-lich.component';
+import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.component';
+import { BruneiComponent } from './index/tainguyen/em-yeu-dia-li/brunei/brunei.component';
+import { CampuchiaComponent } from './index/tainguyen/em-yeu-dia-li/campuchia/campuchia.component';
+import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
+import { EmYeuDiaLiComponent } from './index/tainguyen/em-yeu-dia-li/em-yeu-dia-li.component';
+import { IndonesiaComponent } from './index/tainguyen/em-yeu-dia-li/indonesia/indonesia.component';
+import { LaoComponent } from './index/tainguyen/em-yeu-dia-li/lao/lao.component';
+import { MalaysiaComponent } from './index/tainguyen/em-yeu-dia-li/malaysia/malaysia.component';
+import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
+import { PhilippinesComponent } from './index/tainguyen/em-yeu-dia-li/philippines/philippines.component';
+import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
+import { ThaiLanComponent } from './index/tainguyen/em-yeu-dia-li/thai-lan/thai-lan.component';
+import { VietNamComponent } from './index/tainguyen/em-yeu-dia-li/viet-nam/viet-nam.component';
 import { HoatHinhComponent } from './index/tainguyen/hoat-hinh/hoat-hinh.component';
 import { LangNgheComponent } from './index/tainguyen/lang-nghe/lang-nghe.component';
 import { LeHoiComponent } from './index/tainguyen/le-hoi/le-hoi.component';
@@ -73,24 +90,7 @@ import { TainguyenComponent } from './index/tainguyen/tainguyen.component';
 import { TroChoiComponent } from './index/tainguyen/tro-choi/tro-choi.component';
 import { VanHoaComponent } from './index/tainguyen/van-hoa/van-hoa.component';
 import { VitriComponent } from './index/vitri/vitri.component';
-import { NguyenTatThanhComponent } from './index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component';
-import { DuongTruongSonComponent } from './index/lichsu/comics/duong-truong-son/duong-truong-son.component';
-import { BruneiComponent } from './index/tainguyen/em-yeu-dia-li/brunei/brunei.component';
-import { EmYeuDiaLiComponent } from './index/tainguyen/em-yeu-dia-li/em-yeu-dia-li.component';
-import { VietNamComponent } from './index/tainguyen/em-yeu-dia-li/viet-nam/viet-nam.component';
-import { LaoComponent } from './index/tainguyen/em-yeu-dia-li/lao/lao.component';
-import { CampuchiaComponent } from './index/tainguyen/em-yeu-dia-li/campuchia/campuchia.component';
-import { ThaiLanComponent } from './index/tainguyen/em-yeu-dia-li/thai-lan/thai-lan.component';
-import { IndonesiaComponent } from './index/tainguyen/em-yeu-dia-li/indonesia/indonesia.component';
-import { PhilippinesComponent } from './index/tainguyen/em-yeu-dia-li/philippines/philippines.component';
-import { MalaysiaComponent } from './index/tainguyen/em-yeu-dia-li/malaysia/malaysia.component';
-import { MyanmarComponent } from './index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component';
-import { SingaporeComponent } from './index/tainguyen/em-yeu-dia-li/singapore/singapore.component';
-import { EastLesteComponent } from './index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component';
-import { AseanComponent } from './index/tainguyen/em-yeu-dia-li/asean/asean.component';
-import { GioiThieuChungComponent } from './index/gioi-thieu-chung/gioi-thieu-chung.component';
-import { GioiThieuChungVideoComponent } from './index/gioi-thieu-chung/gioi-thieu-chung-video/gioi-thieu-chung-video.component';
-import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-dung/huong-dan-su-dung.component';
+import { GameComponent } from './index/gioi-thieu-chung/game/game.component';
 
 const routes: Routes = [
   {
@@ -112,6 +112,10 @@ const routes: Routes = [
   {
     path: 'gioithieuchung/huongdan',
     component: HuongDanSuDungComponent,
+  },
+  {
+    path: 'gioithieuchung/game',
+    component: GameComponent,
   },
   {
     path: 'noidung',

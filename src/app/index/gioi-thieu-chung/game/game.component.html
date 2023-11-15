@@ -1,0 +1,283 @@
+<ng-container *ngIf="orientation">
+  <div class="orientation-phone">
+    <img class="flip-phone" src="/assets/game/flip-phone.png" alt="" />
+  </div>
+</ng-container>
+<ng-container *ngIf="!orientation">
+  <div class="question-list">
+    <img class="background" src="/assets/game/question-background.jpg" alt="" />
+    <div class="back text-center">
+      <a class="return" (click)="cancel()" style="cursor: pointer"
+        ><i class="fas fa-arrow-left"></i
+      ></a>
+    </div>
+    <app-answer-point class="point" [pointPlus]="point"></app-answer-point>
+    <div class="content">
+      <div class="welcome-page" *ngIf="activePage == 0">
+        <p class="title">
+          <span style="color: rgb(146, 192, 241)">GAME</span><br /><span
+            style="color: rgb(255, 168, 116)"
+            >Khám phá Đồng Nai</span
+          >
+        </p>
+        <p class="description">
+          Tại vùng đất Đồng Nai giàu truyền thống văn hóa, một kho báu bí ẩn
+          đang chờ bạn khám phá.
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <div class="starting-page" *ngIf="activePage == 1">
+        <p>
+          Bạn hãy hoàn thành thử thách ở mỗi chặng để tìm ra kho báu quý giá<br />
+          đang được cất giấu nhé!
+        </p>
+        <img src="/assets/game/map.png" alt="" class="left" />
+        <img src="/assets/game/treasure.png" alt="" class="right" />
+        <button class="next" (click)="nextPage()">Bắt đầu</button>
+      </div>
+
+      <!-- Câu hỏi 1 -->
+      <div class="question" *ngIf="activePage == 2">
+        <p class="challenge-name">
+          THỬ THÁCH 1:<br />ĐỒNG NAI: VÙNG ĐẤT GIÀU SẢN VẬT
+        </p>
+        <p class="question">
+          Một món ăn nổi tiếng của Đồng Nai được vinh danh tại lễ hội “Rạng danh
+          văn hóa ẩm thực Việt Nam”
+        </p>
+        <div class="answer-zone">
+          <img src="/assets/game/quest1.png" alt="" />
+          <div class="list-answer-col">
+            <button class="answer" (click)="checkAnswer(1, 1, $event)">
+              Gỏi cá Tân Mai</button
+            ><button class="answer" (click)="checkAnswer(1, 2, $event)">
+              Xôi chiên phồng</button
+            ><button class="answer" (click)="checkAnswer(1, 3, $event)">
+              Gỏi bưởi
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 3">
+        <p class="clue-title">Bạn có biết?</p>
+        <p>
+          Tại lễ hội “Rạng danh văn hóa ẩm thực Việt Nam”, tỉnh Đồng Nai có 2
+          món ăn được vinh dự góp tên vào bản đồ ẩm thực Việt Nam. Đó là món GỎI
+          BƯỞI và món GÀ HẤP BƯỞI
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 2 -->
+      <div class="question" *ngIf="activePage == 4">
+        <p class="challenge-name">THỬ THÁCH 2:<br />CHIẾC CHÌA KHÓA VẠN NĂNG</p>
+        <p class="question">
+          Thương cảng nổi tiếng của Biên Hoà vào thế kỷ 18 là thương cảng nào?
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row">
+            <button class="answer" (click)="checkAnswer(2, 1, $event)">
+              Cù Lao cảng</button
+            ><button class="answer" (click)="checkAnswer(2, 2, $event)">
+              Nông Nại Đại phố</button
+            ><button class="answer" (click)="checkAnswer(2, 3, $event)">
+              Sông phố
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="clue" *ngIf="activePage == 5">
+        <p class="clue-title">Bạn có biết?</p>
+        <p>
+          Vườn quốc gia Cát Tiên có tổng diện tích là 70.548 ha, trong đó phần
+          diện tích thuộc Đồng Nai: 39.108 ha; phần diện tích thuộc tỉnh
+          Lâm Đồng: 26.969 ha; phần diện tích thuộc tỉnh Bình Phước: 4.469 ha.
+          Trụ sở Vườn quốc gia Cát Tiên đặt tại huyện Tân Phú, Đồng Nai.
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 3 -->
+      <div class="question" *ngIf="activePage == 6">
+        <p class="challenge-name">THỬ THÁCH 3:<br />DÒNG SÔNG HUYỀN BÍ</p>
+        <p class="question">Tên công trình thủy điện lớn nhất tỉnh Đồng Nai?</p>
+        <div class="answer-zone">
+          <img src="/assets/game/quest3.png" alt="" />
+          <div class="list-answer-col">
+            <button class="answer" (click)="checkAnswer(3, 1, $event)">
+              Thủy điện Trị An</button
+            ><button class="answer" (click)="checkAnswer(3, 2, $event)">
+              Thủy điện Thác Bà</button
+            ><button class="answer" (click)="checkAnswer(3, 3, $event)">
+              Thủy điện Đa Nhim
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 7">
+        <p class="clue-title">Bạn có biết?</p>
+        <p>
+          Để ghi nhận vai trò quan trọng cũng như ý nghĩa lớn lao đối với quá
+          trình xây dựng và phát triển kinh tế - xã hội của đất nước nói chung
+          và của khu vực Đông Nam bộ nói riêng, hình ảnh công trình Thủy điện
+          Trị An được in trên mặt sau của tờ tiền mệnh giá 5.000 đồng
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 4 -->
+      <div class="question" *ngIf="activePage == 8">
+        <p class="challenge-name">THỬ THÁCH 4:<br />BÍ MẬT NGÀN XƯA</p>
+        <p class="question">
+          Thương cảng Nông Nại Đại phố (Cù Lao phố nay thuộc xã Hiệp Hòa, thành
+          phố Biên Hòa) còn có tên gọi là gì?
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row-4">
+            <button class="answer" (click)="checkAnswer(4, 1, $event)">
+              Giản Phố</button
+            ><button class="answer" (click)="checkAnswer(4, 2, $event)">
+              Cù Châu</button
+            ><button class="answer" (click)="checkAnswer(4, 3, $event)">
+              Đông Phố</button
+            ><button class="answer" (click)="checkAnswer(4, 4, $event)">
+              Cả 3 đáp án trên đều đúng
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 9">
+        <p class="clue-title">Bạn có biết?</p>
+        <p>
+          Cù lao Phố còn được gọi là Đông Phố, Giản Phố, Cù Châu, Nông Nại Đại
+          Phố. Tuy nằm cách biển nhưng là nơi sông sâu, nước chảy có thể đi đến
+          mọi miền.
+          <span style="font-weight: 500"
+            ><i
+              >Nhìn từ trên cao, cù lao Phố có hình quả chuông, được  hai nhánh
+              của sông Đồng Nai ôm trọn trong địa phận của TP.Biên Hòa.</i
+            ></span
+          >
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 5 -->
+      <div class="question" *ngIf="activePage == 10">
+        <p class="challenge-name">THỬ THÁCH 5:<br />KHU RỪNG MA THUẬT</p>
+        <p class="question">
+          Tại huyện Tân Phú tỉnh Đồng Nai có một khu rừng đã được công nhận rừng
+          Quốc gia; tên gọi của khu rừng đó là gì?
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row-4">
+            <button class="answer" (click)="checkAnswer(5, 1, $event)">
+              Rừng U Minh</button
+            ><button class="answer" (click)="checkAnswer(5, 2, $event)">
+              Rừng Cúc Phương</button
+            ><button class="answer" (click)="checkAnswer(5, 3, $event)">
+              Rừng Nam Cát Tiên
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 11">
+        <p class="clue-title">Bạn có biết?</p>
+        <p>
+          Vườn quốc gia Cát Tiên có tổng diện tích là 70.548 ha, trong đó phần
+          diện tích thuộc Đồng Nai: 39.108 ha; phần diện tích thuộc tỉnh
+          Lâm Đồng: 26.969 ha; phần diện tích thuộc tỉnh Bình Phước: 4.469 ha.
+          Trụ sở Vườn quốc gia Cát Tiên đặt tại huyện Tân Phú, Đồng Nai.
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 6 -->
+      <div class="question" *ngIf="activePage == 12">
+        <p class="challenge-name">THỬ THÁCH 5:<br />NGỌN NÚI BÍ ẨN</p>
+        <p class="question">
+          Tên một địa điểm du lịch ở Đồng Nai được xem là Vịnh Hạ Long thu nhỏ?
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row-4">
+            <button class="answer" (click)="checkAnswer(6, 1, $event)">
+              Khu du lịch Suối Tre.</button
+            ><button class="answer" (click)="checkAnswer(6, 2, $event)">
+              Khu du lịch Thác Giang Điền.</button
+            ><button class="answer" (click)="checkAnswer(6, 3, $event)">
+              Khu du lịch Bửu Long.
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 13">
+        <p class="clue-title">Bạn có biết?</p>
+        <p>
+          Khu danh thắng Bửu Long được xem là một món quà quý giá của tỉnh Đồng
+          Nai và chỉ cách Sài Gòn khoảng 30km về hướng Đông. Nơi đây mang vẻ đẹp
+          của núi non, sông hồ, hang động,...được thiên nhiên bồi đắp qua năm
+          tháng tạo nên khung cảnh hữu tình và mỹ lệ. Vì thế mà người ta gọi
+          <i> khu du lịch Bửu Long</i> là Vịnh Hạ Long thu nhỏ.
+        </p>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 7 -->
+      <div class="question" *ngIf="activePage == 14">
+        <p class="challenge-name">THỬ THÁCH 7:<br />CHIẾN BINH CUỐI CÙNG</p>
+        <p class="question">
+          Tên làng nghề truyền thống nổi tiếng của Đồng Nai
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row-4">
+            <button
+              class="answer"
+              (click)="checkAnswer(7, 1, $event)"
+              style="flex: 1 1 45%"
+            >
+              Làng gốm</button
+            ><button
+              class="answer"
+              (click)="checkAnswer(7, 2, $event)"
+              style="flex: 1 1 45%"
+            >
+              Làng nghề gỗ mỹ nghệ Xuân Tâm</button
+            ><button
+              class="answer"
+              (click)="checkAnswer(7, 3, $event)"
+              style="flex: 0 0 45%"
+            >
+              Làng đất nung Bửu long
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 15">
+        <p class="clue-title">Bạn có biết?</p>
+        <img src="/assets/game/pottery.png" alt="" />
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <app-summary-result
+        *ngIf="activePage == 16"
+        [point]="point"
+        [correctAnswers]="countCorrectAnswer"
+        [wrongAnswers]="countWrongAnswer"
+      ></app-summary-result>
+    </div>
+  </div>
+</ng-container>

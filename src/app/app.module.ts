@@ -100,6 +100,9 @@ import { GioiThieuChungComponent } from './index/gioi-thieu-chung/gioi-thieu-chu
 import { GioiThieuChungVideoComponent } from './index/gioi-thieu-chung/gioi-thieu-chung-video/gioi-thieu-chung-video.component';
 import { HuongDanSuDungComponent } from './index/gioi-thieu-chung/huong-dan-su-dung/huong-dan-su-dung.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GameComponent } from './index/gioi-thieu-chung/game/game.component';
+import { AnswerPointComponent } from './index/gioi-thieu-chung/game/answer-point/answer-point.component';
+import { SummaryResultComponent } from './index/gioi-thieu-chung/game/summary-result/summary-result.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -191,6 +194,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     GioiThieuChungComponent,
     GioiThieuChungVideoComponent,
     HuongDanSuDungComponent,
+    GameComponent,
+    AnswerPointComponent,
+    SummaryResultComponent,
   ],
   imports: [
     BrowserModule,

@@ -66,9 +66,13 @@
   .icon5,
   .icon6 {
     color: white;
-    font-size: 2.5vw;
+    font-size: 30px;
     padding: 3px;
     opacity: 1;
+  }
+
+  .content p {
+    font-size: 30px;
   }
   .con1:hover .value1,
   .active .value1,
@@ -81,7 +85,7 @@
   .con6:hover .value6,
   .active .value6 {
     display: block;
-    padding: 13px 0 13px 0;
+    padding: 5px 0;
     color: #ff8000;
     background: white;
     border-radius: 20px;
@@ -91,7 +95,7 @@
   .con4:hover .value4,
   .active .value4 {
     display: block;
-    padding: 13px 0 13px 0;
+    padding: 5px 0;
     color: #ff8000;
     background: white;
     border-radius: 20px;
@@ -128,5 +132,26 @@
   .active .content {
     background-color: white;
     border-radius: 0.5vw;
+  }
+}
+
+@media (max-width: 950px) {
+  .icon1,
+  .icon2,
+  .icon3,
+  .icon4,
+  .icon5,
+  .icon6 {
+    color: white;
+    font-size: 30px;
+  }
+  .active .content i {
+    padding: 10px;
+    color: #ff8000;
+    margin: 0;
+  }
+  .active .content {
+    background-color: white;
+    border-radius: 10px;
   }
 }
