@@ -11,7 +11,11 @@
         ><i class="fas fa-arrow-left"></i
       ></a>
     </div>
-    <app-answer-point class="point" [pointPlus]="point"></app-answer-point>
+    <app-answer-point
+      *ngIf="activePage != 16"
+      class="point"
+      [pointPlus]="point"
+    ></app-answer-point>
     <div class="content">
       <div class="welcome-page" *ngIf="activePage == 0">
         <p class="title">
@@ -93,10 +97,12 @@
       <div class="clue" *ngIf="activePage == 5">
         <p class="clue-title">Bạn có biết?</p>
         <p>
-          Vườn quốc gia Cát Tiên có tổng diện tích là 70.548 ha, trong đó phần
-          diện tích thuộc Đồng Nai: 39.108 ha; phần diện tích thuộc tỉnh
-          Lâm Đồng: 26.969 ha; phần diện tích thuộc tỉnh Bình Phước: 4.469 ha.
-          Trụ sở Vườn quốc gia Cát Tiên đặt tại huyện Tân Phú, Đồng Nai.
+          Cù lao Phố là một thương cảng danh tiếng khi xưa của đất Nam bộ với
+          tên gọi Nông Nại Đại Phố, được mệnh danh là "Xứ đô hội". Nay, địa bàn
+          này thuộc đơn vị hành chính xã Hiệp Hòa, TP.Biên Hòa. Người có công
+          đầu trong việc xây dựng thương cảng cù lao Phố là nhóm người Hoa do
+          Trần Thượng Xuyên dẫn đầu, được chúa Nguyễn cho vào khai phá đất Đồng
+          Nai năm 1679.
         </p>
 
         <button class="next" (click)="nextPage()">Tiếp tục</button>
