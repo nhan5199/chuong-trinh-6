@@ -1,27 +1,29 @@
-<div class="lich-su">
-  <div class="back text-center">
-    <a class="return" routerLink="/lichsu" style="cursor: pointer;"><i class="fas fa-arrow-left"></i></a>
+<div class="muc-luc">
+  <div class="return text-center">
+    <a class="" routerLink="/lichsu"><i class="fas fa-arrow-left"></i></a>
   </div>
-  <div class="card-container row">
-    <div class="col-md-2"></div>
-    <div class="col-md-4">
-      <div class="card-content">
-        <div class="image">
-          <img src="assets/images/movie.jpg" alt="">
-          <a  routerLink="/lichsuhanhchinh_video"><button
-              class="card-button">Xem ngay</button></a>
-        </div>
+  <div class="muc-luc-container">
+    <div class="item">
+      <div
+        class="card-content"
+        (click)="onClickNavigate('/lichsuhanhchinh_video')"
+      >
+        <img src="assets/images/movie.jpg" alt="" />
+        <button (click)="onClickNavigate('/lichsuhanhchinh_video')">
+          Xem ngay
+        </button>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card-content">
-        <div  class="image">
-          <img  src="assets/images/canva.jpg" alt="">
-          <a  routerLink="/lichsuhanhchinh_canva"><button
-              class="card-button">Xem ngay</button></a>
-        </div>
+    <div class="item">
+      <div
+        class="card-content"
+        (click)="onClickNavigate('/lichsuhanhchinh_canva')"
+      >
+        <img src="assets/images/canva.jpg" alt="" />
+        <button (click)="onClickNavigate('/lichsuhanhchinh_canva')">
+          Xem ngay
+        </button>
       </div>
     </div>
   </div>
-  <div class="col-md-2"></div>
 </div>

@@ -1,6 +1,6 @@
 .question-list {
   width: 100%;
-  height: calc(100svh - 76px);
+  height: 100svh;
 }
 
 .question-list .background {
@@ -12,7 +12,7 @@
 .orientation-phone {
   background-color: #ffcc29;
   width: 100%;
-  height: calc(100svh - 76px);
+  height: 100svh;
 }
 
 .orientation-phone .flip-phone {
@@ -25,35 +25,31 @@
   transform: translate(-50%, -50%);
 }
 
-.back {
+.music {
   position: absolute;
-  margin: 0;
-  font-size: 40px;
-  top: 110px;
-  width: 100px;
-  left: 70px;
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  left: 5%;
+  cursor: pointer;
 }
-.back a {
-  color: white;
-  text-decoration: none;
-  transition: 0.2s;
-}
-.back a i {
-  width: 50px;
-}
-.back a:hover {
-  border: 5px solid white;
-  border-radius: 20px;
-}
-
 .content {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 55%;
   transform: translate(-50%, -60%);
   width: 75%;
-  height: 60svh;
+  height: 65svh;
   background-color: transparent;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-shrink: unset;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .welcome-page,
@@ -82,7 +78,7 @@ p {
   text-align: center;
   font-weight: bold;
   color: rgb(124, 46, 0);
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .next {
@@ -130,7 +126,7 @@ p {
 }
 
 .answer-zone img {
-  width: 500px;
+  width: 400px;
   border-radius: 10px;
 }
 
@@ -140,15 +136,22 @@ p {
   gap: 20px;
 }
 
+.point-plus {
+  position: absolute;
+  font-size: 100px;
+  color: green;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
 .list-answer-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   flex-wrap: wrap;
 }
 
@@ -158,16 +161,13 @@ p {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  position: absolute;
-  top: 60%;
-  transform: translateY(-60%);
   flex-wrap: wrap;
 }
 
 .answer {
   flex: 0 0 45%;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 25px;
   padding: 10px 20px;
   background-color: #fac702;
   color: rgb(124, 46, 0);
@@ -183,8 +183,9 @@ p {
 
 .clue {
   position: absolute;
-  width: 90%;
-  top: 50%;
+  width: 75%;
+  height: 100%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -194,28 +195,57 @@ p {
 }
 
 .clue-title {
-  color: rgb(255, 105, 105);
-  margin-bottom: 45px;
+  color: white;
   font-size: 50px;
-  font-weight: 400;
+  font-weight: bold;
+}
+
+.clue-content .decorate {
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  left: -15%;
+  top: 20%;
+}
+
+.clue-description {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid #ff6969;
+  border-radius: 10px;
+  background-color: #ffb5b5;
 }
 
 .point {
   position: absolute;
-  top: 12%;
+  top: 15%;
   right: 20%;
 }
 
-.clue img {
-  width: 600px;
+.pottery {
+  width: 500px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+audio {
+  display: none;
+}
+
+.money {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 100%;
+}
+
+.money img {
+  width: 200px;
+}
 @media (max-width: 1050px) {
-  .content {
-    top: 65%;
-  }
   .title {
     font-size: 35px;
     margin: 0;
@@ -224,6 +254,15 @@ p {
   p {
     font-size: 13px;
     margin: 0;
+  }
+
+  .clue-content .decorate {
+    width: 70px;
+    height: 130px;
+  }
+
+  .clue-description {
+    padding: 10px;
   }
 
   .next {
@@ -276,33 +315,38 @@ p {
   }
 
   .clue {
-    top: 40%;
+    top: 50%;
   }
 
   .clue-title {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     margin-bottom: 10px;
   }
 
   .challenge-name {
-    margin: 5px;
+    margin: 10px;
   }
 
-  .clue img {
+  .pottery {
     width: 240px;
   }
 
-  .back {
-    font-size: 15px;
-    top: 28%;
-    left: 0%;
+  .music {
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    left: 7%;
+  }
+
+  .money img {
+    width: 150px;
   }
 }
 
 @media (max-width: 750px) {
   .content {
-    top: 70%;
+    top: 60%;
   }
   .title {
     font-size: 20px;
@@ -373,13 +417,11 @@ p {
     margin-top: 20px;
   }
 
-  .clue img {
-    width: 120px;
+  .pottery {
+    width: 300px;
   }
 
-  .back {
-    font-size: 10px;
-    top: 28%;
-    left: 0%;
+  .money img {
+    width: 120px;
   }
 }

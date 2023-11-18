@@ -74,16 +74,20 @@ p {
 
 @media screen and (max-width: 1050px) {
   .summary-result {
-    top: 30%;
+    top: 45%;
   }
   .result div {
     height: 25px;
   }
   .result {
-    top: 15%;
+    top: 10%;
   }
   p {
-    font-size: 18px;
+    font-size: 14px;
+  }
+
+  .action button {
+    font-size: 14px;
   }
 }
 

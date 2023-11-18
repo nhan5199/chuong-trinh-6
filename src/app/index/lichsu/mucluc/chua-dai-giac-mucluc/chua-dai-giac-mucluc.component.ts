@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chua-dai-giac-mucluc',
   templateUrl: './chua-dai-giac-mucluc.component.html',
-  styleUrls: ['./chua-dai-giac-mucluc.component.css']
+  styleUrls: ['./chua-dai-giac-mucluc.component.css'],
 })
 export class ChuaDaiGiacMuclucComponent implements OnInit {
+  constructor(private readonly _router: Router) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  onClickNavigate(url: string) {
+    this._router.navigateByUrl(url);
   }
-
 }

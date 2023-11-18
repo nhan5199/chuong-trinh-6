@@ -1,336 +1,73 @@
+.resource {
+  width: 100%;
+  background: #ffcc29;
+  min-height: 100svh;
+}
 
-  .lich-su {
-    width:100%;
-    margin:0 auto;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: auto;
+.resource-container {
+  position: absolute;
+  width: 100%;
+  background: #ffcc29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
 
-    transition-duration: 1s;
-    position: absolute;
-    background: #FFCC29;
-
-  }
-  .col-lg-9{
-    margin: 0 auto;
-  }
-  .lich-su img{
-    width:90%;
-    height: 55vh;
-    opacity:1;
-    position: relative;
-    border:2px solid green;
-    border-radius: 10px;
-    margin-top:60px;
-    margin-bottom:20px;
-  }
-  .col1:hover img, .col2:hover img{
-    top:-20px;
-    transition-duration: .5s;
-    opacity:1;
-  }
-
-  .col-lg-12{
-    margin:0 auto;
-  }
-  .row1{
-    margin-top:3vw;
-  }
-
-  .card-button {
-    padding: 15px;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    margin: 0 auto;
-    text-decoration: none;
-    font-size: 25px;
-    transition: background .5s;
-    background: #5CE3F2;
-    color: #3940BF;
-    background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-    background-size: 200%;
-    position: absolute;
-    left: 43%;
-    margin-left: -43px;
-    bottom: 15%;
-    margin-bottom: -15px;
-    display: block;
-
-  }
-  .card-button:hover{
-    background-position: left;
-    color:#0082c8;
-  }
-
-
-@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
-
-h5 {
-  font-size: 7vh;
-  margin-top:60px;
-/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
-  color: #fccaff; */
-    color: #fff6a9;
+.title {
   text-align: center;
-  animation: blink 12s infinite;
-    font-weight: bold;
-  -webkit-animation: blink 12s infinite;
+  font-size: 35px;
+  padding: 80px 0 20px 0;
+  font-weight: bold;
 }
 
-
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-    color: #fff6a9;
-  }
+.item {
+  cursor: pointer;
+  position: relative;
+  flex: 0 0 20%;
+  transition: 0.5s ease;
+  margin: 20px;
 }
 
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: #fccaff;
-    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-    color: #8C4545;
-  }
+.item:hover {
+  flex: 0 0 21%;
 }
 
-  @media (min-width:1100px){
-    .lich-su {
-      width:100%;
-      margin:0 auto;
-      text-align: center;
-      background-repeat: no-repeat;
-      background-size: auto;
+.item img {
+  width: 100%;
+  border-radius: 15px;
 
-      transition-duration: 1s;
-      position: absolute;
-      background: #FFCC29;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 
-    }
+.item p {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 5%;
+  background: #5ce3f2;
+  color: #3940bf;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background 0.5s;
+  background: linear-gradient(to left, #5ce3f2 50%, #f2935c 50%) right;
+  background-size: 200%;
+}
+
+.item:hover p {
+  background-position: left;
+}
+
+@media screen and (max-width: 1000px) {
+  .title {
+    padding: 60px 0 20px 0;
   }
-  @media(orientation : portrait){
-    @media (max-width : 390px){
-      h5{
-        font-size: 8vw;
-        line-height: 9vw;
-        margin-top:30px;
-      }
-      .lich-su img{
-        width:90%;
-        height: 40vh;
-        opacity:1;
-        position: relative;
-        border:2px solid green;
-        border-radius: 10px;
-        margin-top:30px;
-        margin-bottom:20px;
-      }
-      .card-button {
-        left: 42%;
-      }
-    }
-
-    @media (min-width:400px) and (max-width:500px){
-      h5{
-        font-size: 8vw;
-        line-height: 9vw;
-        margin-top:30px;
-      }
-      .lich-su img{
-        width:80%;
-        height: 40vh;
-        opacity:1;
-        position: relative;
-        border:2px solid green;
-        border-radius: 10px;
-        margin-top:30px;
-        margin-bottom:20px;
-      }
-      .card-button {
-        left: 42%;
-      }
-      .card-button p{
-        font-size: 5vw;;
-      }
-    }
-
-    @media (min-width: 700px) and (max-width: 900px){
-      h5{
-        font-size: 8vw;
-        line-height: 9vw;
-        margin-top:30px;
-      }
-      .lich-su img{
-        width:60%;
-        height: 40vh;
-        opacity:1;
-        position: relative;
-        border:2px solid green;
-        border-radius: 10px;
-        margin-top:30px;
-        margin-bottom:20px;
-      }
-      .card-button {
-        left: 40%;
-        font-size: 5vw;
-        padding:20px 30px;
-      }
-    }
-
-    @media (min-width: 910px) and (max-width: 1090px){
-      .lich-su {
-        width:100%;
-        margin:0 auto;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: auto;
-
-        transition-duration: 1s;
-        position: absolute;
-        background: #FFCC29;
-      }
-      h5{
-        font-size: 6vw;
-        line-height: 9vw;
-        margin-top:30px;
-      }
-      .lich-su img{
-        width:90%;
-        height: 25vh;
-        opacity:1;
-        position: relative;
-        border:2px solid green;
-        border-radius: 10px;
-        margin-top:30px;
-        margin-bottom:20px;
-      }
-      .card-button {
-        left: 43%;
-        font-size: 2vw;
-      }
-    }
-
+  .item p {
+    font-size: 10px;
+    bottom: 0;
   }
-
-  @media (orientation : landscape){
-
-    @media only screen
-    and (min-width: 1024px)
-    and (max-height: 1366px)
-    and (-webkit-min-device-pixel-ratio: 1.5) {
-      h5{
-        font-size: 4vw;
-        line-height: 9vw;
-        margin-top:30px;
-      }
-      .card-button {
-        left: 34%;
-        font-size: 2.5vw;
-      }
-    }
-    @media only screen
-    and (min-device-width : 768px)
-    and (max-device-width : 1024px)
-    and (orientation : landscape) {
-      h5{
-        font-size: 4vw;
-        line-height: 9vw;
-        margin-top:30px;
-      }
-      .card-button {
-        left: 43%;
-        font-size: 2vw;
-      }
-      .lich-su img{
-        margin-top:15px;
-        margin-bottom:20px;
-      }
-    }
-
-    @media only screen
-    and (min-width : 374px)
-    and (max-width : 813px){
-      h5{
-        font-size: 4vw;
-        line-height: 9vw;
-        margin-top:10px;
-      }
-      .lich-su img{
-        width:40%;
-        height: 70vh;
-        opacity:1;
-        position: relative;
-        border:2px solid green;
-        border-radius: 10px;
-        margin-top:10px;
-        margin-bottom:20px;
-      }
-      .card-button {
-        left: 46%;
-        font-size: 3vw;
-        padding:10px 20px;
-        bottom:7vw;
-      }
-    }
-
-    @media only screen
-    and (min-width:375px)
-    and (max-width : 750px){
-      h5{
-        font-size: 4vw;
-        line-height: 9vw;
-        margin-top:10px;
-      }
-      .lich-su img{
-        width:40%;
-        height: 70vh;
-        opacity:1;
-        position: relative;
-        border:2px solid green;
-        border-radius: 10px;
-        margin-top:10px;
-        margin-bottom:20px;
-      }
-      .card-button {
-        left: 46%;
-        font-size: 3vw;
-        padding:10px 20px;
-        bottom:7vw;
-      }
-    }
-  }
-
+}

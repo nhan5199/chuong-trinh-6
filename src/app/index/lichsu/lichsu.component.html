@@ -1,44 +1,35 @@
-<div class="lich-su row w3-animate-opacity">
- <div class="col-lg-11 row" >
-  <div class="col-lg-4 col1">
-    <a routerLink="/lichsuhanhchinh_mucluc">
-      <img  src="assets/images/hanh_chinh.jpg" alt="">
-    <a  class="card1" routerLink="/lichsuhanhchinh_mucluc">
-      <p >Lịch sử<br>
-        hành chính</p>
-      <div class="go-corner">
-        <div class="go-arrow">
-          →
-        </div>
-      </div>
-    </a>
-    </a>
+<div class="introduce w3-animate-opacity">
+  <div class="lichsu-container">
+    <div class="item">
+      <img
+        src="assets/images/hanh_chinh.jpg"
+        alt=""
+        (click)="onClickNavigate('/lichsuhanhchinh_mucluc')"
+      />
+      <button (click)="onClickNavigate('/lichsuhanhchinh_mucluc')">
+        Lịch sử hành chính
+      </button>
+    </div>
+    <!-- 134 -->
+    <div class="item">
+      <img
+        src="assets/images/di_tich_lich_su.jpg"
+        alt=""
+        (click)="onClickNavigate('/danhsachditich')"
+      />
+      <button (click)="onClickNavigate('/danhsachditich')">
+        Di tích lịch sử
+      </button>
+    </div>
+    <div class="item">
+      <img
+        src="assets/images/nguyen_huu_canh_1.jpg"
+        alt=""
+        (click)="onClickNavigate('/danhsachtruyentranh')"
+      />
+      <button (click)="onClickNavigate('/danhsachtruyentranh')">
+        Nhân vật lịch sử
+      </button>
+    </div>
   </div>
-  <div class="col-lg-4" >
-   <a routerLink="/danhsachditich">
-    <img  src="assets/images/di_tich_lich_su.jpg" alt="">
-    <a class="card1" routerLink="/danhsachditich">
-      <p>Di tích<br> lịch sử</p>
-      <div class="go-corner">
-        <div class="go-arrow">
-          →
-        </div>
-      </div>
-    </a>
-   </a>
-  </div>
-  <div class="col-lg-4 col2" style="height:80vh">
-    <a routerLink="/danhsachtruyentranh">
-      <img  src="assets/images/nguyen_huu_canh_1.jpg" alt="">
-    <a  class="card1" routerLink="/danhsachtruyentranh">
-      <p>Nhân vật<br> lịch sử</p>
-      <div class="go-corner">
-        <div class="go-arrow">
-          →
-        </div>
-      </div>
-    </a>
-    </a>
-  </div>
- </div>
 </div>

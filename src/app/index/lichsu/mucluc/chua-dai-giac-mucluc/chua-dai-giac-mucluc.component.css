@@ -1,534 +1,63 @@
-
-@media(min-width:1100px){
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-.lich-su {
-  position: absolute;
+.muc-luc {
   width: 100%;
-  height: 100%;
-  background: #FFCC29;
-}
-.card-content{
-  margin-top:40px
-}
-.image{
-  padding-left:10%;
-}
-.card-content:hover img{
-  margin-top:-20px;
-}
-img{
-  width:90%;
-  height:65vh;
-  position:relative;
-  -webkit-box-shadow: 0 0 20px black;
-              box-shadow: 0 0 20px black;
-}
-.card-content a{
-  position:absolute;
-  left:33%;
-  bottom:10%;
-  z-index:999;
+  min-height: 100svh;
+  background: #ffcc29;
 }
 
+.muc-luc-container {
+  width: 100%;
 
-.card-button {
-  padding: 15px 20px;
-  border-radius: 50px;
-  background: #5CE3F2;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  margin: 0 auto;
-  text-decoration: none;
-  color: #3940BF;
-  font-size: 30px;
-  transition: background .5s;
-   background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-    background-size: 200%;
-
-}
-.card-button:hover{
-  background-position: left;
-
+  background: #ffcc29;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.back{
+.item {
+  flex: 0 0 22%;
   position: relative;
-  margin:0;
-  font-size: 40px;
-  top: 10px;
-  width: 100px;
-  left: 40px;
-}
-.back a{
-  color:white;
-  text-decoration: none;
-  transition: .2s;
-}
-.back a i{
-  width:50px;
-}
-.back a:hover{
-  border: 5px solid white;
-  border-radius: 20px;
-
-}
-}
-@media (orientation : portrait){
-  @media (max-width : 390px){
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-  .lich-su {
-    position: absolute;
-    width: 100%;
-    background: #FFCC29;
-  }
-  .card-content{
-    margin-top:40px
-  }
-  .image{
-    padding-left:10%;
-  }
-  img{
-    width:70%;
-    margin-left:9vw;
-    height:40vh;
-    position:relative;
-    -webkit-box-shadow: 0 0 20px black;
-                box-shadow: 0 0 20px black;
-    margin-bottom:19vw;
-  }
-  .card-content a{
-    position:absolute;
-    left:40vw;
-    bottom:24vw;
-    z-index:999;
-  }
-  .card-button {
-    padding: 15px 20px;
-    border-radius: 50px;
-    background: #5CE3F2;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    margin: 0 auto;
-    text-decoration: none;
-    color: #3940BF;
-    font-size: 4vw;
-    transition: background .5s;
-     background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-      background-size: 200%;
-
-  }
-  .card-button:hover{
-    background-position: left;
-
-  }
-
-  .back{
-    display:none;
-  }
-  }
-
-  @media (min-width:400px) and (max-width:500px){
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-  .lich-su {
-    position: absolute;
-    width: 100%;
-    background: #FFCC29;
-  }
-  .card-content{
-    margin-top:40px
-  }
-  .image{
-    padding-left:10%;
-  }
-  img{
-    width:60vw;
-    margin-left:11vw;
-    height:37vh;
-    position:relative;
-    -webkit-box-shadow: 0 0 20px black;
-                box-shadow: 0 0 20px black;
-    margin-bottom:10vw;
-  }
-  .card-content a{
-    position:absolute;
-    left:38.5vw;
-    bottom:14vw;
-    z-index:999;
-  }
-  .card-button {
-    padding: 15px 20px;
-    border-radius: 50px;
-    background: #5CE3F2;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    margin: 0 auto;
-    text-decoration: none;
-    color: #3940BF;
-    font-size: 5vw;
-    transition: background .5s;
-     background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-      background-size: 200%;
-
-  }
-  .card-button:hover{
-    background-position: left;
-
-  }
-
-  .back{
-    display:none;
-  }
-  }
-
-  @media (min-width: 700px) and (max-width: 1090px){
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-    .lich-su {
-      position: absolute;
-      width: 100%;
-      height: calc(100vh - 80px);
-      background: #FFCC29;
-    }
-    .card-content:hover img{
-      margin-top:-20px;
-    }
-    img{
-      width:100%;
-      height:33vh;
-      position:relative;
-      -webkit-box-shadow: 0 0 20px black;
-                  box-shadow: 0 0 20px black;
-    }
-
-    .card-content a{
-      position:absolute;
-      left:8vw;
-      bottom:8%;
-      z-index:999;
-    }
-    .card-button {
-      padding: 15px 20px;
-      border-radius: 50px;
-      background: #5CE3F2;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      margin: 0 auto;
-      text-decoration: none;
-      color: #3940BF;
-      font-size: 3vw;
-      transition: background .5s;
-       background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-        background-size: 200%;
-
-    }
-    .card-button:hover{
-      background-position: left;
-
-    }
-
-    .back{
-      position: relative;
-      margin:0;
-      font-size: 40px;
-      top: 8vw;
-      width: 100px;
-      left: 40px;
-      margin-bottom: 15vw;
-    }
-    .back a{
-      color:white;
-      text-decoration: none;
-      transition: .2s;
-    }
-    .back a i{
-      width:50px;
-    }
-    .back a:hover{
-      border: 5px solid white;
-      border-radius: 20px;
-
-    }
-  }
-}
-
-@media (orientation : landscape){
-
-@media only screen
-and (min-width: 1024px)
-and (max-height: 1366px)
-and (-webkit-min-device-pixel-ratio: 1.5) {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-  .lich-su {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: #FFCC29;
-  }
-  .card-content:hover img{
-    margin-top:-20px;
-  }
-  img{
-    width:100%;
-    height:52vh;
-    position:relative;
-    -webkit-box-shadow: 0 0 20px black;
-                box-shadow: 0 0 20px black;
-  }
-  .card-content a{
-    position:absolute;
-    left:10.5vw;
-    bottom:10%;
-    z-index:999;
-  }
-  .card-button {
-    padding: 15px 20px;
-    border-radius: 50px;
-    background: #5CE3F2;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    margin: 0 auto;
-    text-decoration: none;
-    color: #3940BF;
-    font-size: 3vw;
-    transition: background .5s;
-     background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-      background-size: 200%;
-
-  }
-  .card-button:hover{
-    background-position: left;
-
-  }
-
-  .back{
-    position: relative;
-    margin:0;
-    font-size: 40px;
-    top: 5vw;
-    width: 100px;
-    left: 40px;
-    margin-bottom:10vw;
-  }
-  .back a{
-    color:white;
-    text-decoration: none;
-    transition: .2s;
-  }
-  .back a i{
-    width:50px;
-  }
-  .back a:hover{
-    border: 5px solid white;
-    border-radius: 20px;
-
-  }
-}
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape) {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-  .lich-su {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: #FFCC29;
-  }
-  .card-content:hover img{
-    margin-top:-20px;
-  }
-  img{
-    width:100%;
-    height:52vh;
-    position:relative;
-    -webkit-box-shadow: 0 0 20px black;
-                box-shadow: 0 0 20px black;
-  }
-  .card-content a{
-    position:absolute;
-    left:8vw;
-    bottom:10%;
-    z-index:999;
-  }
-  .card-button {
-    padding: 15px 20px;
-    border-radius: 50px;
-    background: #5CE3F2;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    margin: 0 auto;
-    text-decoration: none;
-    color: #3940BF;
-    font-size: 3vw;
-    transition: background .5s;
-     background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-      background-size: 200%;
-
-  }
-  .card-button:hover{
-    background-position: left;
-
-  }
-
-  .back{
-    position: relative;
-    margin:0;
-    font-size: 40px;
-    top: 5vw;
-    width: 100px;
-    left: 40px;
-    margin-bottom:10vw;
-  }
-  .back a{
-    color:white;
-    text-decoration: none;
-    transition: .2s;
-  }
-  .back a i{
-    width:50px;
-  }
-  .back a:hover{
-    border: 5px solid white;
-    border-radius: 20px;
-
-  }
-}
-
-@media only screen
-and (min-width : 374px)
- and (max-width : 813px){
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-
-
-.lich-su {
-  position: absolute;
-  width: 100%;
-  background: #FFCC29;
-}
-.card-content{
-  margin-top:4vw
-}
-.image{
-  padding-left:10%;
-}
-.card-content:hover img{
-  margin-top:-20px;
-}
-img{
-  width:90%;
-  height:65vh;
-  position:relative;
-  -webkit-box-shadow: 0 0 20px black;
-              box-shadow: 0 0 20px black;
-  margin-bottom:3vw;
-}
-.card-content a{
-  position:absolute;
-  left:11vw;
-  bottom:5vw;
-  z-index:999;
-}
-.card-button {
-  padding: 10px 15px;
-  border-radius: 50px;
-  background: #5CE3F2;
-  font-weight: bold;
   cursor: pointer;
-  border: none;
-  margin: 0 auto;
-  text-decoration: none;
-  color: #3940BF;
-  font-size: 2vw;
-  transition: background .5s;
-   background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
-    background-size: 200%;
-
-}
-.card-button:hover{
-  background-position: left;
-
+  transition: 0.5s ease;
 }
 
-.back{
-  display:none;
-}
+.item:hover {
+  flex: 0 0 24%;
 }
 
-@media only screen
-and (min-width:375px)
-and (max-width : 750px){
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
-.lich-su {
-position: absolute;
-width: 100%;
-background: #FFCC29;
+.item img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-.card-content{
-margin-top:4vw
-}
-.image{
-padding-left:10%;
-}
-.card-content:hover img{
-margin-top:-20px;
-}
-img{
-width:38vw;
-margin-left:21vw;
-height:65vh;
-position:relative;
--webkit-box-shadow: 0 0 20px black;
-            box-shadow: 0 0 20px black;
-margin-bottom:3vw;
-}
-.card-content a{
-position:absolute;
-left:43vw;
-bottom:6vw;
-z-index:999;
-}
-.card-button {
-padding: 10px 15px;
-border-radius: 50px;
-background: #5CE3F2;
-font-weight: bold;
-cursor: pointer;
-border: none;
-margin: 0 auto;
-text-decoration: none;
-color: #3940BF;
-font-size: 3vw;
-transition: background .5s;
- background: linear-gradient(to left, #5CE3F2 50%, #F2935C 50%)right ;
+
+button {
+  position: absolute;
+  bottom: 5%;
+  width: 70%;
+  padding: 10px 20px;
+  border: 5px solid #ff8000;
+  margin-top: 10px;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #ff8c00;
+  font-size: 20px;
+  font-weight: bold;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background 0.75s ease;
+  background: linear-gradient(to left, white 50%, #ff8000 50%) right;
   background-size: 200%;
-
-}
-.card-button:hover{
-background-position: left;
-
 }
 
-.back{
-display:none;
+button:hover,
+.item:hover button {
+  background-color: #ff8000;
+  color: white;
+  background-position: left;
 }
-}
-}
-
-

@@ -1,129 +1,166 @@
-<link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
-<div class="di-tich w3-animate-opacity">
-    <div class="back text-center">
-      <a class="return" routerLink="lichsu"><i class="fas fa-arrow-left"></i></a>
-    </div>
-    <h5 >Danh sách di tích lịch sử - văn hóa tiêu biểu</h5>
+<div class="di-tich">
+  <div class="return text-center">
+    <a class="" routerLink="/lichsu"><i class="fas fa-arrow-left"></i></a>
+  </div>
+  <p class="title">Danh sách di tích lịch sử - văn hóa tiêu biểu</p>
 
-    <div class=" col-md-11 row" style="margin:0 auto;">
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div  class="image">
-                    <img src="assets/images/LaNga/1.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1 >Địa điểm <br>  chiến thắng <br> La Ngà </h1>
+  <div class="di-tich-container">
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/LaNga/1.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Địa điểm <br />
+              chiến thắng <br />
+              La Ngà
+            </p>
 
-                    </div>
-                    <a routerLink="/langa_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/langa_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
         </div>
-
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/DaiKiNiem/1.png" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1>Di tích <br> Đài Kỉ niệm</h1>
-
-                    </div>
-                    <a routerLink="/daikiniem_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/DaBaChong/1.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1> Đá Chồng <br> Định Quán </h1>
-
-                    </div>
-                    <a routerLink="/dabachong_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/TrinhHoaiDuc/0.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1>Trịnh <br>  Hoài Đức</h1>
-
-                    </div>
-                    <a routerLink="/trinhhoaiduc_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
 
-    <div class="col-md-11 row row2">
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/ChuaDaiGiac/1.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1>Chùa <br>  Đại Giác</h1>
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/DaiKiNiem/1.png" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Di tích <br />
+              Đài Kỉ niệm
+            </p>
 
-                    </div>
-                    <a routerLink="/chuadaigiac_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/daikiniem_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
         </div>
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/NguyenHuuCanh/0.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1>Nguyễn <br> Hữu Cảnh</h1>
-
-                    </div>
-                    <a routerLink="/nguyenhuucanh_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/DinhTanLan/1.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                    <h1>Đình <br>  Tân Lân</h1>
-
-                </div>
-                    <a routerLink="/dinhtanlan_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div style="margin-top:30px" class="card-book text-center">
-                <div class="image">
-                    <img src="assets/images/NguyenTriPhuong/0.jpg" />
-                </div>
-                <div class="details">
-                    <div class="center">
-                        <h1>Nguyễn <br> Tri Phương</h1>
-
-                    </div>
-                    <a routerLink="/nguyentriphuong_mucluc"><button class="card-button">Xem ngay</button></a>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
+
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/DaBaChong/1.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Đá Chồng <br />
+              Định Quán
+            </p>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('dabachong_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/TrinhHoaiDuc/0.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Trịnh <br />
+              Hoài Đức
+            </p>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/trinhhoaiduc_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/ChuaDaiGiac/1.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Chùa <br />
+              Đại Giác
+            </p>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/chuadaigiac_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/NguyenHuuCanh/0.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Nguyễn <br />
+              Hữu Cảnh
+            </p>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/nguyenhuucanh_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/DinhTanLan/1.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Đình <br />
+              Tân Lân
+            </p>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/ndinhtanlan_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card-book">
+        <img src="assets/images/NguyenTriPhuong/0.jpg" />
+        <div class="details">
+          <div class="center">
+            <p>
+              Nguyễn <br />
+              Tri Phương
+            </p>
+            <button
+              class="card-button"
+              (click)="onClickNavigate('/nguyentriphuong_mucluc')"
+            >
+              Xem ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

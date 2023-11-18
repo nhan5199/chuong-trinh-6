@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-game',
@@ -7,13 +7,17 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./game.component.css'],
 })
 export class GameComponent implements OnInit {
-  activePage: number = 0;
-  listAnswer: number[] = [3, 2, 1, 4, 3, 3, 1];
+  @ViewChild('audioPlayer') audioPlayer: any;
+  activePage: number = 3;
+  listAnswer: number[] = [3, 2, 1, 1, 4, 3, 3, 1];
 
   countWrongAnswer: number = 0;
   countCorrectAnswer: number = 0;
   point: number = 0;
 
+  isDisplayPointPlus: boolean = false;
+  isPlaying: boolean = true;
+  musicNoteImg: string = '/assets/game/play-music.png';
   orientation: boolean = false;
 
   constructor(private readonly _location: Location) {}
@@ -34,6 +38,18 @@ export class GameComponent implements OnInit {
         this.orientation = true;
       }
     }
+    this.toggleAudio();
+  }
+
+  toggleAudio() {
+    if (this.isPlaying) {
+      this.audioPlayer.nativeElement.pause();
+      this.musicNoteImg = '/assets/game/mute-music.png';
+    } else {
+      this.audioPlayer.nativeElement.play();
+      this.musicNoteImg = '/assets/game/play-music.png';
+    }
+    this.isPlaying = !this.isPlaying;
   }
 
   checkAnswer(questNum: number, chosenAnswer: number, event: any) {
@@ -44,6 +60,7 @@ export class GameComponent implements OnInit {
       if (element) {
         element.style.backgroundColor = 'green';
         element.style.color = 'white';
+        this.onCorrectAnswer();
       }
     } else {
       this.countWrongAnswer += 1;
@@ -70,8 +87,16 @@ export class GameComponent implements OnInit {
     }, 1500);
   }
 
+  onCorrectAnswer() {
+    this.isDisplayPointPlus = true;
+
+    setTimeout(() => {
+      this.isDisplayPointPlus = false;
+    }, 1000);
+  }
+
   nextPage() {
-    this.activePage += 1;
+    this.activePage += 2;
   }
   cancel() {
     this._location.back();
