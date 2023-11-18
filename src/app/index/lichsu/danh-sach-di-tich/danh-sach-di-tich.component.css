@@ -99,3 +99,42 @@ p {
 .details:hover .card-button {
   background-position: left;
 }
+
+@media screen and (max-width: 950px) {
+  .title {
+    font-size: 35px;
+    padding: 50px 0 20px 0;
+  }
+
+  .card-book .details .center {
+    font-size: 20px;
+  }
+  .card-button {
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+}
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 20px;
+    padding: 50px 0 20px 0;
+  }
+
+  .item {
+    flex: 0 0 35%;
+    height: 25svh;
+  }
+
+  .card-book .details .center {
+    font-size: 15px;
+  }
+
+  .card-button {
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+}

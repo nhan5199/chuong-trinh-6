@@ -32,25 +32,22 @@ iframe {
   height: 70svh;
   border-radius: 10px;
 }
-
 @media screen and (max-width: 950px) {
-  .video {
-    top: 55%;
-  }
   h5 {
     font-size: 30px;
+    margin: 20px 0 10px 0;
   }
 
   iframe {
-    width: 50%;
-    height: 50svh;
+    width: 60%;
+    height: 65svh;
   }
 }
 
 @media screen and (max-width: 550px) {
   .video {
     position: absolute;
-    top: 20%;
+    top: 35%;
   }
 
   iframe {
