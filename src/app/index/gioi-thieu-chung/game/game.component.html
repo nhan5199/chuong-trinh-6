@@ -4,12 +4,12 @@
   </div>
 </ng-container>
 <ng-container *ngIf="!orientation">
-  <audio
+  <!-- <audio
     #audioPlayer
     src="/assets/game/dong-nai-que-toi.mp3"
     autoplay
     loop
-  ></audio>
+  ></audio> -->
   <div class="question-list">
     <img class="background" src="/assets/game/question-background.jpg" alt="" />
     <img (click)="toggleAudio()" class="music" [src]="musicNoteImg" alt="" />
@@ -22,7 +22,7 @@
 
     <p *ngIf="isDisplayPointPlus" class="point-plus">+100</p>
     <app-answer-point
-      *ngIf="activePage != 18 && activePage % 2 != 1"
+      *ngIf="activePage != 22 && activePage % 2 != 1"
       class="point"
       [pointPlus]="point"
     ></app-answer-point>
@@ -153,11 +153,12 @@
           <div class="clue-description">
             <p class="clue-title">Bạn có biết?</p>
             <p>
-              Để ghi nhận vai trò quan trọng cũng như ý nghĩa lớn lao đối với
-              quá trình xây dựng và phát triển kinh tế - xã hội của đất nước nói
-              chung và của khu vực Đông Nam bộ nói riêng, hình ảnh công trình
-              Thủy điện Trị An được in trên mặt sau của tờ tiền mệnh giá 5.000
-              đồng
+              Nhà máy thủy điện Trị An là biểu tượng sáng ngời của tinh thần
+              đoàn kết quốc tế, tình hữu nghị giữa Việt Nam và Liên Xô (nay là
+              Liên bang Nga). Đây là công trình thủy điện được xây dựng nhờ sự
+              hỗ trợ to lớn về tài chính và công nghệ từ Liên Xô. Thủy điện Trị
+              An được khởi công vào ngày kỷ niệm độc lập dân tộc 30/4/1984, trên
+              sông Đồng Nai chảy qua huyện Vĩnh Cửu, tỉnh Đồng Nai.
             </p>
           </div>
         </div>
@@ -204,7 +205,7 @@
         <button class="next" (click)="nextPage()">Tiếp tục</button>
       </div>
 
-      <!-- Câu hỏi 4 -->
+      <!-- Câu hỏi 5 -->
       <div class="question-container" *ngIf="activePage == 10">
         <p class="challenge-name">THỬ THÁCH 5:<br />BÍ MẬT NGÀN XƯA</p>
         <p class="question">
@@ -250,12 +251,13 @@
         <button class="next" (click)="nextPage()">Tiếp tục</button>
       </div>
 
-      <!-- Câu hỏi 5 -->
+      <!-- Câu hỏi 6 -->
       <div class="question-container" *ngIf="activePage == 12">
         <p class="challenge-name">THỬ THÁCH 6:<br />KHU RỪNG MA THUẬT</p>
         <p class="question">
-          Tại huyện Tân Phú tỉnh Đồng Nai có một khu rừng đã được công nhận rừng
-          Quốc gia; tên gọi của khu rừng đó là gì?
+          Tại huyện Tân Phú tỉnh Đồng Nai có một khu rừng đã được Thủ tướng
+          Chính phủ quyết định xếp hạng di tích quốc gia đặc biệt. Tên gọi của
+          khu rừng đó là gì?
         </p>
         <div class="answer-zone">
           <div class="list-answer-row-4">
@@ -276,11 +278,12 @@
           <div class="clue-description">
             <p class="clue-title">Bạn có biết?</p>
             <p>
-              Vườn quốc gia Cát Tiên có tổng diện tích là 70.548 ha, trong đó
-              phần diện tích thuộc Đồng Nai: 39.108 ha; phần diện tích thuộc
-              tỉnh Lâm Đồng: 26.969 ha; phần diện tích thuộc tỉnh Bình Phước:
-              4.469 ha. Trụ sở Vườn quốc gia Cát Tiên đặt tại huyện Tân
-              Phú, Đồng Nai.
+              Trụ sở Vườn quốc gia Cát Tiên đặt tại huyện Tân Phú, Đồng Nai.
+              Vườn Quốc gia Cát Tiên đã được công nhận là Khu Dự trữ sinh quyển
+              thế giới vào năm 2001; Hệ đất ngập nước bàu Sấu được ghi tên vào
+              danh sách Ramsar năm 2005. Ngày 27/9/2012, Vườn Quốc gia Cát Tiên
+              được Thủ tướng Chính phủ quyết định xếp hạng di tích quốc gia đặc
+              biệt.
             </p>
           </div>
         </div>
@@ -288,7 +291,7 @@
         <button class="next" (click)="nextPage()">Tiếp tục</button>
       </div>
 
-      <!-- Câu hỏi 6 -->
+      <!-- Câu hỏi 7 -->
       <div class="question-container" *ngIf="activePage == 14">
         <p class="challenge-name">THỬ THÁCH 7:<br />NGỌN NÚI BÍ ẨN</p>
         <p class="question">
@@ -312,6 +315,9 @@
           <img class="decorate" src="/assets/game/do-re-mon.png" alt="" />
           <div class="clue-description">
             <p class="clue-title">Bạn có biết?</p>
+            <div class="attraction">
+              <img src="/assets/game/buu-long.jpg" alt="" />
+            </div>
             <p>
               Khu danh thắng Bửu Long được xem là một món quà quý giá của tỉnh
               Đồng Nai và chỉ cách Sài Gòn khoảng 30km về hướng Đông. Nơi đây
@@ -326,32 +332,22 @@
         <button class="next" (click)="nextPage()">Tiếp tục</button>
       </div>
 
-      <!-- Câu hỏi 7 -->
+      <!-- Câu hỏi 8 -->
       <div class="question-container" *ngIf="activePage == 16">
-        <p class="challenge-name">THỬ THÁCH 8:<br />CHIẾN BINH CUỐI CÙNG</p>
+        <p class="challenge-name">THỬ THÁCH 8:<br />NGUÒI BÍ ẨN</p>
         <p class="question">
-          Tên làng nghề truyền thống nổi tiếng của Đồng Nai
+          Ông là người khai khẩn, mở mang vùng đất Cù lao Phố, có công lớn trong
+          công cuộc khai phá và xây dựng vùng đất Đồng Nai - Gia Định. Ông là
+          ai?
         </p>
         <div class="answer-zone">
           <div class="list-answer-row-4">
-            <button
-              class="answer"
-              (click)="checkAnswer(8, 1, $event)"
-              style="flex: 1 1 45%"
-            >
-              Làng gốm</button
-            ><button
-              class="answer"
-              (click)="checkAnswer(8, 2, $event)"
-              style="flex: 1 1 45%"
-            >
-              Làng nghề gỗ mỹ nghệ Xuân Tâm</button
-            ><button
-              class="answer"
-              (click)="checkAnswer(8, 3, $event)"
-              style="flex: 0 0 45%"
-            >
-              Làng đất nung Bửu long
+            <button class="answer" (click)="checkAnswer(8, 1, $event)">
+              Trịnh Hoài Đức</button
+            ><button class="answer" (click)="checkAnswer(8, 2, $event)">
+              Nguyễn Hữu Cảnh</button
+            ><button class="answer" (click)="checkAnswer(8, 3, $event)">
+              Trần Thượng Xuyên
             </button>
           </div>
         </div>
@@ -359,17 +355,118 @@
 
       <div class="clue" *ngIf="activePage == 17">
         <div class="clue-content">
-          <img src="/assets/game/no-bi-ta.png" alt="" />
+          <img class="decorate" src="/assets/game/no-bi-ta.png" alt="" />
           <div class="clue-description">
             <p class="clue-title">Bạn có biết?</p>
-            <img class="pottery" src="/assets/game/pottery.png" alt="" />
+            <p>
+              Trần Thượng Xuyên, người tỉnh Quảng Đông (Trung Quốc). Ông được
+              coi là người đã có công tổ chức khai phá, mở mang vùng đất Đồng
+              Nai - Gia Định. Ghi nhớ công đức của Trần Thượng Xuyên, chúa
+              Nguyễn đã ban danh hiệu cao quý “Nguyễn vi vương, Trần vi tướng,
+              đại đại công thần bất tuyệt”. Các vua Minh Mạng, Thiệu Trị đều
+              phong ông làm “Thượng đẳng thần”. Đình Tân Lân là nơi thờ Trấn
+              biên Đô đốc tướng quân Trần Thượng Xuyên.
+            </p>
+          </div>
+        </div>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 9 -->
+      <div class="question-container" *ngIf="activePage == 18">
+        <p class="challenge-name">THỬ THÁCH 9:<br />NHÂN VẬT KIỆT XUẤT</p>
+        <p class="question">
+          Người phụ nữ xứ Đồng Nai không ngại khó từ nan, thân gái dặm trường
+          đến chốn kinh thành đánh trông kêu oan cho chồng. Bà được thái hậu Từ
+          Dũ hết lời khen ngợi và tặng cho tấm biển son chạm bốn chữ thếp vàng
+          "Liệt phụ khả gia". Bà là ai?
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row-4">
+            <button class="answer" (click)="checkAnswer(9, 1, $event)">
+              Nguyễn Thị Minh Khai</button
+            ><button class="answer" (click)="checkAnswer(9, 2, $event)">
+              Nguyễn Thị Tồn</button
+            ><button class="answer" (click)="checkAnswer(9, 3, $event)">
+              Triệu Thị Trinh
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 19">
+        <div class="clue-content">
+          <img class="decorate" src="/assets/game/xu-ka.png" alt="" />
+          <div class="clue-description">
+            <p class="clue-title">Bạn có biết?</p>
+            <p>
+              Bà Nguyễn Thị Tồn quê phủ Phước Long, tỉnh Biên Hòa (nay là phường
+              Bửu Hòa, thành phố Biên Hòa, tỉnh Đồng Nai). Bà là vợ của thủ khoa
+              Bùi Hữu Nghĩa, một trong 4 “rồng vàng” xứ Đồng Nai. Để minh oan
+              cho chồng, bà đã quá giang ghe bầu, lặn lội vượt biển ra kinh
+              thành Huế để đánh trống kêu oan cho chồng. Tuy chồng được minh oàn
+              nhưng khi trở về quê hương, bà Tồn lâm bệnh nặng và qua đời.
+            </p>
+          </div>
+        </div>
+
+        <button class="next" (click)="nextPage()">Tiếp tục</button>
+      </div>
+
+      <!-- Câu hỏi 10 -->
+      <div class="question-container" *ngIf="activePage == 20">
+        <p class="challenge-name">THỬ THÁCH 10:<br />CHIẾN BINH CUỐI CÙNG</p>
+        <p class="question">
+          Tên làng nghề truyền thống nổi tiếng của Đồng Nai
+        </p>
+        <div class="answer-zone">
+          <div class="list-answer-row-4">
+            <button
+              class="answer"
+              (click)="checkAnswer(10, 1, $event)"
+              style="flex: 1 1 45%"
+            >
+              Làng gốm Tân Vạn</button
+            ><button
+              class="answer"
+              (click)="checkAnswer(10, 2, $event)"
+              style="flex: 1 1 45%"
+            >
+              Chiếu cói Nga Sơn</button
+            ><button
+              class="answer"
+              (click)="checkAnswer(10, 3, $event)"
+              style="flex: 0 0 45%"
+            >
+              Lụa tơ tằm Hà Đông
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="clue" *ngIf="activePage == 21">
+        <div class="clue-content">
+          <img class="decorate" src="/assets/game/do-re-mi.png" alt="" />
+          <div class="clue-description">
+            <p class="clue-title">Bạn có biết?</p>
+            <p>
+              Các khu vực sản xuất gốm Đồng Nai hiện nay tập trung chủ yếu ở
+              phía Nam thành phố Biên Hòa, tại xã Hóa Na, tân Hạnh và phường Bửu
+              Hòa, Tân Vạn.<br />Lò gốm đầu tiên ở Tân Vạn xây dựng năm 1878,
+              sau đó hình thành làng nghề chuyên làm hũ, lu, khạp cung cấp cho
+              dân cư hạ lưu Đồng bằng sông Cửu Long và một số nơi làm nghề nước
+              mắm, các sản phẩm gốm mĩ nghệ.<br />Biên Hòa là nơi khai sinh gốm
+              mĩ nghệ hiện đại với cha đẻ là Giáo sư Lê Bá Đảng của Trường Mĩ
+              nghệ thực hành Biên Hòa
+            </p>
           </div>
         </div>
         <button class="next" (click)="nextPage()">Tiếp tục</button>
       </div>
 
       <app-summary-result
-        *ngIf="activePage == 18"
+        *ngIf="activePage == 22"
         [point]="point"
         [correctAnswers]="countCorrectAnswer"
         [wrongAnswers]="countWrongAnswer"

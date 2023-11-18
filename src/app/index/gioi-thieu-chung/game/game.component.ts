@@ -8,8 +8,8 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 })
 export class GameComponent implements OnInit {
   @ViewChild('audioPlayer') audioPlayer: any;
-  activePage: number = 3;
-  listAnswer: number[] = [3, 2, 1, 1, 4, 3, 3, 1];
+  activePage: number = 0;
+  listAnswer: number[] = [3, 2, 1, 1, 4, 3, 3, 3, 2, 1];
 
   countWrongAnswer: number = 0;
   countCorrectAnswer: number = 0;
@@ -38,7 +38,6 @@ export class GameComponent implements OnInit {
         this.orientation = true;
       }
     }
-    this.toggleAudio();
   }
 
   toggleAudio() {
@@ -96,7 +95,7 @@ export class GameComponent implements OnInit {
   }
 
   nextPage() {
-    this.activePage += 2;
+    this.activePage += 1;
   }
   cancel() {
     this._location.back();

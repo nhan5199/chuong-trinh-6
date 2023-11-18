@@ -245,6 +245,16 @@ audio {
 .money img {
   width: 200px;
 }
+
+.attraction {
+  display: flex;
+  justify-content: center;
+}
+
+.attraction img {
+  width: 200px;
+  height: 150px;
+}
 @media (max-width: 1050px) {
   .title {
     font-size: 35px;
@@ -342,6 +352,11 @@ audio {
   .money img {
     width: 150px;
   }
+
+  .attraction img {
+    width: 100px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -349,17 +364,17 @@ audio {
     top: 60%;
   }
   .title {
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
   }
 
   p {
-    font-size: 10px;
+    font-size: 15px;
     margin: 0;
   }
 
   .next {
-    font-size: 12px;
+    font-size: 15px;
     padding: 5px;
     margin: 0;
     margin-top: 10px;
@@ -376,15 +391,15 @@ audio {
   }
 
   .left {
-    left: 0;
+    left: 15%;
   }
 
   .right {
-    right: 0;
+    right: 15%;
   }
 
   .answer {
-    font-size: 10px;
+    font-size: 15px;
     padding: 0 10px;
     font-weight: bold;
   }
@@ -423,5 +438,10 @@ audio {
 
   .money img {
     width: 120px;
+  }
+
+  .attraction img {
+    width: 100px;
+    height: 100px;
   }
 }
