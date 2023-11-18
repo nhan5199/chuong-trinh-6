@@ -4,12 +4,12 @@
   </div>
 </ng-container>
 <ng-container *ngIf="!orientation">
-  <!-- <audio
+  <audio
     #audioPlayer
     src="/assets/game/dong-nai-que-toi.mp3"
     autoplay
     loop
-  ></audio> -->
+  ></audio>
   <div class="question-list">
     <img class="background" src="/assets/game/question-background.jpg" alt="" />
     <img (click)="toggleAudio()" class="music" [src]="musicNoteImg" alt="" />
