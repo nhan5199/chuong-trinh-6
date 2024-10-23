@@ -91,6 +91,8 @@ import { TroChoiComponent } from './index/tainguyen/tro-choi/tro-choi.component'
 import { VanHoaComponent } from './index/tainguyen/van-hoa/van-hoa.component';
 import { VitriComponent } from './index/vitri/vitri.component';
 import { GameComponent } from './index/gioi-thieu-chung/game/game.component';
+import { ListStorylineComponent } from './index/tainguyen/list-storyline/list-storyline.component';
+import { StorylineItemComponent } from './index/tainguyen/list-storyline/storyline-item/storyline-item.component';
 
 const routes: Routes = [
   {
@@ -432,6 +434,15 @@ const routes: Routes = [
       //   path: 'brunei', component: BruneiComponent
       // },
     ],
+  },
+
+  {
+    path: 'list-storyline',
+    component: ListStorylineComponent,
+  },
+  {
+    path: 'list-storyline/:title',
+    component: StorylineItemComponent,
   },
   {
     path: 'em-yeu-dia-li/asean',

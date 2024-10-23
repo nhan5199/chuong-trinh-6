@@ -1,0 +1,23 @@
+<div class="list-storyline text-center w3-animate-opacity">
+  <p class="title">Danh sách storyline</p>
+  <div class="return text-center">
+    <a class="return" routerLink="/tainguyen"
+      ><i class="fas fa-arrow-left"></i
+    ></a>
+  </div>
+
+  <div class="list-storyline-container">
+    <div class="item" (click)="onClickNavigate('/list-storyline/bai-2')">
+      <img src="assets/storyline/storyline-item.png" alt="" />
+      <p (click)="onClickNavigate('/list-storyline/bai-2')" class="">Bài 2</p>
+    </div>
+    <div class="item" (click)="onClickNavigate('/list-storyline/bai-4')">
+      <img src="assets/storyline/storyline-item.png" alt="" />
+      <p (click)="onClickNavigate('/list-storyline/bai-4')" class="">Bài 4</p>
+    </div>
+    <div class="item" (click)="onClickNavigate('/list-storyline/bai-13')">
+      <img src="assets/storyline/storyline-item.png" alt="" />
+      <p (click)="onClickNavigate('/list-storyline/bai-13')" class="">Bài 13</p>
+    </div>
+  </div>
+</div>

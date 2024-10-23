@@ -103,6 +103,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GameComponent } from './index/gioi-thieu-chung/game/game.component';
 import { AnswerPointComponent } from './index/gioi-thieu-chung/game/answer-point/answer-point.component';
 import { SummaryResultComponent } from './index/gioi-thieu-chung/game/summary-result/summary-result.component';
+import { ListStorylineComponent } from './index/tainguyen/list-storyline/list-storyline.component';
+import { StorylineItemComponent } from './index/tainguyen/list-storyline/storyline-item/storyline-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -197,6 +199,8 @@ import { SummaryResultComponent } from './index/gioi-thieu-chung/game/summary-re
     GameComponent,
     AnswerPointComponent,
     SummaryResultComponent,
+    ListStorylineComponent,
+    StorylineItemComponent,
   ],
   imports: [
     BrowserModule,
