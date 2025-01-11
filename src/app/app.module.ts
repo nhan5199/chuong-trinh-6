@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './layouts/menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { VitriComponent } from './index/vitri/vitri.component';
 import { LichsuComponent } from './index/lichsu/lichsu.component';
@@ -105,6 +104,8 @@ import { AnswerPointComponent } from './index/gioi-thieu-chung/game/answer-point
 import { SummaryResultComponent } from './index/gioi-thieu-chung/game/summary-result/summary-result.component';
 import { ListStorylineComponent } from './index/tainguyen/list-storyline/list-storyline.component';
 import { StorylineItemComponent } from './index/tainguyen/list-storyline/storyline-item/storyline-item.component';
+import { MenuItemComponent } from './shared/menu-item/menu-item.component';
+import { MenuComponent } from './shared/menu/menu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -201,6 +202,8 @@ import { StorylineItemComponent } from './index/tainguyen/list-storyline/storyli
     SummaryResultComponent,
     ListStorylineComponent,
     StorylineItemComponent,
+    MenuItemComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

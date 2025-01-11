@@ -1,0 +1,10 @@
+<div class="menu">
+  <app-menu-item
+    *ngFor="let item of listMenuItems"
+    [name]="item.name"
+    [icon]="item.icon"
+    [router]="item.routerLink"
+    [currentActive]="currentActive"
+    (onClickEvent)="onClickMenuItem($event)"
+  ></app-menu-item>
+</div>

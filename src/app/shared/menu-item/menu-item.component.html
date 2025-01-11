@@ -1,0 +1,12 @@
+<div class="menu-item" (click)="onClickMenuItem()">
+  <div class="original-display">
+    <i [ngClass]="icon"></i>
+  </div>
+  <div
+    class="hover-display"
+    [ngClass]="currentActive == router ? 'active' : ''"
+  >
+    <p class="display-label">{{ name }}</p>
+    <i [ngClass]="icon"></i>
+  </div>
+</div>

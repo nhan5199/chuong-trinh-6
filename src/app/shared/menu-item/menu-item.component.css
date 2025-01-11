@@ -1,0 +1,68 @@
+.menu-item {
+  margin: 0.5rem 0;
+  cursor: pointer;
+  position: relative; /* Ensure proper stacking of child elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem; /* Consistent height for all menu items */
+}
+
+p,
+i {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.menu-item:hover .original-display,
+.original-display {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-item:hover .hover-display,
+.hover-display.active {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.original-display {
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.3s ease;
+}
+
+.hover-display {
+  background-color: white;
+  border-radius: 20px;
+  color: #ff8000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.3s ease;
+}
