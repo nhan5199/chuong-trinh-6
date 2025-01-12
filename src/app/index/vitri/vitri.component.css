@@ -127,26 +127,14 @@
   .content {
     width: 90%;
     height: 40svh;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 
 @media (orientation: landscape) {
-  @media screen and (max-width: 950px) {
-    .content {
-      bottom: 6%;
-    }
-  }
   @media screen and (max-width: 750px) {
     .content {
       width: 90%;
-      height: 80svh;
-    }
-
-    .location {
-      align-items: end;
+      height: 70svh;
     }
 
     .title {

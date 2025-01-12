@@ -70,3 +70,28 @@
     padding: 5px 15px;
   }
 }
+
+@media (max-width: 500px) {
+  .item {
+    flex: 0 0 40%;
+  }
+
+  .title {
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+  }
+  .item p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .resource-container {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .item p {
+    font-size: 0.6rem;
+  }
+}

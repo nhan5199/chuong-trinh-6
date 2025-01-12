@@ -1,6 +1,6 @@
 .introduce-container {
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
   margin: 0;
   background: #056cf2;
   position: relative;
@@ -8,7 +8,7 @@
 
 h5 {
   font-size: 45px;
-  margin-bottom: 40px;
+  margin: 1.5rem 0;
   color: #fff6a9;
   font-family: "Pacifico", cursive;
   text-align: center;
@@ -17,9 +17,6 @@ h5 {
 }
 
 .video {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -35,7 +32,7 @@ iframe {
 @media screen and (max-width: 950px) {
   h5 {
     font-size: 30px;
-    margin: 20px 0 10px 0;
+    margin: 1rem 0;
   }
 
   iframe {
@@ -45,11 +42,6 @@ iframe {
 }
 
 @media screen and (max-width: 550px) {
-  .video {
-    position: absolute;
-    top: 35%;
-  }
-
   iframe {
     width: 80%;
     height: 30svh;
