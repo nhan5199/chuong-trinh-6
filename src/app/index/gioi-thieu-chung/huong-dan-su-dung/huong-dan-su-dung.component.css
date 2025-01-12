@@ -16,7 +16,11 @@ img {
   border-bottom-right-radius: 15px;
 }
 .contain {
-  height: calc(120vh - 80px);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #11998e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -31,11 +35,9 @@ img {
 }
 .book {
   display: flex;
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
 }
 .flip-book {
   width: 80%;

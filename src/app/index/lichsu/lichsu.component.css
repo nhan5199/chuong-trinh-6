@@ -67,9 +67,10 @@ button:hover,
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   button {
-    font-size: 13px;
+    font-size: 15px;
+    padding: 5px 15px;
   }
   .container {
     height: 80%;
@@ -78,8 +79,10 @@ button:hover,
   .item img {
     height: 200px;
   }
-  .item:hover img {
-    height: 230px;
+
+  .item img {
+    height: 300px;
+    width: 90%;
   }
 }
 

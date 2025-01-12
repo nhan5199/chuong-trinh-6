@@ -70,3 +70,23 @@ i {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 1.2rem;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .original-display i {
+    font-size: 1.5rem;
+  }
+
+  .hover-display p {
+    display: none;
+  }
+}

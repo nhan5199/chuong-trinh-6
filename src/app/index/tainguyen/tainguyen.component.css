@@ -13,7 +13,7 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
+  gap: 4rem;
 }
 
 .title {
@@ -28,7 +28,6 @@
   position: relative;
   flex: 0 0 20%;
   transition: 0.5s ease;
-  margin: 20px;
 }
 
 .item:hover {
@@ -62,12 +61,12 @@
   background-position: left;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .title {
-    padding: 60px 0 20px 0;
+    padding: 2rem 0.5rem;
   }
   .item p {
-    font-size: 10px;
-    bottom: 0;
+    font-size: 15px;
+    padding: 5px 15px;
   }
 }

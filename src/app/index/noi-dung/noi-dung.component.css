@@ -102,41 +102,28 @@ ul:hover {
 .content:hover ul {
   display: block;
 }
-@media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 950px) {
+
+@media screen and (max-width: 1024px) {
   .title,
   ul li,
   .count-number {
-    font-size: 15px;
+    font-size: 1.2rem;
   }
 
   .main-content {
     gap: 15px;
   }
-  .content {
-    flex: 0 0 45%;
-  }
 
   ul {
     display: none;
   }
+}
 
-  .content:hover ul {
-    display: block;
-  }
-
-  ul:hover {
-    display: block;
+@media (max-width: 768px) {
+  .content {
+    flex: 0 0 40%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .main-content {
-    top: 10%;
-  }
-
-  .count-number {
-    padding: 7px 14px;
-  }
 }
