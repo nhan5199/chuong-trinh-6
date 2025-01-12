@@ -1,7 +1,7 @@
 .resource {
   width: 100%;
   background: #ffcc29;
-  min-height: 100svh;
+  min-height: 100%;
 }
 
 .resource-container {
@@ -32,7 +32,7 @@
 }
 
 .item:hover {
-  flex: 0 0 21%;
+  transform: scale(1.1);
 }
 
 .item img {

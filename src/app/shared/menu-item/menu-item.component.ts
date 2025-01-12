@@ -3,6 +3,7 @@ import {
   EventEmitter,
   Input,
   OnChanges,
+  OnInit,
   Output,
   SimpleChanges,
 } from '@angular/core';
@@ -12,14 +13,18 @@ import {
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css'],
 })
-export class MenuItemComponent implements OnChanges {
+export class MenuItemComponent implements OnChanges, OnInit {
   @Input('name') name: string = '';
   @Input('icon') icon: string = '';
   @Input('router') router: string = '';
   @Input('currentActive') currentActive: string = '';
   @Output() onClickEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  currentRouter: string | undefined = 'vitri';
+  currentRouter: string | undefined = '';
+
+  ngOnInit(): void {
+    console.log('data2 :', this.currentActive);
+  }
 
   onClickMenuItem() {
     this.onClickEvent.emit(this.router);
@@ -28,7 +33,7 @@ export class MenuItemComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['currentActive']) {
       if (this.currentActive == this.router) {
-        console.log('data: ', true);
+        console.log('data: ' + this.currentActive + ' - ' + this.router);
       }
     }
   }

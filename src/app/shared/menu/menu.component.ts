@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
-export class MenuComponent {
-  currentActive: string = 'vitri';
+export class MenuComponent implements OnInit {
+  currentActive: string = '';
   listMenuItems: any[] = [
     { name: 'Vị trí', icon: 'fas fa-map-marker-alt', routerLink: 'vitri' },
     { name: 'Nội dung', icon: 'fas fa-book-reader', routerLink: 'noidung' },
@@ -23,7 +23,12 @@ export class MenuComponent {
 
   constructor(private readonly router: Router) {}
 
+  ngOnInit(): void {
+    // this.currentActive = window.location.href?.split('/')[1];
+  }
+
   onClickMenuItem(router: string) {
+    // this.currentActive = window.location.href?.split('/')[1];
     this.currentActive = router;
     this.router.navigateByUrl(`/${router}`);
   }

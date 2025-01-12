@@ -1,6 +1,6 @@
 .table-content {
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
   background: #03a66a;
   background-size: cover;
   background-position: center;
@@ -16,7 +16,7 @@
   align-items: baseline;
   flex-direction: row;
   width: 100%;
-  top: 12%;
+  padding-top: 2rem;
 }
 
 .title,
@@ -39,6 +39,11 @@ ul li {
   background-size: 200%;
 }
 
+.drop-down-list {
+  max-height: 50svh;
+  overflow: auto;
+}
+
 .title:hover,
 ul li:hover {
   background-position: right;
@@ -47,7 +52,7 @@ ul li:hover {
 .list {
   width: 100%;
 
-  transition: ease;
+  transition: 1s ease;
 }
 
 p,
@@ -70,7 +75,7 @@ ul {
   padding: 10px 20px;
   background-color: #ffcc29;
   font-size: 30px;
-  margin: 0;
+  margin: 1rem;
 }
 
 ul li {
@@ -78,11 +83,11 @@ ul li {
 }
 
 ul {
-  visibility: hidden;
+  display: none;
 }
 
 ul:hover {
-  visibility: visible;
+  display: block;
 }
 
 .content {
@@ -95,17 +100,11 @@ ul:hover {
 }
 
 .content:hover ul {
-  visibility: visible;
+  display: block;
 }
 @media screen and (max-width: 1200px) {
-  .main-content {
-    top: 20%;
-  }
 }
 @media screen and (max-width: 950px) {
-  .main-content {
-    top: 25%;
-  }
   .title,
   ul li,
   .count-number {

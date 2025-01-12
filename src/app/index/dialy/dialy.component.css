@@ -1,10 +1,10 @@
-.introduce {
+.dia-ly {
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
   background: #ffcc29;
 }
 
-.dialy-container {
+.dia-ly-container {
   height: 85%;
   width: 100%;
   display: flex;
@@ -63,11 +63,7 @@ button:hover,
 }
 
 .item:hover {
-  flex: 0 0 22%;
-}
-
-.item:hover img {
-  height: 400px;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,6 +1,6 @@
 .location {
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
   background: #11998e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -18,13 +18,12 @@
   border: 5px solid #e9e513;
   width: 80%;
   border-radius: 15px;
-  height: 90svh;
+  height: 85%;
   background-image: url("/assets/images/vitri.JPG");
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: 1%;
 }
 
 .location-title {
