@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 .di-tich {
   width: 100%;
-  min-height: 100svh;
-
+  min-height: 100%;
+  position: relative;
   background: #056cf2;
 }
 
@@ -71,16 +71,17 @@ p {
 }
 .title {
   text-align: center;
-  font-size: 50px;
-  padding: 30px;
+  font-size: 3rem;
+  padding: 2rem 0;
 }
 
 .card-button {
+  width: 80%;
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  padding: 15px 20px;
+  padding: 10px;
   border-radius: 50px;
   background: #1f75c4;
   color: white;
@@ -90,7 +91,7 @@ p {
   margin: 0 auto;
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 1.5rem;
   transition: background 0.5s;
   background: linear-gradient(to left, #0082c8 50%, #ed213a 50%) right;
   background-size: 200%;
@@ -98,6 +99,17 @@ p {
 .card-button:hover,
 .details:hover .card-button {
   background-position: left;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    height: 50svh;
+    font-size: 1.5rem;
+  }
+
+  .card-button {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 950px) {

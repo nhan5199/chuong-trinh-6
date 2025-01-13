@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-trinh-hoai-duc-mucluc',
   templateUrl: './trinh-hoai-duc-mucluc.component.html',
-  styleUrls: ['./trinh-hoai-duc-mucluc.component.css'],
+  styleUrls: ['../muc-luc.css'],
 })
 export class TrinhHoaiDucMuclucComponent implements OnInit {
   constructor(private readonly _router: Router) {}

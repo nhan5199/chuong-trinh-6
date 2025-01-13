@@ -1,7 +1,7 @@
 .truyen-tranh {
   width: 100%;
-  min-height: 100svh;
-
+  min-height: 100%;
+  position: relative;
   background: #ffcc29;
 }
 
@@ -25,7 +25,7 @@
 
 .item img {
   width: 100%;
-  height: 65svh;
+  height: 55svh;
   border-radius: 15px;
 
   transition: 0.5 ease;
@@ -33,8 +33,8 @@
 }
 
 .title {
-  padding: 60px 0 20px 0;
-  font-size: 70px;
+  padding: 2rem 0;
+  font-size: 3rem;
   text-align: center;
   font-family: "Pacifico";
 }
@@ -64,15 +64,12 @@ button:hover,
   visibility: visible;
 }
 
-.item:hover img {
-  filter: brightness(50%);
-}
-
 .item:hover {
-  flex: 0 0 20.5%;
+  filter: brightness(50%);
+  transform: scale(1.1);
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1024px) {
   .truyen-tranh-container {
     justify-content: center;
   }
@@ -85,7 +82,7 @@ button:hover,
   button {
     padding: 5px;
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 1rem;
   }
 }
 
@@ -96,9 +93,6 @@ button:hover,
 
   .item {
     flex: 0 0 35%;
-  }
-  .item:hover {
-    flex: 0 0 36%;
   }
 
   .item img {

@@ -36,17 +36,17 @@ body {
   position: absolute;
   margin: 0;
   font-size: 40px;
-  top: 10%;
+  top: 5%;
   width: 100px;
   left: 3%;
   z-index: 1000;
 }
 .return a {
-  color: white;
   text-decoration: none;
   transition: 0.2s;
 }
 .return a i {
+  color: white;
   width: 50px;
 }
 .return a:hover {

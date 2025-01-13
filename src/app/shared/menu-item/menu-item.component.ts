@@ -22,9 +22,7 @@ export class MenuItemComponent implements OnChanges, OnInit {
 
   currentRouter: string | undefined = '';
 
-  ngOnInit(): void {
-    console.log('data2 :', this.currentActive);
-  }
+  ngOnInit(): void {}
 
   onClickMenuItem() {
     this.onClickEvent.emit(this.router);

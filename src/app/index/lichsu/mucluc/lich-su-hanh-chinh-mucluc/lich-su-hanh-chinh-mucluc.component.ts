@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-lich-su-hanh-chinh-mucluc',
   templateUrl: './lich-su-hanh-chinh-mucluc.component.html',
-  styleUrls: ['./lich-su-hanh-chinh-mucluc.component.css'],
+  styleUrls: ['../muc-luc.css'],
 })
 export class LichSuHanhChinhMuclucComponent implements OnInit {
   constructor(private location: Location, private readonly _router: Router) {}

@@ -1,7 +1,8 @@
 .muc-luc {
   width: 100%;
-  min-height: 100svh;
+  height: 100%;
   background: #ffcc29;
+  position: relative;
 }
 
 .muc-luc-container {
@@ -62,6 +63,12 @@ button:hover,
   background-position: left;
 }
 
+@media (max-width: 1024px) {
+  button {
+    padding: 5px 15px;
+  }
+}
+
 @media screen and (max-width: 950px) {
   .muc-luc-container {
     justify-content: space-evenly;
@@ -81,8 +88,8 @@ button:hover,
   .muc-luc-container {
     flex-direction: column;
     justify-content: center;
-    top: 40%;
-    transform: translate(-50%, -40%);
+    top: 30%;
+    transform: translate(-50%, -30%);
   }
   .item {
     width: 50%;

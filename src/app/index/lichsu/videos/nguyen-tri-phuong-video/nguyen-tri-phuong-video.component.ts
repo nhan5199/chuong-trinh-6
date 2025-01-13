@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-nguyen-tri-phuong-video',
   templateUrl: './nguyen-tri-phuong-video.component.html',
-  styleUrls: ['./nguyen-tri-phuong-video.component.css']
+  styleUrls: ['../video.css'],
 })
 export class NguyenTriPhuongVideoComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

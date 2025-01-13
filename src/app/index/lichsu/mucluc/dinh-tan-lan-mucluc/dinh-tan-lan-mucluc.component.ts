@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-dinh-tan-lan-mucluc',
   templateUrl: './dinh-tan-lan-mucluc.component.html',
-  styleUrls: ['./dinh-tan-lan-mucluc.component.css'],
+  styleUrls: ['../muc-luc.css'],
 })
 export class DinhTanLanMuclucComponent implements OnInit {
   constructor(private readonly _router: Router) {}
