@@ -37,7 +37,7 @@ body {
   margin: 0;
   font-size: 40px;
   top: 5%;
-  width: 100px;
+  /* width: 100px; */
   left: 3%;
   z-index: 1000;
 }

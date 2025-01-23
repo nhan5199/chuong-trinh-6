@@ -1,0 +1,93 @@
+<div class="card" style="background-color: #03a66a">
+  <div class="card-body">
+    <form [formGroup]="answerForm" style="">
+      <h1>{{ testTitle }}</h1>
+      <div class="form-group" *ngFor="let item of listQuestions">
+        <h2 [innerHTML]="'Câu ' + item.id + ')' + ' ' + item.question"></h2>
+
+        <div
+          class="row option"
+          [ngClass]="
+            isSubmit
+              ? option.id == item.correctAnswer
+                ? 'correct-answer'
+                : answerForm.value['cau' + item.id] != item.correctAnswer &&
+                  option.id == answerForm.value['cau' + item.id]
+                ? 'wrong-answer'
+                : ''
+              : ''
+          "
+          *ngFor="let option of item.options"
+        >
+          <input
+            type="radio"
+            id="{{ item.id + '' + option.id }}"
+            [value]="option.id"
+            formControlName="cau{{ item.id }}"
+            name="cau{{ item.id }}"
+            (click)="isSubmit ? $event.preventDefault() : null"
+            [class.disabled]="isSubmit"
+          />
+          <label
+            for="{{ item.id + '' + option.id }}"
+            [innerHTML]="option.id + '. ' + option.text"
+            [class.disabled]="isSubmit"
+            (click)="isSubmit ? $event.preventDefault() : null"
+          ></label>
+        </div>
+      </div>
+
+      <div class="form-group row" style="margin-bottom: 5vw">
+        <div
+          class="col-md-3 justify-content-left text-center"
+          style="padding-left: 0"
+        >
+          <button type="submit" class="btn btn-primary">
+            <a
+              routerLink="/bando"
+              style="color: white; text-decoration: none; cursor: pointer"
+              (click)="cancel()"
+            >
+              Trở về
+            </a>
+          </button>
+        </div>
+        <div class="col-md-6 text-center">
+          <div
+            *ngIf="!isSubmit; else result"
+            style="padding: 0; margin: 0 auto"
+          >
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+              Nộp bài
+            </button>
+            <button type="submit" class="btn btn-primary">Nộp bài</button>
+          </div>
+          <ng-template #result>
+            <div style="padding: 0">
+              <h2>
+                Số câu đúng là: &nbsp;
+                <span style="color: #0000e6">{{ point }}</span
+                >/<span style="color: red">10</span>
+              </h2>
+              <h2>
+                Số điểm của bạn là: &nbsp;<span style="color: #0000e6">{{
+                  point
+                }}</span>
+              </h2>
+            </div>
+          </ng-template>
+        </div>
+        <div class="col-md-3 text-center">
+          <button type="submit" class="btn btn-primary">
+            <a
+              routerLink="/danhsachcauhoi"
+              style="color: white; text-decoration: none"
+            >
+              Câu hỏi
+            </a>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

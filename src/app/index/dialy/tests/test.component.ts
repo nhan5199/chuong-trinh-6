@@ -1,18 +1,35 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import constant from 'src/app/shared/constant';
 @Component({
-  selector: 'app-dinh-quan-test',
-  templateUrl: './dinh-quan-test.component.html',
-  styleUrls: ['./dinh-quan-test.component.css'],
+  selector: 'app-test',
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.css'],
 })
-export class DinhQuanTestComponent implements OnInit {
+export class TestComponent implements OnInit {
   answerForm!: FormGroup;
-  constructor(private _formBuilder: FormBuilder, private location: Location) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    private location: Location,
+    private router: Router
+  ) {}
 
   point: number = 0;
-  string = 'n3ifb3iu4v3';
+  testTitle: string | undefined = '';
+
+  listQuestions: any;
   ngOnInit(): void {
+    debugger;
+    this.listQuestions = constant.LIST_QUESTIONS.find(
+      (x) => x.name == this.router.url?.split('_')[0]?.split('/')[1]
+    )?.questions;
+
+    this.testTitle = constant.TEST_TITLE.find(
+      (x) => x.code == this.router.url?.split('_')[0]?.split('/')[1]
+    )?.title;
+
     this.answerForm = this._formBuilder.group({
       cau1: ['', [Validators.required]],
       cau2: ['', [Validators.required]],
@@ -36,7 +53,6 @@ export class DinhQuanTestComponent implements OnInit {
   isSubmit = false;
   onSubmit() {
     this.point = 0;
-    console.log(this.answerForm.value);
     if (this.answerForm.value.cau1 == 'A') {
       this.point = this.point + 1;
     }
@@ -49,10 +65,10 @@ export class DinhQuanTestComponent implements OnInit {
     if (this.answerForm.value.cau4 == 'C') {
       this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau5 == 'A') {
+    if (this.answerForm.value.cau5 == 'B') {
       this.point = this.point + 1;
     }
-    if (this.answerForm.value.cau6 == 'B') {
+    if (this.answerForm.value.cau6 == 'A') {
       this.point = this.point + 1;
     }
     if (this.answerForm.value.cau7 == 'A') {
@@ -67,10 +83,8 @@ export class DinhQuanTestComponent implements OnInit {
     if (this.answerForm.value.cau10 == 'C') {
       this.point = this.point + 1;
     }
-    console.log('diem', this.point);
+    console.log('diem', this.answerForm.value);
     this.isSubmit = true;
-    console.log('diem', this.isSubmit);
-    // this.open(content, this.point);
   }
 
   cancel() {

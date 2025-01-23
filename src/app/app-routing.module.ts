@@ -6,17 +6,7 @@ import { DiaLyHanhChinhComponent } from './index/dialy/dia-ly-hanh-chinh/dia-ly-
 import { DiaLyKinhTeComponent } from './index/dialy/dia-ly-kinh-te/dia-ly-kinh-te.component';
 import { DialyComponent } from './index/dialy/dialy.component';
 import { GioiThieuComponent } from './index/dialy/gioi-thieu/gioi-thieu.component';
-import { BienHoaTestComponent } from './index/dialy/tests/bien-hoa-test/bien-hoa-test.component';
-import { CamMyTestComponent } from './index/dialy/tests/cam-my-test/cam-my-test.component';
-import { DinhQuanTestComponent } from './index/dialy/tests/dinh-quan-test/dinh-quan-test.component';
-import { LongKhanhTestComponent } from './index/dialy/tests/long-khanh-test/long-khanh-test.component';
-import { LongThanhTestComponent } from './index/dialy/tests/long-thanh-test/long-thanh-test.component';
-import { NhonTrachTestComponent } from './index/dialy/tests/nhon-trach-test/nhon-trach-test.component';
-import { TanPhuTestComponent } from './index/dialy/tests/tan-phu-test/tan-phu-test.component';
-import { ThongNhatTestComponent } from './index/dialy/tests/thong-nhat-test/thong-nhat-test.component';
-import { TrangBomTestComponent } from './index/dialy/tests/trang-bom-test/trang-bom-test.component';
-import { VinhCuuTestComponent } from './index/dialy/tests/vinh-cuu-test/vinh-cuu-test.component';
-import { XuanLocTestComponent } from './index/dialy/tests/xuan-loc-test/xuan-loc-test.component';
+import { TestComponent } from './index/dialy/tests/test.component';
 import { ChuaDaiGiacCanvaComponent } from './index/lichsu/canvas/chua-dai-giac-canva/chua-dai-giac-canva.component';
 import { DaBaChongCanvaComponent } from './index/lichsu/canvas/da-ba-chong-canva/da-ba-chong-canva.component';
 import { DaiKiNiemCanvaComponent } from './index/lichsu/canvas/dai-ki-niem-canva/dai-ki-niem-canva.component';
@@ -344,49 +334,53 @@ const routes: Routes = [
     component: LichSuHanhChinhCanvaComponent,
   },
   {
-    path: 'cammy_test',
-    component: CamMyTestComponent,
+    path: ':province',
+    component: TestComponent,
   },
-  {
-    path: 'dinhquan_test',
-    component: DinhQuanTestComponent,
-  },
-  {
-    path: 'longthanh_test',
-    component: LongThanhTestComponent,
-  },
-  {
-    path: 'nhontrach_test',
-    component: NhonTrachTestComponent,
-  },
-  {
-    path: 'tanphu_test',
-    component: TanPhuTestComponent,
-  },
-  {
-    path: 'thongnhat_test',
-    component: ThongNhatTestComponent,
-  },
-  {
-    path: 'trangbom_test',
-    component: TrangBomTestComponent,
-  },
-  {
-    path: 'vinhcuu_test',
-    component: VinhCuuTestComponent,
-  },
-  {
-    path: 'xuanloc_test',
-    component: XuanLocTestComponent,
-  },
-  {
-    path: 'bienhoa_test',
-    component: BienHoaTestComponent,
-  },
-  {
-    path: 'longkhanh_test',
-    component: LongKhanhTestComponent,
-  },
+  // {
+  //   path: 'cammy_test',
+  //   component: CamMyTestComponent,
+  // },
+  // {
+  //   path: 'dinhquan_test',
+  //   component: DinhQuanTestComponent,
+  // },
+  // {
+  //   path: 'longthanh_test',
+  //   component: LongThanhTestComponent,
+  // },
+  // {
+  //   path: 'nhontrach_test',
+  //   component: NhonTrachTestComponent,
+  // },
+  // {
+  //   path: 'tanphu_test',
+  //   component: TanPhuTestComponent,
+  // },
+  // {
+  //   path: 'thongnhat_test',
+  //   component: ThongNhatTestComponent,
+  // },
+  // {
+  //   path: 'trangbom_test',
+  //   component: TrangBomTestComponent,
+  // },
+  // {
+  //   path: 'vinhcuu_test',
+  //   component: VinhCuuTestComponent,
+  // },
+  // {
+  //   path: 'xuanloc_test',
+  //   component: XuanLocTestComponent,
+  // },
+  // {
+  //   path: 'bienhoa_test',
+  //   component: TestComponent,
+  // },
+  // {
+  //   path: 'longkhanh_test',
+  //   component: LongKhanhTestComponent,
+  // },
   {
     path: 'sachbando',
     component: SachBanDoComponent,
