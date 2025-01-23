@@ -2,7 +2,7 @@
   background-color: #4699c2;
   position: relative;
   width: 100%;
-  height: 100svh;
+  height: 100%;
 }
 
 svg {
@@ -45,6 +45,7 @@ title {
   text-decoration: none;
   transition: 0.2s;
   margin-left: 80px;
+  text-align: center;
 }
 .back a i {
   width: 50px;
@@ -67,6 +68,7 @@ title {
   text-decoration: none;
   transition: 0.2s;
   margin-left: -80px;
+  text-align: center;
 }
 .goto a i {
   width: 50px;
