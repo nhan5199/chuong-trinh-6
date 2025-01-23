@@ -1565,7 +1565,7 @@ export default class {
     { code: 'nhontrach', title: 'Huyện Nhơn Trạch' },
     { code: 'tanphu', title: 'Huyện Tân Phú' },
     { code: 'thongnhat', title: 'Huyện Thống Nhất' },
-    { code: 'trangbom', title: 'Huyện Tràng Bom' },
+    { code: 'trangbom', title: 'Huyện Trảng Bom' },
     { code: 'vinhcuu', title: 'Huyện Vĩnh Cửu' },
     { code: 'xuanloc', title: 'Huyện Xuân Lộc' },
   ];
