@@ -1,124 +1,164 @@
 <div class="contain">
-        <ng-template #tanphu let-modal scrollable="true">
-                <img src="assets/maps/tan_phu.png" alt="">
-                <button type="submit" class="btn btn-primary ">
-                        <a routerLink="/tanphu_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #vinhcuu let-modal>
-                <img src="assets/maps/vinh_cuu.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/vinhcuu_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #bienhoa let-modal>
-                <img src="assets/maps/bien_hoa.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/bienhoa_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #cammy let-modal>
-                <img src="assets/maps/cam_my.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/cammy_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #dinhquan let-modal>
-                <img src="assets/maps/dinh_quan.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/dinhquan_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #longthanh let-modal>
-                <img src="assets/maps/long_thanh.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/longthanh_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #nhontrach let-modal>
-                <img src="assets/maps/nhon_tranh.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/nhontrach_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #thongnhat let-modal>
-                <img src="assets/maps/thong_nhat.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/thongnhat_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #trangbom let-modal>
-                <img src="assets/maps/trang_bom.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/trangbom_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #longkhanh let-modal>
-                <img src="assets/maps/long_khanh.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/longkhanh_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <ng-template #xuanloc let-modal>
-                <img src="assets/maps/xuan_loc.png" alt="">
-                <button type="submit" class="btn btn-primary">
-                        <a routerLink="/xuanloc_test" (click)="close()"
-                        style="color:white;text-decoration: none;">
-                                Kiểm tra kiến thức
-                        </a>
-                </button>
-        </ng-template>
-        <div class="back col-sm-2">
-                <a class="return" (click)="cancel()" style="cursor: pointer;">
-                        <i class="fas fa-arrow-left"></i>
-                </a>
-        </div>
-        <div class="goto col-sm-2">
-                <a class="return" routerLink="/danhsachcauhoi">
-                   <i class="fas fa-arrow-right"></i>
-                </a>
-        </div>
-        <div class="mapdiv">
-                <!DOCTYPE svg
-                PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                <svg class="map" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800.000000 782.000000"
-                        preserveAspectRatio="xMidYMid meet">
-
-                        <g transform="translate(0.000000,782.000000) scale(0.100000,-0.100000)" fill="#000000"
-                                stroke="none">
-                                <a (click)="open(tanphu)">
-                                        <title>Tân phú</title>
-                                        <path d="M5347 7553 c-4 -3 -7 -31 -8 -62 0 -40 -8 -70 -27 -106 -30 -56 -52
+  <ng-template #tanphu let-modal scrollable="true">
+    <img src="assets/maps/tan_phu.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/tanphu_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #vinhcuu let-modal>
+    <img src="assets/maps/vinh_cuu.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/vinhcuu_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #bienhoa let-modal>
+    <img src="assets/maps/bien_hoa.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/bienhoa_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #cammy let-modal>
+    <img src="assets/maps/cam_my.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/cammy_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #dinhquan let-modal>
+    <img src="assets/maps/dinh_quan.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/dinhquan_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #longthanh let-modal>
+    <img src="assets/maps/long_thanh.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/longthanh_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #nhontrach let-modal>
+    <img src="assets/maps/nhon_tranh.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/nhontrach_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #thongnhat let-modal>
+    <img src="assets/maps/thong_nhat.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/thongnhat_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #trangbom let-modal>
+    <img src="assets/maps/trang_bom.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/trangbom_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #longkhanh let-modal>
+    <img src="assets/maps/long_khanh.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/longkhanh_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <ng-template #xuanloc let-modal>
+    <img src="assets/maps/xuan_loc.png" alt="" />
+    <button type="submit" class="btn btn-primary">
+      <a
+        routerLink="/tests/xuanloc_test"
+        (click)="close()"
+        style="color: white; text-decoration: none"
+      >
+        Kiểm tra kiến thức
+      </a>
+    </button>
+  </ng-template>
+  <div class="back col-sm-2">
+    <a class="return" (click)="cancel()" style="cursor: pointer">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+  </div>
+  <div class="goto col-sm-2">
+    <a class="return" routerLink="/tests/danhsachcauhoi">
+      <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+  <div class="mapdiv">
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+    <svg
+      class="map"
+      version="1.0"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 800.000000 782.000000"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <g
+        transform="translate(0.000000,782.000000) scale(0.100000,-0.100000)"
+        fill="#000000"
+        stroke="none"
+      >
+        <a (click)="open(tanphu)">
+          <title>Tân phú</title>
+          <path
+            d="M5347 7553 c-4 -3 -7 -31 -8 -62 0 -40 -8 -70 -27 -106 -30 -56 -52
         -65 -98 -40 -30 16 -34 16 -95 -3 -35 -11 -84 -23 -109 -27 -25 -4 -86 -29
         -136 -55 -83 -44 -98 -48 -185 -55 -52 -3 -125 -13 -164 -21 -38 -8 -90 -14
         -115 -15 -28 0 -89 -17 -160 -43 l-114 -43 59 -38 c33 -21 62 -39 63 -41 4 -3
@@ -146,11 +186,13 @@
         -53 17 -16 14 -23 15 -53 4 -42 -15 -54 -9 -94 47 -43 59 -76 56 -176 -18 -59
         -44 -79 -49 -93 -23 -15 26 40 179 60 167 9 -6 11 40 2 74 -8 27 -34 29 -41 2
         -7 -28 -31 -25 -45 5 -8 18 -8 32 -1 48 9 18 7 32 -5 58 -21 46 -20 45 -38 23
-        -14 -18 -15 -17 -11 14 4 35 4 35 -6 25z" />
-                                </a>
-                                <a title="vinh cuu" (click)="open(vinhcuu)">
-                                        <title>Vĩnh Cửu</title>
-                                        <path d="M3950 7055 c-63 -14 -123 -24 -133 -25 -40 0 -85 -31 -102 -71 -25
+        -14 -18 -15 -17 -11 14 4 35 4 35 -6 25z"
+          />
+        </a>
+        <a title="vinh cuu" (click)="open(vinhcuu)">
+          <title>Vĩnh Cửu</title>
+          <path
+            d="M3950 7055 c-63 -14 -123 -24 -133 -25 -40 0 -85 -31 -102 -71 -25
         -55 -39 -63 -114 -69 -65 -5 -65 -5 -72 -39 -8 -40 -98 -136 -147 -157 -38
         -17 -52 -47 -52 -110 0 -39 5 -48 40 -80 46 -42 49 -57 16 -79 -14 -9 -29 -29
         -34 -45 -6 -15 -23 -34 -39 -42 -30 -15 -33 -31 -18 -130 7 -44 6 -48 -18 -59
@@ -196,11 +238,13 @@
         -1 6 3 21 9 32 5 11 13 45 17 76 11 99 36 158 93 219 29 32 49 61 45 65 -4 5
         -2 5 4 2 6 -3 26 9 44 28 24 25 33 43 32 66 -1 52 -31 80 -128 121 -48 21 -92
         42 -96 46 -5 5 -10 37 -12 73 -2 35 -7 101 -11 147 l-8 82 -64 45 c-40 28 -74
-        45 -91 44 -15 0 -79 -11 -142 -24z" />
-                                </a>
-                                <a title="dinh quan" (click)="open(dinhquan)">
-                                        <title>Định Quán</title>
-                                        <path d="M4903 6271 c-23 -15 -53 -20 -121 -22 -50 -2 -89 -7 -86 -11 6 -10
+        45 -91 44 -15 0 -79 -11 -142 -24z"
+          />
+        </a>
+        <a title="dinh quan" (click)="open(dinhquan)">
+          <title>Định Quán</title>
+          <path
+            d="M4903 6271 c-23 -15 -53 -20 -121 -22 -50 -2 -89 -7 -86 -11 6 -10
         -70 -104 -95 -117 -11 -6 -42 -4 -85 5 -58 12 -72 12 -85 1 -9 -8 -42 -28 -74
         -46 -31 -18 -62 -41 -67 -52 -6 -10 -16 -19 -23 -19 -21 0 -155 -140 -201
         -209 -42 -64 -43 -68 -50 -171 -5 -94 -4 -108 14 -138 11 -18 24 -31 29 -28 5
@@ -234,11 +278,13 @@
         117 -2 154 -13 17 -93 101 -176 187 -130 132 -158 166 -187 228 -50 105 -69
         116 -157 90 -68 -20 -103 -16 -107 14 -2 13 4 34 13 48 9 13 13 30 9 36 -4 6
         -3 8 3 5 6 -4 13 3 16 16 8 30 8 316 0 345 -6 26 -76 65 -165 93 -32 9 -75 31
-        -97 48 -45 36 -73 39 -118 12z" />
-                                </a>
-                                <a title="trang bom" (click)="open(trangbom)">
-                                        <title>Trảng Bom</title>
-                                        <path d="M3336 4138 c-7 -13 -17 -44 -21 -70 -5 -37 -16 -58 -51 -97 -64 -71
+        -97 48 -45 36 -73 39 -118 12z"
+          />
+        </a>
+        <a title="trang bom" (click)="open(trangbom)">
+          <title>Trảng Bom</title>
+          <path
+            d="M3336 4138 c-7 -13 -17 -44 -21 -70 -5 -37 -16 -58 -51 -97 -64 -71
         -75 -86 -139 -191 -63 -104 -90 -138 -149 -181 -42 -31 -100 -38 -139 -17 -20
         10 -21 10 -8 -6 12 -14 12 -16 -2 -10 -8 3 -18 12 -21 20 -10 26 -34 15 -63
         -28 -27 -41 -32 -43 -77 -43 -42 0 -51 -4 -75 -34 l-28 -34 -84 7 c-52 4 -98
@@ -251,11 +297,13 @@
         27 -12 27 -31 1 57 43 95 46 46 4 56 16 38 45 -33 53 -29 71 20 114 51 45 73
         86 73 141 0 42 -47 137 -64 127 -6 -3 -8 -3 -4 2 4 4 -11 42 -32 84 -55 105
         -55 171 -3 275 13 26 22 54 19 62 -3 8 -27 28 -53 44 -44 28 -52 30 -109 24
-        -54 -6 -66 -4 -90 15 -34 27 -50 27 -68 -1z" />
-                                </a>
-                                <a title="thong nhat" (click)="open(thongnhat)">
-                                        <title>Thống Nhất</title>
-                                        <path d="M3961 4114 c-7 -19 -23 -46 -35 -59 -26 -28 -76 -34 -76 -10 0 23
+        -54 -6 -66 -4 -90 15 -34 27 -50 27 -68 -1z"
+          />
+        </a>
+        <a title="thong nhat" (click)="open(thongnhat)">
+          <title>Thống Nhất</title>
+          <path
+            d="M3961 4114 c-7 -19 -23 -46 -35 -59 -26 -28 -76 -34 -76 -10 0 23
         -46 36 -114 33 -58 -3 -61 -4 -67 -33 -4 -16 -16 -52 -28 -78 -15 -31 -23 -70
         -24 -110 -1 -52 4 -72 32 -127 19 -36 46 -83 61 -105 43 -64 53 -99 45 -152
         -6 -40 -16 -56 -61 -101 -56 -56 -62 -74 -33 -119 19 -32 5 -50 -50 -63 -28
@@ -271,11 +319,13 @@
         88 141 88 121 0 -5 16 7 76 56 7 5 15 6 19 2 4 -4 3 2 -3 14 -12 22 -42 51
         -42 40 0 -4 -9 -2 -20 4 -14 8 -37 6 -85 -5 -83 -19 -128 -19 -164 0 -16 8
         -32 11 -36 7 -5 -4 -5 -1 -1 6 4 6 2 12 -4 12 -7 0 -20 10 -30 23 -11 13 -61
-        50 -112 82 -51 32 -98 64 -104 72 -7 8 -25 18 -41 22 -28 8 -31 6 -42 -25z" />
-                                </a>
-                                <a title="xuan loc" (click)="open(xuanloc)">
-                                        <title>Xuân Lộc</title>
-                                        <path d="M4910 4096 c0 -9 20 -29 44 -43 55 -33 64 -52 61 -128 l-3 -60 -83
+        50 -112 82 -51 32 -98 64 -104 72 -7 8 -25 18 -41 22 -28 8 -31 6 -42 -25z"
+          />
+        </a>
+        <a title="xuan loc" (click)="open(xuanloc)">
+          <title>Xuân Lộc</title>
+          <path
+            d="M4910 4096 c0 -9 20 -29 44 -43 55 -33 64 -52 61 -128 l-3 -60 -83
         -60 c-45 -33 -105 -76 -133 -96 -28 -20 -51 -41 -50 -47 1 -7 2 -30 3 -52 1
         -33 6 -42 25 -50 13 -5 34 -27 47 -49 36 -64 69 -70 160 -26 40 19 79 35 86
         35 48 0 91 -57 78 -102 -4 -13 -31 -48 -59 -78 -77 -81 -81 -87 -66 -105 7 -9
@@ -298,11 +348,13 @@
         66 -29 43 -58 63 -96 65 -38 2 -73 16 -123 49 -21 13 -58 30 -83 36 -25 7 -49
         16 -55 20 -5 4 -53 10 -106 12 -61 2 -103 9 -113 17 -9 7 -16 10 -16 5 0 -4
         -6 0 -13 10 -8 11 -35 20 -77 26 -59 8 -68 12 -100 50 -104 123 -89 114 -181
-        121 -46 4 -99 11 -116 14 -27 6 -33 4 -33 -9z" />
-                                </a>
-                                <a title="long khanh" (click)="open(longkhanh)">
-                                        <title>Long Khánh</title>
-                                        <path d="M4571 3798 c-29 -24 -49 -48 -47 -55 3 -8 -2 -13 -14 -13 -13 0 -23
+        121 -46 4 -99 11 -116 14 -27 6 -33 4 -33 -9z"
+          />
+        </a>
+        <a title="long khanh" (click)="open(longkhanh)">
+          <title>Long Khánh</title>
+          <path
+            d="M4571 3798 c-29 -24 -49 -48 -47 -55 3 -8 -2 -13 -14 -13 -13 0 -23
         -13 -34 -48 -23 -67 -66 -123 -131 -167 -30 -21 -57 -45 -59 -54 -2 -9 -9 -39
         -16 -67 -8 -36 -23 -63 -49 -91 -25 -26 -40 -52 -44 -78 -4 -22 -22 -65 -42
         -95 -38 -60 -43 -92 -20 -147 8 -19 15 -50 15 -68 0 -34 -41 -103 -84 -144
@@ -313,11 +365,13 @@
         27 98 96 171 45 47 59 68 59 91 0 44 -25 64 -69 58 -20 -3 -40 -5 -44 -6 -5 0
         -5 -5 -1 -12 4 -7 3 -8 -4 -4 -6 4 -29 -2 -51 -14 -72 -36 -118 -24 -151 39
         -12 24 -30 43 -47 49 -26 9 -29 15 -40 88 -14 95 -59 204 -83 204 -10 0 -41
-        -19 -69 -42z" />
-                                </a>
-                                <a title="bien hoa" (click)="open(bienhoa)">
-                                        <title>Biên Hòa</title>
-                                        <path d="M1850 3505 c-30 -13 -68 -24 -83 -25 -15 0 -44 -7 -64 -15 -19 -8
+        -19 -69 -42z"
+          />
+        </a>
+        <a title="bien hoa" (click)="open(bienhoa)">
+          <title>Biên Hòa</title>
+          <path
+            d="M1850 3505 c-30 -13 -68 -24 -83 -25 -15 0 -44 -7 -64 -15 -19 -8
         -47 -15 -62 -15 -20 -1 -35 -13 -64 -55 -46 -66 -70 -83 -133 -94 -27 -5 -62
         -14 -79 -20 -16 -6 -41 -13 -55 -15 -45 -9 -62 -28 -51 -56 18 -47 123 -144
         171 -160 27 -9 74 -40 116 -76 58 -51 82 -65 135 -78 65 -17 68 -20 96 -71 9
@@ -328,11 +382,13 @@
         55 74 0 7 -22 20 -50 29 -59 20 -75 43 -75 114 0 29 -7 60 -16 73 -20 30 -69
         54 -102 51 -33 -3 -70 8 -97 30 -15 12 -20 27 -20 57 2 61 -9 81 -52 94 -47
         15 -73 37 -66 56 9 23 -34 96 -95 162 -32 34 -65 62 -74 62 -9 0 -39 -5 -67
-        -12 -44 -10 -57 -9 -87 5 -45 22 -58 21 -124 -8z" />
-                                </a>
-                                <a title="cam my" (click)="open(cammy)">
-                                        <title>Cẩm Mỹ</title>
-                                        <path d="M3780 2780 c-11 -11 -20 -33 -20 -49 0 -47 -17 -80 -53 -101 -22 -13
+        -12 -44 -10 -57 -9 -87 5 -45 22 -58 21 -124 -8z"
+          />
+        </a>
+        <a title="cam my" (click)="open(cammy)">
+          <title>Cẩm Mỹ</title>
+          <path
+            d="M3780 2780 c-11 -11 -20 -33 -20 -49 0 -47 -17 -80 -53 -101 -22 -13
         -40 -35 -50 -60 -12 -31 -24 -44 -54 -56 -112 -44 -111 -43 -158 -130 -25 -45
         -45 -88 -45 -95 0 -6 16 -32 36 -55 26 -32 43 -44 62 -44 38 0 68 -24 82 -65
         l12 -35 78 0 c43 0 82 -4 85 -10 9 -15 27 -12 19 3 -4 6 -3 8 1 4 11 -10 16
@@ -350,11 +406,13 @@
         -16 -25 4 -4 -2 -15 -13 -23 -11 -8 -15 -17 -10 -19 10 -4 12 -71 2 -80 -9
         -10 -43 -7 -121 10 -67 14 -94 15 -169 6 -49 -6 -97 -15 -106 -19 -36 -19 -98
         -22 -135 -7 -33 14 -35 17 -26 41 14 37 13 58 -2 49 -9 -5 -8 -2 1 10 21 25
-        -11 63 -90 106 -36 19 -81 47 -100 61 -81 63 -169 79 -209 39z" />
-                                </a>
-                                <a title="long thanh" (click)="open(longthanh)">
-                                        <title>Long Thành</title>
-                                        <path d="M2662 2621 c-32 -57 -71 -81 -157 -96 -81 -14 -120 -33 -130 -64 -8
+        -11 63 -90 106 -36 19 -81 47 -100 61 -81 63 -169 79 -209 39z"
+          />
+        </a>
+        <a title="long thanh" (click)="open(longthanh)">
+          <title>Long Thành</title>
+          <path
+            d="M2662 2621 c-32 -57 -71 -81 -157 -96 -81 -14 -120 -33 -130 -64 -8
         -26 9 -58 35 -66 11 -3 20 -11 20 -16 0 -6 -4 -7 -10 -4 -6 4 -7 -5 -4 -23 9
         -42 -16 -57 -87 -54 -33 1 -72 2 -89 2 -51 0 -103 0 -147 3 -23 1 -45 -1 -48
         -5 -3 -3 3 -21 14 -39 37 -60 22 -110 -48 -167 -23 -18 -41 -38 -41 -45 0 -7
@@ -371,11 +429,13 @@
         -25 41 -58 46 -55 9 -116 74 -116 123 0 19 5 38 10 41 14 9 12 25 -3 25 -19 0
         -38 24 -75 92 l-31 58 27 17 c38 25 51 44 52 75 0 15 5 30 10 33 23 14 6 20
         -60 23 l-71 3 -45 -46 -45 -47 -112 5 c-62 3 -126 9 -144 12 -26 6 -36 3 -56
-        -19 -13 -14 -34 -26 -46 -26 -23 0 -97 69 -109 101 -7 18 -10 15 -30 -20z" />
-                                </a>
-                                <a title="nhon trach" (click)="open(nhontrach)">
-                                        <title>Nhơn Trạch</title>
-                                        <path d="M2130 1984 c-14 -3 -44 -7 -67 -10 -39 -5 -43 -8 -43 -32 0 -74 -79
+        -19 -13 -14 -34 -26 -46 -26 -23 0 -97 69 -109 101 -7 18 -10 15 -30 -20z"
+          />
+        </a>
+        <a title="nhon trach" (click)="open(nhontrach)">
+          <title>Nhơn Trạch</title>
+          <path
+            d="M2130 1984 c-14 -3 -44 -7 -67 -10 -39 -5 -43 -8 -43 -32 0 -74 -79
         -98 -142 -44 -58 51 -91 47 -143 -15 -44 -54 -95 -38 -95 31 0 40 -11 56 -36
         56 -18 0 -35 -15 -67 -60 -38 -54 -53 -66 -147 -114 -58 -30 -115 -65 -126
         -78 -42 -46 -76 -111 -85 -166 -21 -121 -22 -128 -4 -162 37 -71 160 -169 213
@@ -390,10 +450,10 @@
         7 139 -22 13 -39 28 -39 33 0 11 -50 48 -70 53 -7 2 -21 11 -31 20 -10 10 -42
         29 -71 44 -78 39 -98 61 -98 106 0 20 7 56 16 78 22 54 14 75 -55 157 -44 54
         -62 84 -71 124 -24 101 -62 146 -173 203 -60 32 -77 36 -135 35 -37 -1 -78 -3
-        -92 -5z" />
-                                </a>
-                        </g>
-
-                </svg>
-        </div>
+        -92 -5z"
+          />
+        </a>
+      </g>
+    </svg>
+  </div>
 </div>

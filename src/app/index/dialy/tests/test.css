@@ -15,7 +15,7 @@ input {
 
 label {
   font-size: 20px;
-  line-height: 2vw;
+  line-height: 2rem;
   max-width: 95%;
   margin: 0;
 }
@@ -69,187 +69,15 @@ button:hover,
 .disabled {
   cursor: not-allowed;
 }
-@media (min-width: 1100px) {
+
+@media (max-width: 770px) {
+  form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
   label {
-    line-height: 1.5vw;
-  }
-}
-@media (orientation: portrait) {
-  @media (max-width: 390px) {
-    h1 {
-      font-size: 5vw;
-      margin-bottom: 0;
-      padding: 5vw;
-    }
-    form {
-      width: 100%;
-    }
-    .row {
-      flex-wrap: nowrap;
-    }
-    h2 {
-      font-size: 3vw;
-      line-height: 5vw;
-    }
-    label {
-      font-size: 2.5vw;
-      line-height: 4vw;
-    }
-    input {
-      width: 3vw;
-    }
-    button,
-    .quest {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 2.5vw;
-      border-radius: 5px;
-    }
-  }
-
-  @media (min-width: 400px) and (max-width: 500px) {
-    h1 {
-      font-size: 5vw;
-      margin-bottom: 0;
-      padding: 5vw;
-    }
-    form {
-      width: 100%;
-    }
-    .row {
-      flex-wrap: nowrap;
-    }
-    h2 {
-      font-size: 3vw;
-      line-height: 5vw;
-    }
-    label {
-      font-size: 2.5vw;
-      line-height: 4vw;
-    }
-    input {
-      width: 3vw;
-    }
-    button,
-    .quest {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 2.5vw;
-      border-radius: 5px;
-    }
-  }
-
-  @media (min-width: 700px) and (max-width: 1090px) {
-    h1 {
-      font-size: 5vw;
-      margin-bottom: 0;
-      padding: 5vw;
-    }
-    form {
-      width: 90%;
-    }
-    .row {
-      flex-wrap: nowrap;
-    }
-    h2 {
-      font-size: 3vw;
-      line-height: 5vw;
-    }
-    label {
-      font-size: 2vw;
-      line-height: 3vw;
-    }
-    input {
-      width: 3vw;
-    }
-    button,
-    .quest {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 2.5vw;
-      border-radius: 5px;
-    }
-  }
-}
-
-@media (orientation: landscape) {
-  @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    h1 {
-      font-size: 5vw;
-      margin-bottom: 0;
-      padding: 5vw;
-    }
-    form {
-      width: 70%;
-    }
-    .row {
-      flex-wrap: nowrap;
-    }
-    h2 {
-      font-size: 3vw;
-      line-height: 4vw;
-    }
-    label {
-      font-size: 2vw;
-      line-height: 2vw;
-    }
-    input {
-      width: 3vw;
-    }
-    button,
-    .quest {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 2.5vw;
-      border-radius: 5px;
-    }
-  }
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    label {
-      font-size: 2vw;
-      line-height: 2.5vw;
-    }
-  }
-
-  @media only screen and (min-width: 374px) and (max-width: 813px) {
-    button,
-    .quest {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 1.5vw;
-      border-radius: 5px;
-    }
-  }
-
-  @media only screen and (min-width: 375px) and (max-width: 750px) {
-    h1 {
-      font-size: 5vw;
-      margin-bottom: 0;
-      padding: 5vw;
-    }
-    form {
-      width: 70%;
-    }
-    .row {
-      flex-wrap: nowrap;
-    }
-    h2 {
-      font-size: 2.5vw;
-      line-height: 4vw;
-    }
-    label {
-      font-size: 2vw;
-      line-height: 2vw;
-    }
-    input {
-      width: 3vw;
-    }
-    button,
-    .quest {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 2.5vw;
-      border-radius: 5px;
-    }
+    max-width: 90%;
   }
 }

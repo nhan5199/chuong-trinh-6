@@ -8,7 +8,7 @@ import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 })
 export class GameComponent implements OnInit {
   @ViewChild('audioPlayer') audioPlayer: any;
-  activePage: number = 0;
+  activePage: number = 15;
   listAnswer: number[] = [3, 2, 1, 1, 4, 3, 3, 3, 2, 1];
 
   countWrongAnswer: number = 0;

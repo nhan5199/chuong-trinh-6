@@ -334,53 +334,9 @@ const routes: Routes = [
     component: LichSuHanhChinhCanvaComponent,
   },
   {
-    path: ':province',
+    path: 'tests/:province',
     component: TestComponent,
   },
-  // {
-  //   path: 'cammy_test',
-  //   component: CamMyTestComponent,
-  // },
-  // {
-  //   path: 'dinhquan_test',
-  //   component: DinhQuanTestComponent,
-  // },
-  // {
-  //   path: 'longthanh_test',
-  //   component: LongThanhTestComponent,
-  // },
-  // {
-  //   path: 'nhontrach_test',
-  //   component: NhonTrachTestComponent,
-  // },
-  // {
-  //   path: 'tanphu_test',
-  //   component: TanPhuTestComponent,
-  // },
-  // {
-  //   path: 'thongnhat_test',
-  //   component: ThongNhatTestComponent,
-  // },
-  // {
-  //   path: 'trangbom_test',
-  //   component: TrangBomTestComponent,
-  // },
-  // {
-  //   path: 'vinhcuu_test',
-  //   component: VinhCuuTestComponent,
-  // },
-  // {
-  //   path: 'xuanloc_test',
-  //   component: XuanLocTestComponent,
-  // },
-  // {
-  //   path: 'bienhoa_test',
-  //   component: TestComponent,
-  // },
-  // {
-  //   path: 'longkhanh_test',
-  //   component: LongKhanhTestComponent,
-  // },
   {
     path: 'sachbando',
     component: SachBanDoComponent,
@@ -428,15 +384,6 @@ const routes: Routes = [
       //   path: 'brunei', component: BruneiComponent
       // },
     ],
-  },
-
-  {
-    path: 'list-storyline',
-    component: ListStorylineComponent,
-  },
-  {
-    path: 'list-storyline/:title',
-    component: StorylineItemComponent,
   },
   {
     path: 'em-yeu-dia-li/asean',

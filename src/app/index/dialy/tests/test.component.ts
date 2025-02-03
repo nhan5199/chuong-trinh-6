@@ -21,13 +21,13 @@ export class TestComponent implements OnInit {
 
   listQuestions: any;
   ngOnInit(): void {
-    debugger;
+    console.log('data: ', this.router.url?.split('_')[0]);
     this.listQuestions = constant.LIST_QUESTIONS.find(
-      (x) => x.name == this.router.url?.split('_')[0]?.split('/')[1]
+      (x) => x.name == this.router.url?.split('_')[0]?.split('/tests/')[1]
     )?.questions;
 
     this.testTitle = constant.TEST_TITLE.find(
-      (x) => x.code == this.router.url?.split('_')[0]?.split('/')[1]
+      (x) => x.code == this.router.url?.split('_')[0]?.split('/tests/')[1]
     )?.title;
 
     this.answerForm = this._formBuilder.group({
