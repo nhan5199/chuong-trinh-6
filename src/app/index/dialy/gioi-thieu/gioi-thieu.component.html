@@ -1,243 +1,175 @@
-<div
-  id="carouselExampleIndicators"
-  class="carousel slide dia-ly w3-animate-opacity"
-  data-ride="carousel"
->
-  <ol class="carousel-indicators">
-    <li
-      data-target="#carouselExampleIndicators"
-      data-slide-to="0"
-      class="active"
-    ></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item item1">
-      <div class="row">
-        <div class="carousel-content col-sm-6" style="overflow: auto">
-          <div class="return text-center">
-            <a class="return" routerLink="/dialy"
-              ><i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
-          <div class="title">
-            <p>Dân cư</p>
-            <div class="seperate"></div>
-          </div>
-          <ul class="text-left">
-            <li>
-              Theo số liệu thống kê, có trên 30 dân tộc sinh sống ở đây qua
-              nhiều thời kỳ lịch sử. Trước năm 1698, người Việt và người Hoa đã
-              đến vùng đất Biên Hòa – Đồng Nai sinh sống nhưng không nhiều. Các
-              cư dân được xem là bản địa là Chơro, Mạ, Kơho, Xtiêng.
-            </li>
-            <li>
-              Từ năm 1698 đến nay, có 5 đợt nhập cư lớn của các nguồn di dân đến
-              Đồng Nai làm tăng dân số và thành phần dân cư.
-            </li>
-            <li>
-              Đồng Nai có các dân tộc sinh sống xếp theo dân số từ cao đến thấp
-              là: Việt (chiếm số đông đảo nhất), kế đến là người Hoa, Nùng, Tày,
-              Chơro, Dao, Mường, Khơme, Chăm, Mạ, Stiêng, Thái, Kơho, Sán Dìu,
-              Thổ và một số dân tộc khác như Hmông, Giarai, Ngái, Êđê, Bana,
-              Hrê, Raglai, Bru Vân kiều, Giáy, Cơtu, GíeTriêng, Tà Ôi, Kháng,
-              Xinh Mun, Chu ru, Lào, La Chí, La Ha, Phù Lá, Mảng, Bố Y, Si la,
-              Pu péo…nhưng số lượng không đáng kể.
-            </li>
-          </ul>
-        </div>
-        <div class="carousel-img col-sm-6">
-          <img src="assets/images/dan_cu_1.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item item2">
-      <div class="row">
-        <div class="carousel-content col-sm-6" style="overflow: auto">
-          <div class="back col-sm-2">
-            <a class="return" (click)="cancel()" style="cursor: pointer"
-              ><i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
+<div class="slide dia-ly w3-animate-opacity">
+  <button class="prev-slide" (click)="goToPrevSlide()">
+    <i class="fas fa-angle-left"></i>
+  </button>
 
-          <div class="title">
-            <p>Khí hậu</p>
-            <div class="seperate"></div>
-          </div>
-          <ul class="text-left">
-            <li>
-              Khí hậu Đồng Nai là khí hậu nhiệt đới gió mùa cận xích đạo, có hai
-              mùa tương phản nhau (mùa khô và mùa mưa). Mùa khô từ tháng 12 đến
-              tháng 3 hoặc tháng 4 năm sau (khoảng 5 – 6 tháng), mùa mưa từ
-              tháng 5 đến tháng 11 (khoảng 6 – 7 tháng).
-            </li>
-            <li>
-              Nhiệt độ không khí trung bình hằng năm từ 25,7 –
-              26,7<sup>o</sup>C. Mức độ chênh nhau giữa các năm không lớn. Chênh
-              lệch nhiệt độ cao nhất giữa tháng nóng nhất và lạnh nhất là
-              4,2<sup>o</sup>C.
-            </li>
-            <li>
-              Nhiệt độ trung bình mùa khô từ 25,4 – 26,7<sup>o</sup>C, chênh
-              lệch giữa tháng cao nhất và tháng thấp nhất là 4,8<sup>o</sup>C.
-              Nhiệt độ trung bình mùa mưa từ 26 – 26,8<sup>o</sup>C. So với mùa
-              khô, mức dao động không lớn, khoảng 0,8<sup>o</sup>C.
-            </li>
-            <li>
-              Mùa khô, tổng lượng mưa chỉ từ 210 – 370 mm chiếm 12 – 145 lượng
-              mưa của năm. Mùa mưa, lượng mưa từ 1.500 – 2.400 mm, chiếm 86 –
-              88% lượng mưa của năm. Phân bố lượng mưa giảm dần từ phía Bắc
-              xuống phía Nam và từ giữa ra hai phía Đông và Tây của Đồng Nai.
-            </li>
-          </ul>
+  <button class="next-slide" (click)="goToNextSlide()">
+    <i class="fas fa-angle-right"></i>
+  </button>
+  <div class="slide-container">
+    <div id="item1" class="slide-item active">
+      <div class="slide-content">
+        <div class="title">
+          <p>Dân cư</p>
+          <div class="seperate"></div>
         </div>
-        <div class="carousel-img col-sm-6">
-          <img src="assets/images/khi_hau.png" alt="" />
-        </div>
+        <ul class="text-left">
+          <li>
+            Theo số liệu thống kê, có trên 30 dân tộc sinh sống ở đây qua nhiều
+            thời kỳ lịch sử. Trước năm 1698, người Việt và người Hoa đã đến vùng
+            đất Biên Hòa – Đồng Nai sinh sống nhưng không nhiều. Các cư dân được
+            xem là bản địa là Chơro, Mạ, Kơho, Xtiêng.
+          </li>
+          <li>
+            Từ năm 1698 đến nay, có 5 đợt nhập cư lớn của các nguồn di dân đến
+            Đồng Nai làm tăng dân số và thành phần dân cư.
+          </li>
+          <li>
+            Đồng Nai có các dân tộc sinh sống xếp theo dân số từ cao đến thấp
+            là: Việt (chiếm số đông đảo nhất), kế đến là người Hoa, Nùng, Tày,
+            Chơro, Dao, Mường, Khơme, Chăm, Mạ, Stiêng, Thái, Kơho, Sán Dìu, Thổ
+            và một số dân tộc khác như Hmông, Giarai, Ngái, Êđê, Bana, Hrê,
+            Raglai, Bru Vân kiều, Giáy, Cơtu, GíeTriêng, Tà Ôi, Kháng, Xinh Mun,
+            Chu ru, Lào, La Chí, La Ha, Phù Lá, Mảng, Bố Y, Si la, Pu péo…nhưng
+            số lượng không đáng kể.
+          </li>
+        </ul>
+      </div>
+      <div class="slide-img">
+        <img src="assets/images/dan_cu_1.jpg" alt="" />
       </div>
     </div>
-    <div class="carousel-item item3">
-      <div class="row">
-        <div class="carousel-content col-sm-6" style="overflow: auto">
-          <div class="back col-sm-2">
-            <a class="return" (click)="cancel()" style="cursor: pointer"
-              ><i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
-          <div class="title">
-            <p>Đất đai</p>
-            <div class="seperate"></div>
-          </div>
-          <ul class="text-left">
-            <li>
-              Các loại đất hình thành trên phù sa cổ và trên đá phiến sét: gồm
-              đất xám, nâu xám, loang lổ chiếm 41,9% diện tích tự nhiên (246.380
-              ha), có độ phì nhiêu kém, thích hợp cho các loại cây ngắn ngày như
-              đậu, đỗ…một số cây ăn trái và cây công nghiệp dài ngày như cây
-              điều…
-            </li>
-            <li>
-              Các loại đất hình thành trên phù sa mới, gồm: đất phù sa, đất cát.
-              Phân bố chủ yếu ven các sông như sông Đồng Nai, La Ngà. Chất lượng
-              đất tốt, thích hợp với nhiều loại cây trồng như cây lương thực,
-              hoa màu, rau quả…
-            </li>
-            <li>
-              Các loại đất hình thành trên đá bazan: Gồm đất đá bọt, đất đen,
-              đất đỏ có độ phì nhiêu cao, chiếm 39,1% diện tích tự nhiên
-              (229.416 ha), phân bố ở phía bắc và đông bắc của tỉnh. Các loại
-              đất này thích hợp cho các cây công nghiệp ngắn và dài ngày như:
-              cao su, cà phê, tiêu…
-            </li>
-          </ul>
+    <div id="item2" class="slide-item">
+      <div class="slide-content">
+        <div class="title">
+          <p>Khí hậu</p>
+          <div class="seperate"></div>
         </div>
-        <div class="carousel-img col-sm-6">
-          <img src="assets/images/dat_dai.jpg" alt="" />
-        </div>
+        <ul class="text-left">
+          <li>
+            Khí hậu Đồng Nai là khí hậu nhiệt đới gió mùa cận xích đạo, có hai
+            mùa tương phản nhau (mùa khô và mùa mưa). Mùa khô từ tháng 12 đến
+            tháng 3 hoặc tháng 4 năm sau (khoảng 5 – 6 tháng), mùa mưa từ tháng
+            5 đến tháng 11 (khoảng 6 – 7 tháng).
+          </li>
+          <li>
+            Nhiệt độ không khí trung bình hằng năm từ 25,7 – 26,7<sup>o</sup>C.
+            Mức độ chênh nhau giữa các năm không lớn. Chênh lệch nhiệt độ cao
+            nhất giữa tháng nóng nhất và lạnh nhất là 4,2<sup>o</sup>C.
+          </li>
+          <li>
+            Nhiệt độ trung bình mùa khô từ 25,4 – 26,7<sup>o</sup>C, chênh lệch
+            giữa tháng cao nhất và tháng thấp nhất là 4,8<sup>o</sup>C. Nhiệt độ
+            trung bình mùa mưa từ 26 – 26,8<sup>o</sup>C. So với mùa khô, mức
+            dao động không lớn, khoảng 0,8<sup>o</sup>C.
+          </li>
+          <li>
+            Mùa khô, tổng lượng mưa chỉ từ 210 – 370 mm chiếm 12 – 145 lượng mưa
+            của năm. Mùa mưa, lượng mưa từ 1.500 – 2.400 mm, chiếm 86 – 88%
+            lượng mưa của năm. Phân bố lượng mưa giảm dần từ phía Bắc xuống phía
+            Nam và từ giữa ra hai phía Đông và Tây của Đồng Nai.
+          </li>
+        </ul>
+      </div>
+      <div class="slide-img">
+        <img src="assets/images/khi_hau.png" alt="" />
       </div>
     </div>
-    <div class="carousel-item item4">
-      <div class="row">
-        <div class="carousel-content col-sm-6" style="overflow: auto">
-          <div class="back col-sm-2">
-            <a class="return" (click)="cancel()" style="cursor: pointer"
-              ><i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
-
-          <div class="title">
-            <p>Địa hình</p>
-            <div class="seperate"></div>
-          </div>
-          <ul class="text-left">
-            <li>
-              Địa hình đồng bằng gồm 2 dạng chính: Các bậc thềm sông có độ cao
-              từ 5 đến 10m hoặc có nơi chỉ cao từ 2 đến 5m dọc theo các sông và
-              tạo thành từng dải hẹp có chiều rộng thay đổi từ vài chục mét đến
-              vài km. Đất trên địa hình này chủ yếu là các aluvi hiện đại.
-            </li>
-            <li>
-              Địa hình trũng trên trầm tích đầm lầy biển: là những vùng đất
-              trũng trên địa bàn tỉnh Đồng Nai với độ cao dao động từ 0,3 đến
-              2m, có chỗ thấp hơn mực nước biển, thường xuyên ngập triều, mạng
-              lưới sông rạch chằng chịt, có rừng ngập mặn bao phủ. Vật liệu
-              không đồng nhất, có nhiều sét và vật chất hữu cơ lắng đọng.
-            </li>
-            <li>
-              Dạng địa đồi lượn sóng: Độ cao từ 20 đến 200m. Bao gồm các đồi
-              bazan, Bề mặt địa hình rất phẳng, thoải, độ dốc từ 30 đến 80. Loại
-              địa hình này chiếm diện tích rất lớn so với các dạng địa hình khác
-              bao trùm hầu hết các khối bazan, phù sa cổ. Đất phân bổ trên địa
-              hình này gồm nhóm đất đỏ vàng và đất xám.
-            </li>
-            <li>
-              Dạng địa hình núi thấp: Bao gồm các núi sót rải rác và là phần
-              cuối cùng của dãy Trường Sơn với độ cao thay đổi từ 200 – 800m, có
-              đá mẹ lộ thiên thành cụm với các đá chủ yếu là granit, đá phiến
-              sét.
-            </li>
-          </ul>
+    <div id="item3" class="slide-item">
+      <div class="slide-content">
+        <div class="title">
+          <p>Đất đai</p>
+          <div class="seperate"></div>
         </div>
-        <div class="carousel-img col-sm-6">
-          <img src="assets/images/dat_dai_1.jpg" alt="" />
-        </div>
+        <ul class="text-left">
+          <li>
+            Các loại đất hình thành trên phù sa cổ và trên đá phiến sét: gồm đất
+            xám, nâu xám, loang lổ chiếm 41,9% diện tích tự nhiên (246.380 ha),
+            có độ phì nhiêu kém, thích hợp cho các loại cây ngắn ngày như đậu,
+            đỗ…một số cây ăn trái và cây công nghiệp dài ngày như cây điều…
+          </li>
+          <li>
+            Các loại đất hình thành trên phù sa mới, gồm: đất phù sa, đất cát.
+            Phân bố chủ yếu ven các sông như sông Đồng Nai, La Ngà. Chất lượng
+            đất tốt, thích hợp với nhiều loại cây trồng như cây lương thực, hoa
+            màu, rau quả…
+          </li>
+          <li>
+            Các loại đất hình thành trên đá bazan: Gồm đất đá bọt, đất đen, đất
+            đỏ có độ phì nhiêu cao, chiếm 39,1% diện tích tự nhiên (229.416 ha),
+            phân bố ở phía bắc và đông bắc của tỉnh. Các loại đất này thích hợp
+            cho các cây công nghiệp ngắn và dài ngày như: cao su, cà phê, tiêu…
+          </li>
+        </ul>
+      </div>
+      <div class="slide-img">
+        <img src="assets/images/dat_dai.jpg" alt="" />
       </div>
     </div>
-    <div class="carousel-item item5 active">
-      <div class="row">
-        <div class="carousel-content col-sm-6" style="overflow: auto">
-          <div class="back col-sm-2">
-            <a class="return" routerLink="/dialy "
-              ><i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
-
-          <div class="title">
-            <p>Vị trí địa lí</p>
-            <div class="seperate"></div>
-          </div>
-          <ul class="text-left">
-            <li>
-              Nằm trong khu vực miền Đông Nam Bộ, nối liền giữa Nam Bộ, cực nam
-              Trung Bộ và nam Tây Nguyên. Toạ độ địa lí từ 10o30’03 đến
-              11o34’57’’vĩ độ Bắc và từ 106o45’30 đến 107o35’00 kinh độ Đông.
-              Diện tích 5.862,37 km2, bằng 1,76% diện tích tự nhiên của cả nước
-              và 25,5% diện tích tự nhiên vùng Đông Nam Bộ
-            </li>
-            <li>
-              Đồng Nai có vị trí hết sức quan trọng, là cửa ngõ phía đông thành
-              phố Hồ Chí Minh - một trung tâm kinh tế lớn của cả phía Nam, nối
-              Nam Trung Bộ, Nam Tây Nguyên với toàn bộ vùng Đông Nam Bộ bởi các
-              tuyến giao thông huyết mạch như quốc lộ 1A, quốc lộ 51 và tuyến
-              đường sắt Thống Nhất…
-            </li>
-          </ul>
+    <div id="item4" class="slide-item">
+      <div class="slide-content">
+        <div class="title">
+          <p>Địa hình</p>
+          <div class="seperate"></div>
         </div>
-        <div class="carousel-img col-sm-6">
-          <img src="assets/images/ban_do_Dong_Nai.jpg" alt="" />
-        </div>
+        <ul class="text-left">
+          <li>
+            Địa hình đồng bằng gồm 2 dạng chính: Các bậc thềm sông có độ cao từ
+            5 đến 10m hoặc có nơi chỉ cao từ 2 đến 5m dọc theo các sông và tạo
+            thành từng dải hẹp có chiều rộng thay đổi từ vài chục mét đến vài
+            km. Đất trên địa hình này chủ yếu là các aluvi hiện đại.
+          </li>
+          <li>
+            Địa hình trũng trên trầm tích đầm lầy biển: là những vùng đất trũng
+            trên địa bàn tỉnh Đồng Nai với độ cao dao động từ 0,3 đến 2m, có chỗ
+            thấp hơn mực nước biển, thường xuyên ngập triều, mạng lưới sông rạch
+            chằng chịt, có rừng ngập mặn bao phủ. Vật liệu không đồng nhất, có
+            nhiều sét và vật chất hữu cơ lắng đọng.
+          </li>
+          <li>
+            Dạng địa đồi lượn sóng: Độ cao từ 20 đến 200m. Bao gồm các đồi
+            bazan, Bề mặt địa hình rất phẳng, thoải, độ dốc từ 30 đến 80. Loại
+            địa hình này chiếm diện tích rất lớn so với các dạng địa hình khác
+            bao trùm hầu hết các khối bazan, phù sa cổ. Đất phân bổ trên địa
+            hình này gồm nhóm đất đỏ vàng và đất xám.
+          </li>
+          <li>
+            Dạng địa hình núi thấp: Bao gồm các núi sót rải rác và là phần cuối
+            cùng của dãy Trường Sơn với độ cao thay đổi từ 200 – 800m, có đá mẹ
+            lộ thiên thành cụm với các đá chủ yếu là granit, đá phiến sét.
+          </li>
+        </ul>
+      </div>
+      <div class="slide-img">
+        <img src="assets/images/dat_dai_1.jpg" alt="" />
       </div>
     </div>
-    <a
-      class="carousel-control-prev"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div id="item5" class="slide-item">
+      <div class="slide-content">
+        <div class="title">
+          <p>Vị trí địa lí</p>
+          <div class="seperate"></div>
+        </div>
+        <ul class="text-left">
+          <li>
+            Nằm trong khu vực miền Đông Nam Bộ, nối liền giữa Nam Bộ, cực nam
+            Trung Bộ và nam Tây Nguyên. Toạ độ địa lí từ 10o30’03 đến
+            11o34’57’’vĩ độ Bắc và từ 106o45’30 đến 107o35’00 kinh độ Đông. Diện
+            tích 5.862,37 km2, bằng 1,76% diện tích tự nhiên của cả nước và
+            25,5% diện tích tự nhiên vùng Đông Nam Bộ
+          </li>
+          <li>
+            Đồng Nai có vị trí hết sức quan trọng, là cửa ngõ phía đông thành
+            phố Hồ Chí Minh - một trung tâm kinh tế lớn của cả phía Nam, nối Nam
+            Trung Bộ, Nam Tây Nguyên với toàn bộ vùng Đông Nam Bộ bởi các tuyến
+            giao thông huyết mạch như quốc lộ 1A, quốc lộ 51 và tuyến đường sắt
+            Thống Nhất…
+          </li>
+        </ul>
+      </div>
+      <div class="slide-img">
+        <img src="assets/images/ban_do_Dong_Nai.jpg" alt="" />
+      </div>
+    </div>
   </div>
 </div>
