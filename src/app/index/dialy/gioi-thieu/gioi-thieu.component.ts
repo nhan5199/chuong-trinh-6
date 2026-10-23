@@ -1,65 +1,32 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-gioi-thieu',
   templateUrl: './gioi-thieu.component.html',
   styleUrls: ['./gioi-thieu.component.css'],
 })
-export class GioiThieuComponent implements OnInit {
-  currentSlide: number = 1;
-  constructor(private location: Location) {}
+export class GioiThieuComponent implements AfterViewInit, OnDestroy {
+  currentSlide = 1;
+  private slides: HTMLElement[] = [];
+  private timer?: ReturnType<typeof setInterval>;
 
-  ngOnInit(): void {
-    let currentIndex = 1; // Start from the first slide
-    const slideItems = document.querySelectorAll<HTMLElement>('.slide-item');
-    const totalSlides = slideItems.length;
+  constructor(private readonly location: Location, private readonly element: ElementRef<HTMLElement>) {}
 
-    if (totalSlides === 0) return; // Exit if no slides exist
-
-    setInterval(() => {
-      this.goToNextSlide();
-      currentIndex = (currentIndex % totalSlides) + 1; // Loop back to the first slide
-    }, 5000);
+  ngAfterViewInit(): void {
+    this.slides = Array.from(this.element.nativeElement.querySelectorAll<HTMLElement>('.slide-item'));
+    if (this.slides.length > 1) this.timer = setInterval(() => this.goToNextSlide(), 5000);
   }
 
-  cancel() {
-    this.location.back();
-  }
+  ngOnDestroy(): void { clearInterval(this.timer); }
+  cancel(): void { this.location.back(); }
+  goToNextSlide(): void { this.move(1); }
+  goToPrevSlide(): void { this.move(-1); }
 
-  goToNextSlide() {
-    this.currentSlide = this.currentSlide + 1 > 5 ? 1 : this.currentSlide + 1;
-    // Get all elements with class 'slide-item'
-    const slideItems = document.querySelectorAll<HTMLElement>('.slide-item');
-
-    // Remove 'active' class from all slide items
-    slideItems.forEach((item) => item.classList.remove('active'));
-
-    // Find the element with the same number in its id and set it as active
-    slideItems.forEach((item) => {
-      const itemNumber = item.id.replace(/\D/g, ''); // Extract number from the item's id
-      if (+itemNumber === this.currentSlide) {
-        item.classList.add('active');
-        return;
-      }
-    });
-  }
-
-  goToPrevSlide() {
-    this.currentSlide = this.currentSlide - 1 <= 0 ? 5 : this.currentSlide - 1;
-    // Get all elements with class 'slide-item'
-    const slideItems = document.querySelectorAll<HTMLElement>('.slide-item');
-
-    // Remove 'active' class from all slide items
-    slideItems.forEach((item) => item.classList.remove('active'));
-
-    // Find the element with the same number in its id and set it as active
-    slideItems.forEach((item) => {
-      const itemNumber = item.id.replace(/\D/g, ''); // Extract number from the item's id
-      if (+itemNumber === this.currentSlide) {
-        item.classList.add('active');
-        return;
-      }
-    });
+  private move(direction: number): void {
+    if (!this.slides.length) return;
+    this.slides[this.currentSlide - 1].classList.remove('active');
+    this.currentSlide = (this.currentSlide - 1 + direction + this.slides.length) % this.slides.length + 1;
+    this.slides[this.currentSlide - 1].classList.add('active');
   }
 }

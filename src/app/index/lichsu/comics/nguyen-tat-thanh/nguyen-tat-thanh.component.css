@@ -59,7 +59,7 @@ img {
   border-bottom-right-radius: 15px;
 }
 .contain {
-  height: calc(120vh - 80px);
+  height: calc(100dvh - var(--menu-height, 64px));
   background: #11998e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,

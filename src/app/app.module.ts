@@ -1,4 +1,7 @@
 import { NgModule } from '@angular/core';
+import { BookNavigationDirective } from './shared/book-navigation.directive';
+import { MediaLoadingDirective } from './shared/media-loading.directive';
+import { CurrentInfoComponent } from './shared/current-info.component';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -93,6 +96,9 @@ import { MenuItemComponent } from './shared/menu-item/menu-item.component';
 import { MenuComponent } from './shared/menu/menu.component';
 @NgModule({
   declarations: [
+    BookNavigationDirective,
+    MediaLoadingDirective,
+    CurrentInfoComponent,
     AppComponent,
     MenuComponent,
     IndexComponent,

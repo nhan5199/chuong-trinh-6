@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CurrentInfoComponent } from '../../../shared/current-info.component';
 
 import { DiaLyHanhChinhComponent } from './dia-ly-hanh-chinh.component';
 
@@ -8,7 +9,7 @@ describe('DiaLyHanhChinhComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DiaLyHanhChinhComponent ]
+      declarations: [ DiaLyHanhChinhComponent, CurrentInfoComponent ]
     })
     .compileComponents();
   });

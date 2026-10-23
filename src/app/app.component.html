@@ -4,3 +4,6 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+<button *ngIf="showScrollTop" class="scroll-top" type="button" aria-label="Về đầu trang" (click)="scrollToTop()">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>

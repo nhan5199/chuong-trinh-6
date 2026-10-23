@@ -43,13 +43,14 @@ button:hover,
 }
 
 .item {
+  min-width: 0;
   position: relative;
   flex: 0 0 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.5s ease;
+  transition: transform 0.3s ease;
   margin: 10px;
 }
 
@@ -59,11 +60,18 @@ button:hover,
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  transition: 0.5s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .item:hover {
   transform: scale(1.1);
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .dia-ly-container { gap: .5rem; }
+  .item { margin: .5rem; }
+  .dia-ly-container .item img { height: auto; }
+  button { font-size: 12px; }
 }
 
 @media screen and (max-width: 1024px) {

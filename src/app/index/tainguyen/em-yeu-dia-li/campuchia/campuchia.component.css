@@ -16,7 +16,7 @@ img{
 	border-bottom-right-radius: 15px;;
 }
 .contain{
-	height: calc(120vh - 80px);
+	height: calc(100dvh - var(--menu-height, 64px));
 	background: #11998e;  /* fallback for old browsers */
       background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -43,7 +43,7 @@ img{
 	transform-origin: left;
 	transform-style: preserve-3d;
 	transform: rotateY(0deg);
-	transition: .5s;
+	transition: transform .5s ease;
 	color: #000;
 	margin-bottom: 30px;
 
@@ -174,7 +174,7 @@ p{
   }
   @media(min-width:1100px){
     .contain{
-      height: calc(110vh - 80px);
+      height: calc(100dvh - var(--menu-height, 64px));
     }
   }
   @media (orientation : portrait){

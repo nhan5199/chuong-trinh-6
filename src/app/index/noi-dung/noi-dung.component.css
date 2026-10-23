@@ -103,6 +103,11 @@ ul:hover {
   display: block;
 }
 
+.title, li a { color: inherit; text-decoration: none; }
+li a { display: block; width: 100%; padding: .5rem; }
+.content:focus-within ul { display: block; }
+@media (hover: none) { .content ul { display: block; } }
+
 @media screen and (max-width: 1024px) {
   .title,
   ul li,

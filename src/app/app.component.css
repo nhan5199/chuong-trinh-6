@@ -1,3 +1,29 @@
+.body,
+:host {
+  display: block;
+}
+
+:host {
+  --menu-height: 64px;
+}
+
+.scroll-top {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 1050;
+  width: 56px;
+  height: 56px;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  background: #087e6ed9;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.scroll-top:hover, .scroll-top:focus-visible { border-color: white; background: #086b60; }
+
 .body {
   width: 100%;
   min-height: 100svh;
@@ -9,9 +35,12 @@ app-index {
 }
 
 app-menu {
-  height: 60px;
+  display: block;
 }
 
 .content {
-  height: calc(100vh - 60px);
+  position: relative;
+  min-width: 0;
+  height: calc(100vh - var(--menu-height));
+  height: calc(100dvh - var(--menu-height));
 }

@@ -1,11 +1,16 @@
 .menu-item {
-  margin: 0.5rem 0;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  margin: 0;
   cursor: pointer;
   position: relative; /* Ensure proper stacking of child elements */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3rem; /* Consistent height for all menu items */
+  height: 60px;
 }
 
 p,
@@ -20,13 +25,14 @@ i {
 }
 
 .menu-item:hover .original-display,
-.original-display {
+.menu-item:focus-visible .original-display {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .menu-item:hover .hover-display,
+.menu-item:focus-visible .hover-display,
 .hover-display.active {
   opacity: 1;
   visibility: visible;

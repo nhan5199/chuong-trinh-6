@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css?family=Lovers+Quarrel");
 
 html,
 body {
@@ -9,6 +8,123 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root .content > * { min-width: 0; }
+
+/* One viewport anchor for all route-back controls, independent of page layout. */
+app-root .body .content :is(div.back, div.return):has(> a > i.fa-arrow-left) { display: contents; }
+app-root .body .content :is(a, button, div):has(> i.fa-arrow-left) {
+  position: fixed;
+  top: calc(var(--menu-height, 76px) + 16px);
+  left: max(16px, env(safe-area-inset-left));
+  right: auto;
+  bottom: auto;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+  border: 5px solid transparent;
+  border-radius: 16px;
+  color: white;
+  background: #087e6ed9;
+  font-size: 32px;
+  z-index: 1040;
+}
+app-root .body .content :is(a, button, div):has(> i.fa-arrow-left):hover {
+  border: 5px solid white;
+  transform: none;
+}
+app-root .body .content :is(a, button, div) > i.fa-arrow-left { width: auto; margin: 0; }
+
+/* Menu covers grow with the available viewport, keeping their natural shape. */
+app-root .content .dia-ly-container .item img,
+app-root .content .gioi-thieu-container .item img,
+app-root .content .lich-su-container .item img,
+app-root .content .resource-container .item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+app-root .item button { font-size: clamp(14px, 1.4vw, 28px); }
+app-root .content .dia-ly-container .item img {
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: contain;
+}
+app-root .content .dia-ly-container .item button { min-height: 4.5em; }
+/* Reserve the hover border so the arrow never moves when it appears. */
+app-root .content :is(.return a, .back a, a.return) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid transparent;
+  box-sizing: border-box;
+}
+app-root .content :is(.return a, .back a, a.return):hover {
+  border-width: 5px;
+  border-color: white;
+}
+
+/* Centre the closed cover; open spreads retain the original page-turn animation. */
+app-root .content .contain:has(.book) { height: calc(100dvh - var(--menu-height, 76px)); min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 24px 36px; overflow: clip; overflow-anchor: none; }
+app-root .content .contain .book { display: block; width: 100%; height: auto; padding: 0; margin: auto; }
+app-root .contain .book .flip-book {
+  flex-shrink: 0;
+  width: min(100%, calc((100dvh - var(--menu-height, 60px) - 48px) * var(--spread-ratio, 2.8)));
+  height: auto;
+  aspect-ratio: var(--spread-ratio, 2.8);
+  margin: 0 auto;
+  transition: transform .45s ease;
+}
+app-root .book:not(:has(input:checked)) .flip-book {
+  width: min(200%, calc((100dvh - var(--menu-height, 60px) - 48px) * var(--spread-ratio, 2.8)));
+  max-width: none;
+  position: relative;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-75%);
+}
+app-root .book .flip { transition: transform .55s cubic-bezier(.2,.65,.3,1); margin-bottom: 0; }
+app-root .book .front img, app-root .book .back img { object-fit: contain; background: #fff; }
+app-root .book .next-btn, app-root .book .back-btn {
+  top: 0; height: 100%; padding: 0; width: 36px; display: flex; align-items: center; justify-content: center;
+}
+app-root .book .next-btn { right: -36px; }
+app-root .book .back-btn { left: -36px; }
+app-root .question-list { height: calc(100dvh - var(--menu-height, 60px)); }
+app-root .question-list .question-container { font-size: clamp(16px, 1.5vw, 28px); }
+app-root .question-container h3, app-root .question-container p,
+app-root .question-container .answer { font-size: clamp(16px, 1.5vw, 28px); line-height: 1.45; }
+.modal-rounded .modal-dialog { max-width: min(92vw, 900px); }
+.modal-rounded .modal-content { padding: 16px 16px 96px; overflow: hidden; background: transparent; border: 0; box-shadow: none; }
+.modal-rounded .modal-content img { width: 100%; height: auto; max-height: calc(90dvh - 114px); min-height: 0; object-fit: contain; }
+.modal-rounded .modal-content button { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); margin: 0; white-space: nowrap; }
+.modal-rounded .modal-content button a { font-size: clamp(16px, 2vw, 26px); }
+app-root .content .contain:has(.picture-content) { display: flow-root; padding-top: 24px; }
+app-root .content .contain .picture-content { margin-top: 0; }
+app-root :is(.dia-ly-container, .gioi-thieu-container, .lich-su-container, .resource-container) { padding: 24px; gap: clamp(16px, 3vw, 56px); }
+app-root :is(.dia-ly-container, .gioi-thieu-container, .lich-su-container, .resource-container) .item { min-width: 0; margin: 0; box-shadow: none; }
+app-root :is(.dia-ly-container, .gioi-thieu-container, .lich-su-container, .resource-container) .item:hover { transform: translateY(-4px); }
+app-root :is(.dia-ly-container, .gioi-thieu-container, .lich-su-container, .resource-container) .item button { position: static; width: 100%; margin: 10px 0 0; padding: 10px; }
+app-root .gioi-thieu-container .item { max-width: min(28vw, calc((100dvh - var(--menu-height, 76px) - 130px) * .83)); }
+@media (max-height: 500px) and (orientation: landscape) {
+  app-root .content .dia-ly-container .item {
+    max-width: calc((100dvh - var(--menu-height, 76px) - 150px) * .7);
+  }
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  app-root .gioi-thieu-container .item { flex-basis: 42%; max-width: 42%; }
+}
+
+@media (min-width: 900px) {
+  app-root .dia-ly-container .item { flex-basis: 22%; }
+  app-root .gioi-thieu-container .item, app-root .lich-su-container .item { flex-basis: 28%; }
+  app-root .dia-ly-container, app-root .gioi-thieu-container { gap: 1rem; }
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +159,75 @@ body {
 }
 .return a {
   text-decoration: none;
-  transition: 0.2s;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  transition: border-color 0.2s ease;
+}
+
+/* Keep media inside narrow content areas without disabling useful page scrolling. */
+img, video, iframe {
+  max-width: 100%;
+}
+
+.media-loading {
+  background: #e6e6e6 linear-gradient(100deg, #e6e6e6 25%, #f5f5f5 50%, #e6e6e6 75%);
+  background-size: 200% 100%;
+  animation: media-pending 1.5s linear infinite;
+}
+
+.media-error {
+  background-color: #eee;
+  outline: 1px solid #a33;
+}
+
+@keyframes media-pending {
+  to { background-position: -200% 0; }
+}
+
+:focus-visible {
+  outline: 3px solid #1559ac;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Oversized invisible book controls used to extend past phone screens. */
+@media (max-width: 850px) {
+  .book .flip-book .next-btn,
+  .book .flip-book .back-btn {
+    width: 28px;
+    padding-inline: 0;
+    text-align: center;
+  }
+  .book .flip-book .next-btn { right: -28px; }
+  .book .flip-book .back-btn { left: -28px; }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .content .contain > .book {
+    height: auto;
+    padding-top: 40px;
+  }
+  .contain .book .flip-book {
+    height: calc((100dvh - var(--menu-height, 64px)) * .7);
+    margin: 0 auto;
+  }
+  .book .flip-book .next-btn,
+  .book .flip-book .back-btn {
+    top: 0;
+    height: 100%;
+    padding-block: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .return a i {
   color: white;

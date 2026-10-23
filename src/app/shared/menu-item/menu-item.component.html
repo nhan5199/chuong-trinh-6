@@ -1,4 +1,4 @@
-<div class="menu-item" (click)="onClickMenuItem()">
+<button type="button" class="menu-item" [attr.aria-label]="name" [attr.aria-current]="currentActive === router ? 'page' : null" (click)="onClickMenuItem()">
   <div class="original-display">
     <i [ngClass]="icon"></i>
   </div>
@@ -9,4 +9,4 @@
     <p class="display-label">{{ name }}</p>
     <i [ngClass]="icon"></i>
   </div>
-</div>
+</button>

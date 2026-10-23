@@ -1,38 +1,17 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnChanges,
-  OnInit,
-  Output,
-  SimpleChanges,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu-item',
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MenuItemComponent implements OnChanges, OnInit {
-  @Input('name') name: string = '';
-  @Input('icon') icon: string = '';
-  @Input('router') router: string = '';
-  @Input('currentActive') currentActive: string = '';
-  @Output() onClickEvent: EventEmitter<string> = new EventEmitter<string>();
+export class MenuItemComponent {
+  @Input() name = '';
+  @Input() icon = '';
+  @Input() router = '';
+  @Input() currentActive = '';
+  @Output() onClickEvent = new EventEmitter<string>();
 
-  currentRouter: string | undefined = '';
-
-  ngOnInit(): void {}
-
-  onClickMenuItem() {
-    this.onClickEvent.emit(this.router);
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['currentActive']) {
-      if (this.currentActive == this.router) {
-        console.log('data: ' + this.currentActive + ' - ' + this.router);
-      }
-    }
-  }
+  onClickMenuItem(): void { this.onClickEvent.emit(this.router); }
 }
