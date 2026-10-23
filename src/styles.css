@@ -224,6 +224,38 @@ iframe.media-loading { visibility: hidden; }
   background-size: 200% 100% !important;
   animation: media-pending 1.5s linear infinite;
 }
+/* Reserve each player's size while a spinner replaces its loading surface. */
+.media-player {
+  display: grid;
+  width: 100%;
+  min-width: 0;
+}
+.media-player > :is(iframe, video, .media-spinner) {
+  grid-area: 1 / 1;
+  justify-self: center;
+  align-self: center;
+}
+app-root .content .media-player > button.media-retry {
+  grid-area: 1 / 1;
+  align-self: center;
+}
+.media-player > :is(iframe, video).media-loading {
+  visibility: hidden;
+  background: transparent !important;
+  animation: none;
+}
+.media-spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid rgb(255 255 255 / 35%);
+  border-top-color: #ff8000;
+  border-radius: 50%;
+  animation: media-spin .8s linear infinite;
+  pointer-events: none;
+}
+@keyframes media-spin {
+  to { transform: rotate(360deg); }
+}
 app-root .book :is(.front, .back):has(> img.media-error) { background: #dce6df; }
 
 app-root .content button.media-retry {

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { MediaLoadingDirective } from './media-loading.directive';
 
-@Component({ template: '<img [src]="src"><iframe></iframe><div class="book"><img data-media-src="assets/comics/TranThuongXuyen/1.png"></div>' })
+@Component({ template: '<img [src]="src"><div class="media-player"><iframe></iframe></div><div class="exercise"><iframe></iframe></div><div class="book"><img data-media-src="assets/comics/TranThuongXuyen/1.png"></div>' })
 class MediaHostComponent { src = ''; }
 
 describe('MediaLoadingDirective', () => {
@@ -56,6 +56,33 @@ describe('MediaLoadingDirective', () => {
     image.dispatchEvent(new Event('media-request'));
     expect(image.loading).toBe('eager');
     expect(image.getAttribute('src')).toMatch(/^assets\//);
+  });
+
+  it('shows a video spinner while pending and hides it on load or failure', () => {
+    const fixture = TestBed.createComponent(MediaHostComponent);
+    fixture.detectChanges();
+    const player: HTMLElement = fixture.nativeElement.querySelector('.media-player');
+    const frame = player.querySelector('iframe')!;
+    const spinner = player.querySelector<HTMLElement>('[role="status"]')!;
+    expect(spinner.hidden).toBeFalse();
+    expect(spinner.textContent).toBe('Đang tải video');
+    expect(player.classList.contains('media-frame')).toBeFalse();
+    expect(fixture.nativeElement.querySelector('.exercise').classList.contains('media-frame')).toBeTrue();
+    frame.dispatchEvent(new Event('load'));
+    fixture.detectChanges();
+    expect(spinner.hidden).toBeTrue();
+    expect(frame.classList.contains('media-loading')).toBeFalse();
+    frame.dispatchEvent(new Event('error'));
+    fixture.detectChanges();
+    expect(spinner.hidden).toBeTrue();
+    expect(frame.classList.contains('media-error')).toBeTrue();
+    player.querySelector<HTMLButtonElement>('.media-retry')!.click();
+    fixture.detectChanges();
+    expect(spinner.hidden).toBeFalse();
+    expect(frame.getAttribute('aria-busy')).toBe('true');
+    expect(player.querySelector('.media-retry')).toBeNull();
+    fixture.destroy();
+    expect(spinner.isConnected).toBeFalse();
   });
 
   it('offers one retry and removes its control when the view is destroyed', () => {

@@ -17,7 +17,7 @@ test('reserved artwork stays proportional and reader screens do not overflow', a
   }
 });
 
-test('embedded lessons keep a skeleton until their document loads', async ({ page }) => {
+test('videos show a spinner without a grey block until the player loads', async ({ page }) => {
   let release;
   const pending = new Promise(resolve => { release = resolve; });
   await page.route('**/www.youtube.com/embed/**', async route => {
@@ -26,12 +26,74 @@ test('embedded lessons keep a skeleton until their document loads', async ({ pag
   });
   await page.goto('/gioithieuchung/gioithieu', { waitUntil: 'domcontentloaded' });
   const frame = page.locator('iframe');
+  const player = page.locator('.media-player');
+  const spinner = player.getByRole('status');
   await expect(frame).toHaveAttribute('aria-busy', 'true');
   await expect(frame).toHaveCSS('visibility', 'hidden');
-  await expect(page.locator('.media-frame')).toHaveCSS('background-image', /linear-gradient/);
+  await expect(spinner).toBeVisible();
+  await expect(spinner).toHaveCSS('animation-name', 'media-spin');
+  await expect(player).toHaveCSS('background-image', 'none');
+  await expect(player).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await expect(page.locator('.video')).toHaveCSS('background-image', 'none');
+  const before = await frame.boundingBox();
+  const ring = await spinner.boundingBox();
+  expect(Math.abs(ring.x + ring.width / 2 - before.x - before.width / 2)).toBeLessThan(1);
+  expect(Math.abs(ring.y + ring.height / 2 - before.y - before.height / 2)).toBeLessThan(1);
   release();
   await expect(frame).not.toHaveClass(/media-loading/);
   await expect(frame).toHaveCSS('visibility', 'visible');
+  await expect(spinner).toBeHidden();
+  expect(await frame.boundingBox()).toEqual(before);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(1);
+});
+
+test('video spinners settle independently and restart when a source changes', async ({ page }) => {
+  const releases = [];
+  await page.route('**/www.youtube.com/embed/**', async route => {
+    await new Promise(resolve => releases.push(() => resolve()));
+    await route.fulfill({ contentType: 'text/html', body: '<html><body>Player ready</body></html>' });
+  });
+  await page.goto('/lichsuhanhchinh_video', { waitUntil: 'domcontentloaded' });
+  const players = page.locator('.media-player');
+  const first = players.nth(0), second = players.nth(1);
+  await expect(players).toHaveCount(2);
+  await expect(first.getByRole('status')).toBeVisible();
+  await expect(second.getByRole('status')).toBeVisible();
+  await expect.poll(() => releases.length).toBeGreaterThanOrEqual(1);
+  releases[0]();
+  await expect(first.locator('iframe')).not.toHaveClass(/media-loading/);
+  await expect(first.getByRole('status')).toBeHidden();
+  await expect(second.getByRole('status')).toBeVisible();
+  await second.scrollIntoViewIfNeeded();
+  await expect.poll(() => releases.length).toBe(2);
+  releases[1]();
+  await expect(second.getByRole('status')).toBeHidden();
+  await first.scrollIntoViewIfNeeded();
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await first.locator('iframe').evaluate(frame => { frame.src += '?reload=1'; });
+  await expect(first.getByRole('status')).toBeVisible();
+  await expect(first.locator('iframe')).toHaveCSS('visibility', 'hidden');
+  const duration = await first.getByRole('status').evaluate(node => parseFloat(getComputedStyle(node).animationDuration));
+  expect(duration).toBeLessThan(.01);
+  await expect.poll(() => releases.length).toBe(3);
+  releases[2]();
+  await expect(first.getByRole('status')).toBeHidden();
+  await expect(first.locator('iframe')).toHaveCSS('visibility', 'visible');
+});
+
+test('all video pages reveal their players without overflow or leftover spinners', async ({ page }) => {
+  await page.route('**/www.youtube.com/embed/**', route => route.fulfill({ contentType: 'text/html', body: '<html><body>Player ready</body></html>' }));
+  for (const route of ['/gioithieuchung/gioithieu', '/dialykinhte', '/dialyhanhchinh', '/dabachong_video', '/langa_video', '/dinhtanlan_video', '/nguyenhuucanh_video', '/trinhhoaiduc_video', '/nguyentriphuong_video', '/daikiniem_video', '/chuadaigiac_video', '/lichsuhanhchinh_video', '/hoathinh']) {
+    await page.goto(route, { waitUntil: 'domcontentloaded' });
+    const players = page.locator('.media-player');
+    expect(await players.count(), route).toBeGreaterThan(0);
+    for (const player of await players.all()) {
+      await player.scrollIntoViewIfNeeded();
+      await expect(player.locator('iframe'), route).toHaveCSS('visibility', 'visible');
+      await expect(player.getByRole('status'), route).toBeHidden();
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), route).toBeLessThanOrEqual(1);
+  }
 });
 
 test('large books request nearby sheets and resume the last spread', async ({ page }, testInfo) => {

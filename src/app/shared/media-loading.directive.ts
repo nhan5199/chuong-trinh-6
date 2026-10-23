@@ -8,6 +8,7 @@ export class MediaLoadingDirective implements OnInit, AfterViewInit, OnDestroy {
   private revision = 0;
   private destroyed = false;
   private retryButton?: HTMLButtonElement;
+  private spinner?: HTMLElement;
   private fallbackAlt = false;
   private removeRetryListener?: () => void;
   @HostBinding('class.media-loading') loading = true;
@@ -18,7 +19,8 @@ export class MediaLoadingDirective implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     const media = this.element.nativeElement;
-    if (media instanceof HTMLIFrameElement && media.parentElement) this.renderer.addClass(media.parentElement, 'media-frame');
+    if (media.parentElement?.classList.contains('media-player')) this.createSpinner();
+    else if (media instanceof HTMLIFrameElement && media.parentElement) this.renderer.addClass(media.parentElement, 'media-frame');
     if (!(media instanceof HTMLImageElement)) return;
     const source = media.dataset['mediaSrc'];
     if (!source) return;
@@ -51,6 +53,7 @@ export class MediaLoadingDirective implements OnInit, AfterViewInit, OnDestroy {
     this.revision++;
     this.loading = true;
     this.failed = false;
+    if (this.spinner) this.spinner.hidden = false;
     this.removeRetry();
   }
 
@@ -103,12 +106,14 @@ export class MediaLoadingDirective implements OnInit, AfterViewInit, OnDestroy {
     this.revision++;
     this.sourceObserver?.disconnect();
     this.removeRetry();
+    this.spinner?.remove();
   }
 
   private finish(failed = false): void {
     if (this.destroyed) return;
     this.loading = false;
     this.failed = failed;
+    if (this.spinner) this.spinner.hidden = true;
     const media = this.element.nativeElement;
     if (media instanceof HTMLImageElement) {
       if (failed && !media.alt) {
@@ -121,6 +126,18 @@ export class MediaLoadingDirective implements OnInit, AfterViewInit, OnDestroy {
     }
     if (failed && (media instanceof HTMLImageElement || media instanceof HTMLIFrameElement) && media.parentElement) this.offerRetry();
     else this.removeRetry();
+  }
+
+  private createSpinner(): void {
+    const spinner: HTMLElement = this.renderer.createElement('span');
+    spinner.className = 'media-spinner';
+    spinner.setAttribute('role', 'status');
+    const label: HTMLElement = this.renderer.createElement('span');
+    label.className = 'visually-hidden';
+    label.textContent = 'Đang tải video';
+    this.renderer.appendChild(spinner, label);
+    this.renderer.appendChild(this.element.nativeElement.parentElement, spinner);
+    this.spinner = spinner;
   }
 
   private offerRetry(): void {

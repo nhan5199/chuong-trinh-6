@@ -140,3 +140,18 @@ CSS cleanup complete locally (not committed/pushed/deployed):
 - Summary in reports/css-cleanup.json; raw reader captures moved to ignored
   test-results/css-{baseline,after}.json. Reusable capture script and shared-style
   conventions documented in README. No commits or deployment requested.
+
+Video loading follow-up (24 October 2026):
+- Started from clean main at e0ff87a, which already includes the earlier media
+  performance and CSS cleanup work. User authorized committing and pushing main.
+- Replaced the video-container skeleton with an accessible spinner per player.
+  All14YouTube embeds across13templates reserve their existing dimensions and
+  reveal on iframe load. Source changes/retries restart the spinner; load/error
+  and destruction stop it. Embedded exercises retain their existing skeleton.
+- Reproduced the missing-spinner failure before the fix. All54browser checks now
+  pass across desktop/portrait/landscape, including every video route, independent
+  players, source reload, reduced motion, centering and unchanged loading geometry.
+  All32unit tests and production build pass; existing critical-CSS warnings remain.
+  Spinner screenshot visually checked. iframe URLs/permissions/titles/dimensions
+  remain unchanged; whitespace check passes. Tests control embed responses and
+  verify document-load reveal, not third-party video playback availability.

@@ -57,6 +57,12 @@ is saved per book in local browser storage; arrow keys turn pages and Home retur
 to the cover. Storage failures do not prevent reading. Failed images expose a
 retry button. Image decoding completes before the book skeleton is removed.
 
+Video embeds use a `.media-player` container to reserve their space and center an
+accessible spinner. The iframe stays hidden until its document loads; the spinner
+restarts when its source changes and stops on load or error. Each video loads
+independently, including pages with multiple players. Reduced-motion preferences
+also apply to the spinner. Embedded exercises keep their existing skeleton.
+
 `npm run optimize:media` rebuilds the optional WebP variants and metadata using the
 installed Chrome browser, preserving original assets and choosing replacements
 only when smaller. `node scripts/optimize-media.cjs --metadata-only` refreshes
