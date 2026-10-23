@@ -74,3 +74,69 @@ are explicitly viewport bounded, and page labels toggle inputs without browser
 focus scrolling. Nine targeted browser checks pass across all three viewports;
 manual browser measurements confirm identical arrow rectangles on hover and zero
 document scroll after repeated page turns. Diff whitespace check passes.
+
+Skeleton follow-up (local, not pushed): legacy book white backgrounds masked the
+existing media shimmer. Added page-shaped green skeleton overlays with title,
+illustration and text bars until images decode; loading CSS now overrides legacy
+image backgrounds. Image-source mutations reset busy/error state, decode results
+are revision checked, and observers disconnect on destruction. Error placeholders
+use a muted background. Reduced-motion rules apply to shimmer.
+Verification: 29 unit tests, nine targeted browser tests (loading/error/navigation)
+pass; final skeleton appearance rechecked on all three viewports (3 passing).
+Production build passes with the existing third-party critical-CSS warnings.
+Future speed priorities: responsive/compressed scans and a book-aware nearby-page
+loader (native lazy loading alone does not suit hidden/transformed book pages).
+
+Active performance pass: preserve existing UI while replacing eager full-book
+downloads with current/nearby-page requests, restoring reading position, exposing
+retry actions, reserving intrinsic image dimensions, and generating smaller local
+image variants. Baseline uncommitted skeleton work above must be retained.
+One helper owns only asset tooling/manifest/output; root owns runtime, templates,
+tests and integration. Verify request counts, failures/retries, cached/delayed
+loads, saved-page boundaries, desktop/portrait/landscape, unit suite and build.
+
+Performance pass complete locally (not committed/pushed/deployed):
+- Generated 946 smaller WebP variants and intrinsic metadata for 637 images;
+  originals retained. Candidate totals: 392.6MB original, 146.0MB desktop,
+  73.0MB mobile. Readability spot-checked; replacements used only when smaller.
+- 715 static img references now use data-media-src, so metadata/variant selection
+  happens before requesting the image. Nearby-sheet book loader requests four
+  initial images instead of all52. Measured /sachdiali transfer: 8,018,949 ->
+  1,017,040 bytes including its other asset (reports/reader-transfer.json).
+- Added per-book local saved progress, valid actual-sheet bounds, keyboard page
+  controls/Home, visible-only focus targets, retry buttons and failure cleanup.
+  Image and iframe skeletons reset on source changes and wait for decode/load.
+- Corrected missing Angular declaration for NguyenHuuCanhComicComponent, one end
+  image filename, mobile reader/dice overflow and responsive intrinsic sizing.
+- Asset helper independently reviewed root's runtime changes and rechecked the
+  two resulting fixes (unused checkbox restoration and hidden focus controls).
+- All77 static routes audited at desktop and phone widths: no horizontal
+  overflow, application exceptions or failed initially-requested images. Full48
+  browser tests pass across desktop/portrait/landscape. After final reader-size
+  and retry cleanup edits, affected12/9 checks pass again. Unit suite31 passes;
+  final production build passes with the existing critical-CSS warnings.
+- Remaining original content gap: assets/comics/HuongDanSuDung/40.png is absent.
+  It is explicitly listed in the report and gets an error/retry state when reached.
+  No replacement educational content was fabricated. Third-party player content
+  availability cannot be guaranteed by the local loading-state tests.
+Reproduce with npm run optimize:media, npm run audit:site (SITE_VIEWPORT=mobile
+for phones), npm run test:e2e, npm test, and npm run build. Details in README.
+
+CSS cleanup complete locally (not committed/pushed/deployed):
+- Removed31duplicate component CSS files. Source totals under src/app fell from
+  72files /249,479bytes to53files /110,071bytes, a55.9%reduction. The12shared
+  styles cover14image lessons,25readers (core,3layout families,5shared stacks,
+  font faces), and2resource menus. Distinct layouts/stacks remain component-local.
+- Angular styleUrls preserve encapsulation. Resource-menu local base rules load
+  before shared responsive rules. No exact duplicate stylesheets remain.
+- All150book geometry/computed-style snapshots match across25routes,3viewports,
+  closed/open states. Six settled lesson viewports match; original CSS content is
+  unchanged after newline normalization. Initial lesson background-only differences
+  came from skeleton timing; capture now awaits loading-class removal and paint.
+  Helper report records52isolated resource-menu comparisons with zero differences.
+- Full48browser checks and31unit tests pass. Final77desktop+77mobile route audits
+  and production build pass (existing critical-CSS warnings remain). All stylesheet
+  references resolve; diff whitespace check passes. Prior performance work retained.
+- Summary in reports/css-cleanup.json; raw reader captures moved to ignored
+  test-results/css-{baseline,after}.json. Reusable capture script and shared-style
+  conventions documented in README. No commits or deployment requested.

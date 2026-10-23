@@ -1,4 +1,40 @@
 const { test, expect } = require('@playwright/test');
+const { matchesAsset } = require('./media-helpers.cjs');
+
+test('books show a skeleton during slow image loads and recover after errors', async ({ page }, testInfo) => {
+  let release;
+  const pending = new Promise(resolve => { release = resolve; });
+  await page.route('**/assets/**', async route => {
+    if (matchesAsset(route.request().url(), 'assets/dong-nam-a/vietnam/1.png')) await pending;
+    await route.continue();
+  });
+  await page.goto('/em-yeu-dia-li/vietnam', { waitUntil: 'domcontentloaded' });
+  const cover = page.locator('#p1 .front img');
+  await expect(cover).toHaveAttribute('aria-busy', 'true');
+  await expect(cover).toHaveCSS('visibility', 'hidden');
+  const skeleton = await page.locator('#p1 .front').evaluate(node => {
+    const style = getComputedStyle(node, '::after');
+    return { content: style.content, background: style.backgroundImage };
+  });
+  expect(skeleton.content).toBe('""');
+  expect(skeleton.background).toContain('linear-gradient');
+  const reservedPage = await page.locator('#p1 .front').boundingBox();
+  await page.screenshot({ path: testInfo.outputPath('book-skeleton.png'), animations: 'disabled' });
+  release();
+  await expect(cover).not.toHaveClass(/media-loading/);
+  await expect(cover).toHaveCSS('visibility', 'visible');
+  await expect(cover).not.toHaveAttribute('aria-busy');
+  const loadedPage = await page.locator('#p1 .front').boundingBox();
+  expect(Math.abs(loadedPage.width - reservedPage.width)).toBeLessThan(1);
+  expect(Math.abs(loadedPage.height - reservedPage.height)).toBeLessThan(1);
+  await page.route('**/missing-page.png', route => route.abort());
+  await cover.evaluate(image => { image.removeAttribute('srcset'); image.src = '/missing-page.png'; });
+  await expect(cover).toHaveClass(/media-error/);
+  await expect(cover).not.toHaveClass(/media-loading/);
+  await cover.evaluate(image => { image.src = '/assets/dong-nam-a/vietnam/1.png'; });
+  await expect(cover).not.toHaveClass(/media-error|media-loading/);
+  await expect(cover).toHaveCSS('visibility', 'visible');
+});
 
 test('menu images preserve proportions and long pages scroll back to top', async ({ page }) => {
   for (const route of ['/lichsu', '/dialy', '/gioithieuchung']) {
@@ -140,9 +176,9 @@ test('quiz still accepts answers and displays a result', async ({ page }) => {
 });
 
 test('media failures settle and leave an accessible fallback', async ({ page }) => {
-  await page.route('**/assets/images/gioithieu.jpg', route => route.abort());
+  await page.route('**/assets/**', route => matchesAsset(route.request().url(), 'assets/images/gioithieu.jpg') ? route.abort() : route.continue());
   await page.goto('/dialy');
-  const image = page.locator('img[src="assets/images/gioithieu.jpg"]');
+  const image = page.locator('img[data-media-src="assets/images/gioithieu.jpg"]');
   await expect(image).toHaveClass(/media-error/);
   await expect(image).not.toHaveClass(/media-loading/);
   await expect(image).toHaveAttribute('alt', 'Không tải được hình ảnh');

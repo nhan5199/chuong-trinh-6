@@ -4,7 +4,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-du-lich',
   templateUrl: './du-lich.component.html',
-  styleUrls: ['./du-lich.component.css']
+  styleUrls: ['../../../shared/styles/reader-font.css',
+    '../../../shared/styles/book-core.css',
+    './du-lich.component.css']
 })
 export class DuLichComponent implements OnInit {
 

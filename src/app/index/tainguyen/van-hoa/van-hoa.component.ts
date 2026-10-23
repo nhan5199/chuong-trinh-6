@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-van-hoa',
   templateUrl: './van-hoa.component.html',
-  styleUrls: ['./van-hoa.component.css']
+  styleUrls: ['../../../shared/styles/image-lesson.css']
 })
 export class VanHoaComponent implements OnInit {
 

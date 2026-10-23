@@ -4,7 +4,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sach-ban-do',
   templateUrl: './sach-ban-do.component.html',
-  styleUrls: ['./sach-ban-do.component.css']
+  styleUrls: ['../../../shared/styles/book-core.css',
+    '../../../shared/styles/book-scan.css',
+    './sach-ban-do.component.css']
 })
 export class SachBanDoComponent implements OnInit {
 

@@ -1,0 +1,10 @@
+{
+  "components": [
+    "em-yeu-dia-li",
+    "em-yeu-lich-su"
+  ],
+  "screenCount": 13,
+  "stateCount": 2,
+  "comparisons": 52,
+  "differences": []
+}

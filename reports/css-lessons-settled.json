@@ -1,0 +1,236 @@
+{
+  "originalCSSSha256": "8a3268cd4c4ca92cad0a80759932e44fcac8411415dc45716cffd7c251bbec23",
+  "sharedCSSSha256": "c29bb1375ec4600be2f0dee085700463d52846e3abe217468de4790693e7da82",
+  "normalizedCSSSha256": "8a3268cd4c4ca92cad0a80759932e44fcac8411415dc45716cffd7c251bbec23",
+  "ruleContentIdentical": true,
+  "records": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "route": "/daikiniem_canva",
+      "samples": [
+        {
+          "width": 936,
+          "height": 526.75,
+          "left": 252,
+          "top": 132,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        },
+        {
+          "width": 936,
+          "height": 526.75,
+          "left": 252,
+          "top": 132,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        }
+      ],
+      "identical": true
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "route": "/lehoi",
+      "samples": [
+        {
+          "width": 936,
+          "height": 526.5,
+          "left": 252,
+          "top": 132,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        },
+        {
+          "width": 936,
+          "height": 526.5,
+          "left": 252,
+          "top": 132,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        }
+      ],
+      "identical": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/daikiniem_canva",
+      "samples": [
+        {
+          "width": 331.5,
+          "height": 186.375,
+          "left": 29.25,
+          "top": 185.296875,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        },
+        {
+          "width": 331.5,
+          "height": 186.375,
+          "left": 29.25,
+          "top": 185.296875,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        }
+      ],
+      "identical": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "route": "/lehoi",
+      "samples": [
+        {
+          "width": 331.5,
+          "height": 186.46875,
+          "left": 29.25,
+          "top": 185.296875,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        },
+        {
+          "width": 331.5,
+          "height": 186.46875,
+          "left": 29.25,
+          "top": 185.296875,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        }
+      ],
+      "identical": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "route": "/daikiniem_canva",
+      "samples": [
+        {
+          "width": 590.796875,
+          "height": 332.15625,
+          "left": 126.59375,
+          "top": 161.078125,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        },
+        {
+          "width": 590.796875,
+          "height": 332.15625,
+          "left": 126.59375,
+          "top": 161.078125,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        }
+      ],
+      "identical": true
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "route": "/lehoi",
+      "samples": [
+        {
+          "width": 590.796875,
+          "height": 332.3125,
+          "left": 126.59375,
+          "top": 161.078125,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        },
+        {
+          "width": 590.796875,
+          "height": 332.3125,
+          "left": 126.59375,
+          "top": 161.078125,
+          "display": "inline",
+          "position": "static",
+          "transform": "none",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderRadius": "20px",
+          "fontSize": "16px",
+          "perspective": "none",
+          "backfaceVisibility": "visible"
+        }
+      ],
+      "identical": true
+    }
+  ]
+}

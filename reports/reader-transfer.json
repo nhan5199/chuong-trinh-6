@@ -1,0 +1,17 @@
+{
+  "route": "/sachdiali",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "before": {
+    "requestedBookImages": 52,
+    "assetRequests": 53,
+    "assetBytes": 8018949
+  },
+  "after": {
+    "requestedBookImages": 4,
+    "assetRequests": 5,
+    "assetBytes": 1017040
+  }
+}

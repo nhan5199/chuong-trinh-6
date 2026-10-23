@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-le-hoi',
   templateUrl: './le-hoi.component.html',
-  styleUrls: ['./le-hoi.component.css']
+  styleUrls: ['../../../shared/styles/image-lesson.css']
 })
 export class LeHoiComponent implements OnInit {
 

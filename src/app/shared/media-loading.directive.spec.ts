@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { MediaLoadingDirective } from './media-loading.directive';
 
-@Component({ template: '<img [src]="src"><iframe></iframe><div class="book"><img></div>' })
+@Component({ template: '<img [src]="src"><iframe></iframe><div class="book"><img data-media-src="assets/comics/TranThuongXuyen/1.png"></div>' })
 class MediaHostComponent { src = ''; }
 
 describe('MediaLoadingDirective', () => {
@@ -36,6 +36,7 @@ describe('MediaLoadingDirective', () => {
     fixture.detectChanges();
     expect(img.classList.contains('media-error')).toBeFalse();
     expect(img.classList.contains('media-loading')).toBeFalse();
+    expect(img.alt).toBe('');
   });
 
   it('keeps transformed book pages eager and titles embedded lessons', () => {
@@ -43,5 +44,31 @@ describe('MediaLoadingDirective', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('.book img').hasAttribute('loading')).toBeFalse();
     expect(fixture.nativeElement.querySelector('iframe').title).toBe('Nội dung học tập');
+  });
+
+  it('reserves a deferred page size without starting its image request', () => {
+    const fixture = TestBed.createComponent(MediaHostComponent);
+    fixture.detectChanges();
+    const image: HTMLImageElement = fixture.nativeElement.querySelector('.book img');
+    expect(image.getAttribute('width')).toBe('2000');
+    expect(image.getAttribute('height')).toBe('1600');
+    expect(image.hasAttribute('src')).toBeFalse();
+    image.dispatchEvent(new Event('media-request'));
+    expect(image.loading).toBe('eager');
+    expect(image.getAttribute('src')).toMatch(/^assets\//);
+  });
+
+  it('offers one retry and removes its control when the view is destroyed', () => {
+    const fixture = TestBed.createComponent(MediaHostComponent);
+    fixture.detectChanges();
+    const image: HTMLImageElement = fixture.nativeElement.querySelector('.book img');
+    image.dispatchEvent(new Event('error'));
+    image.dispatchEvent(new Event('error'));
+    fixture.detectChanges();
+    const retry: HTMLButtonElement = fixture.nativeElement.querySelector('.book .media-retry');
+    expect(fixture.nativeElement.querySelectorAll('.book .media-retry').length).toBe(1);
+    expect(retry.type).toBe('button');
+    fixture.destroy();
+    expect(retry.isConnected).toBeFalse();
   });
 });

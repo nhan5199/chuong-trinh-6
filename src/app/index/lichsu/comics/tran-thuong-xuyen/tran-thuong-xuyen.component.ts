@@ -4,7 +4,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tran-thuong-xuyen',
   templateUrl: './tran-thuong-xuyen.component.html',
-  styleUrls: ['./tran-thuong-xuyen.component.css']
+  styleUrls: ['../../../../shared/styles/reader-font.css',
+    '../../../../shared/styles/book-core.css',
+    '../../../../shared/styles/book-comic.css',
+    './tran-thuong-xuyen.component.css']
 })
 export class TranThuongXuyenComponent implements OnInit {
 

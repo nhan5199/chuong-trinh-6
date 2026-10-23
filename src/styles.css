@@ -72,7 +72,7 @@ app-root .content :is(.return a, .back a, a.return):hover {
 
 /* Centre the closed cover; open spreads retain the original page-turn animation. */
 app-root .content .contain:has(.book) { height: calc(100dvh - var(--menu-height, 76px)); min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; padding: 24px 36px; overflow: clip; overflow-anchor: none; }
-app-root .content .contain .book { display: block; width: 100%; height: auto; padding: 0; margin: auto; }
+app-root .content .contain .book { position: relative; inset: auto; transform: none; display: block; width: 100%; height: auto; padding: 0; margin: auto; }
 app-root .contain .book .flip-book {
   flex-shrink: 0;
   width: min(100%, calc((100dvh - var(--menu-height, 60px) - 48px) * var(--spread-ratio, 2.8)));
@@ -119,6 +119,7 @@ app-root .gioi-thieu-container .item { max-width: min(28vw, calc((100dvh - var(-
 }
 @media (max-width: 600px) and (orientation: portrait) {
   app-root .gioi-thieu-container .item { flex-basis: 42%; max-width: 42%; }
+  app-root .content .contain:has(.picture-content) { padding-top: 80px; }
 }
 
 @media (min-width: 900px) {
@@ -168,6 +169,8 @@ app-root .gioi-thieu-container .item { max-width: min(28vw, calc((100dvh - var(-
 img, video, iframe {
   max-width: 100%;
 }
+/* Intrinsic dimensions reserve space; responsive artwork retains its ratio. */
+img { height: auto; }
 
 .media-loading {
   background: #e6e6e6 linear-gradient(100deg, #e6e6e6 25%, #f5f5f5 50%, #e6e6e6 75%);
@@ -176,8 +179,76 @@ img, video, iframe {
 }
 
 .media-error {
-  background-color: #eee;
+  background: #dce6df !important;
   outline: 1px solid #a33;
+}
+
+/* Page surfaces cover legacy white backgrounds while the image is loading. */
+app-root .book :is(.front, .back):has(> img.media-loading)::before {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: .55;
+  background:
+    linear-gradient(#8eae9d, #8eae9d) 0 0 / 64% 6%,
+    linear-gradient(#9cb9aa, #9cb9aa) 0 15% / 100% 44%,
+    linear-gradient(#8eae9d, #8eae9d) 0 73% / 94% 3%,
+    linear-gradient(#8eae9d, #8eae9d) 0 83% / 100% 3%,
+    linear-gradient(#8eae9d, #8eae9d) 0 93% / 72% 3%;
+  background-repeat: no-repeat;
+}
+app-root .book :is(.front, .back):has(> img.media-loading)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: #b4c9be linear-gradient(100deg, #b4c9be 25%, #d4e3d8 50%, #b4c9be 75%);
+  background-size: 200% 100%;
+  animation: none;
+}
+app-root .book .media-nearby :is(.front, .back):has(> img.media-loading)::after { animation: media-pending 1.5s linear infinite; }
+app-root .book img.media-loading { animation: none; }
+app-root .book :is(.front, .back) > img.media-loading { visibility: hidden; }
+app-root .book :is(.next-btn, .back-btn) { z-index: 2; }
+img.media-loading, iframe.media-loading, video.media-loading {
+  background: #b4c9be linear-gradient(100deg, #b4c9be 25%, #d4e3d8 50%, #b4c9be 75%) !important;
+  background-size: 200% 100% !important;
+}
+iframe.media-loading { visibility: hidden; }
+.media-frame:has(> iframe.media-loading) {
+  background: #b4c9be linear-gradient(100deg, #b4c9be 25%, #d4e3d8 50%, #b4c9be 75%) !important;
+  background-size: 200% 100% !important;
+  animation: media-pending 1.5s linear infinite;
+}
+app-root .book :is(.front, .back):has(> img.media-error) { background: #dce6df; }
+
+app-root .content button.media-retry {
+  position: relative;
+  display: block;
+  width: fit-content;
+  min-height: 44px;
+  margin: 8px auto;
+  padding: 8px 16px;
+  border: 2px solid #ff8000;
+  border-radius: 12px;
+  background: #fff8e5;
+  color: #743400;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: none;
+  transform: none;
+  z-index: 4;
+}
+app-root .content .book button.media-retry {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes media-pending {

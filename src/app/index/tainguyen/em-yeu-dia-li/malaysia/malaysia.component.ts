@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-malaysia',
   templateUrl: './malaysia.component.html',
-  styleUrls: ['./malaysia.component.css']
+  styleUrls: ['../../../../shared/styles/reader-font.css',
+    '../../../../shared/styles/book-core.css',
+    '../../../../shared/styles/book-country.css',
+    '../../../../shared/styles/book-stack-4.css']
 })
 export class MalaysiaComponent implements OnInit {
 

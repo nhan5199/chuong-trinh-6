@@ -1,0 +1,97 @@
+{
+  "cssFilesBefore": 72,
+  "cssBytesBefore": 249479,
+  "readerFilesBefore": 25,
+  "sharedLayouts": [
+    {
+      "file": "src/app/shared/styles/book-comic.css",
+      "components": 8
+    },
+    {
+      "file": "src/app/shared/styles/book-country.css",
+      "components": 12
+    },
+    {
+      "file": "src/app/shared/styles/book-scan.css",
+      "components": 3
+    }
+  ],
+  "sharedStacks": [
+    {
+      "file": "src/app/shared/styles/book-stack-11.css",
+      "components": 2
+    },
+    {
+      "file": "src/app/shared/styles/book-stack-6.css",
+      "components": 2
+    },
+    {
+      "file": "src/app/shared/styles/book-stack-10.css",
+      "components": 3
+    },
+    {
+      "file": "src/app/shared/styles/book-stack-4.css",
+      "components": 8
+    },
+    {
+      "file": "src/app/shared/styles/book-stack-3.css",
+      "components": 2
+    }
+  ],
+  "removedFiles": [
+    "src/app/index/lichsu/canvas/chua-dai-giac-canva/chua-dai-giac-canva.component.css",
+    "src/app/index/lichsu/canvas/da-ba-chong-canva/da-ba-chong-canva.component.css",
+    "src/app/index/lichsu/canvas/dai-ki-niem-canva/dai-ki-niem-canva.component.css",
+    "src/app/index/lichsu/canvas/dinh-tan-lan-canva/dinh-tan-lan-canva.component.css",
+    "src/app/index/lichsu/canvas/la-nga-canva/la-nga-canva.component.css",
+    "src/app/index/lichsu/canvas/lich-su-hanh-chinh-canva/lich-su-hanh-chinh-canva.component.css",
+    "src/app/index/lichsu/canvas/nguyen-huu-canh-canva/nguyen-huu-canh-canva.component.css",
+    "src/app/index/lichsu/canvas/nguyen-tri-phuong-canva/nguyen-tri-phuong-canva.component.css",
+    "src/app/index/lichsu/canvas/trinh-hoai-duc-canva/trinh-hoai-duc-canva.component.css",
+    "src/app/index/lichsu/comics/dien-bien/dien-bien.component.css",
+    "src/app/index/lichsu/comics/doan-van-cu/doan-van-cu.component.css",
+    "src/app/index/lichsu/comics/duong-truong-son/duong-truong-son.component.css",
+    "src/app/index/lichsu/comics/nguyen-huu-canh-comic/nguyen-huu-canh-comic.component.css",
+    "src/app/index/lichsu/comics/nguyen-tat-thanh/nguyen-tat-thanh.component.css",
+    "src/app/index/lichsu/comics/nguyen-thi-ton-comic/nguyen-thi-ton-comic.component.css",
+    "src/app/index/lichsu/comics/trinh-hoai-duc-comic/trinh-hoai-duc-comic.component.css",
+    "src/app/index/tainguyen/am-thuc/am-thuc.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/brunei/brunei.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/campuchia/campuchia.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/east-leste/east-leste.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/indonesia/indonesia.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/lao/lao.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/malaysia/malaysia.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/myanmar/myanmar.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/philippines/philippines.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/singapore/singapore.component.css",
+    "src/app/index/tainguyen/em-yeu-dia-li/viet-nam/viet-nam.component.css",
+    "src/app/index/tainguyen/lang-nghe/lang-nghe.component.css",
+    "src/app/index/tainguyen/le-hoi/le-hoi.component.css",
+    "src/app/index/tainguyen/tro-choi/tro-choi.component.css",
+    "src/app/index/tainguyen/van-hoa/van-hoa.component.css"
+  ],
+  "cssFilesAfter": 53,
+  "cssBytesAfter": 110071,
+  "savedCssBytes": 139408,
+  "reductionPercent": 55.9,
+  "sharedLessonComponents": 14,
+  "sharedResourceMenuComponents": 2,
+  "missingStyleReferences": [],
+  "verification": {
+    "bookComputedStyleComparisons": 150,
+    "bookMismatches": 0,
+    "settledLessonViewports": 6,
+    "settledLessonMismatches": 0,
+    "browserTestsPassed": 48,
+    "unitTestsPassed": 31,
+    "resourceMenuComparisons": 52,
+    "resourceMenuMismatches": 0,
+    "desktopRoutesAudited": 77,
+    "mobileRoutesAudited": 77,
+    "routeIssues": 0,
+    "productionBuild": "passed",
+    "remainingExactDuplicateStylesheets": 0,
+    "rawBookCaptures": "test-results/css-{baseline,after}.json (local, ignored)"
+  }
+}

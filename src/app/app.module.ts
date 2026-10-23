@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BookNavigationDirective } from './shared/book-navigation.directive';
+import { NguyenHuuCanhComicComponent } from './index/lichsu/comics/nguyen-huu-canh-comic/nguyen-huu-canh-comic.component';
 import { MediaLoadingDirective } from './shared/media-loading.directive';
 import { CurrentInfoComponent } from './shared/current-info.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -157,6 +158,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     SachDienTuComponent,
     SachLichSuComponent,
     SachComponent,
+    NguyenHuuCanhComicComponent,
     DienBienComponent,
     DuongTruongSonComponent,
     NguyenTatThanhComponent,

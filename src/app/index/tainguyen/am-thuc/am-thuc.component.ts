@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-am-thuc',
   templateUrl: './am-thuc.component.html',
-  styleUrls: ['./am-thuc.component.css']
+  styleUrls: ['../../../shared/styles/image-lesson.css']
 })
 export class AmThucComponent implements OnInit {
 
